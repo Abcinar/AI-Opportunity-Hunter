@@ -9,7 +9,7 @@ from sources.reddit_fetcher import fetch_reddit_posts
 from scoring import calculate_opportunity_score, result_to_dict
 from rationale import generate_rationale
 from monitor import OpportunityMonitor
-from signal_analyzer import analyze_post
+from signal_analyzer import analyze_post, is_likely_opportunity
 
 
 def print_header(title: str):
@@ -49,7 +49,7 @@ def print_opportunity(index: int, post: dict, score_result, rationale: str):
 └──────────────────────────────────────────────────────────────""")
 
 
-def fetch_all_signals(limit_per_source: int = 8) -> dict:
+def fetch_all_signals(limit_per_source: int = 12) -> dict:
     print_header("Sinyal Toplama")
     hn_posts = fetch_hacker_news(limit=limit_per_source)
     print(f"  ✓ Hacker News  → {len(hn_posts)} sinyal")
@@ -65,15 +65,26 @@ def fetch_all_signals(limit_per_source: int = 8) -> dict:
         "fetched_at": datetime.now().isoformat(),
         "total_signals": len(all_posts),
         "sources": {"hacker_news": len(hn_posts), "reddit": len(reddit_posts)},
-        "posts": all_posts[:20],
+        "posts": all_posts[:30],
     }
 
 
 def analyze_top_opportunities(posts: list, top_n: int = 3, monitor: OpportunityMonitor = None):
     print_header(f"En İyi {top_n} Fırsat")
+
+    # Önce fırsat olma ihtimali yüksek olanları filtrele
+    candidates = [p for p in posts if is_likely_opportunity(p.get("title", ""))]
+
+    # Yeterli aday yoksa tüm listeye geri dön
+    if len(candidates) < top_n:
+        print(f"  (Filtrelenmiş aday: {len(candidates)} — tüm listeye bakılıyor)")
+        candidates = posts
+    else:
+        print(f"  (Filtrelenmiş aday: {len(candidates)})")
+
     results = []
 
-    for i, post in enumerate(posts[:top_n], 1):
+    for i, post in enumerate(candidates[:top_n], 1):
         title = post.get("title", "")
         source = post.get("source", "")
         points = post.get("points", 0) or post.get("score", 0)
@@ -96,13 +107,13 @@ def analyze_top_opportunities(posts: list, top_n: int = 3, monitor: OpportunityM
         print_opportunity(i, post, score_result, rationale)
 
         # Yüksek skorluları otomatik takibe al
-        if monitor and score_result.total_score >= 70:
+        if monitor and score_result.total_score >= 65:
             monitor.track(
                 title=title,
                 url=url,
                 source=source,
                 score=score_result.total_score,
-                notes="Otomatik takip (skor ≥ 70)",
+                notes="Otomatik takip (skor ≥ 65)",
             )
 
         results.append({
@@ -130,7 +141,7 @@ if __name__ == "__main__":
 
     monitor = OpportunityMonitor()
 
-    signals = fetch_all_signals(limit_per_source=8)
+    signals = fetch_all_signals(limit_per_source=12)
     save_json(signals, "daily_signals.json")
 
     analyze_top_opportunities(signals["posts"], top_n=3, monitor=monitor)
