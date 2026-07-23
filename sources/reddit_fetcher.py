@@ -1,6 +1,5 @@
 """
-Reddit Fetcher
-Public JSON endpoint kullanarak veri çeker (API key gerekmez).
+Reddit Fetcher - Codespaces uyumlu versiyon
 """
 
 import requests
@@ -8,26 +7,27 @@ from datetime import datetime
 from typing import List, Dict
 
 
-SUBREDDITS = [
-    "indiehackers",
-    "SaaS",
-    "startups",
-    "Entrepreneur",
-    "sideproject",
-]
+SUBREDDITS = ["indiehackers", "SaaS", "startups", "sideproject"]
 
 
 def fetch_reddit_posts(limit: int = 10) -> List[Dict]:
-    """Birden fazla subreddit'ten hot post'ları çeker."""
     posts = []
-    headers = {"User-Agent": "AIOpportunityHunter/1.0"}
+    headers = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+    }
 
-    per_sub = max(3, limit // len(SUBREDDITS))
+    per_sub = max(2, limit // len(SUBREDDITS))
 
     for sub in SUBREDDITS:
         try:
-            url = f"https://www.reddit.com/r/{sub}/hot.json?limit={per_sub}"
+            # old.reddit.com bazen engeli aşar
+            url = f"https://old.reddit.com/r/{sub}/hot.json?limit={per_sub}"
             response = requests.get(url, headers=headers, timeout=12)
+            
+            if response.status_code == 403:
+                print(f"  Reddit ({sub}) engellendi (403)")
+                continue
+                
             response.raise_for_status()
             data = response.json()
 
@@ -46,12 +46,10 @@ def fetch_reddit_posts(limit: int = 10) -> List[Dict]:
             print(f"  Reddit ({sub}) hatası: {e}")
             continue
 
-    # Skora göre sırala
     posts.sort(key=lambda x: x.get("score", 0), reverse=True)
     return posts[:limit]
 
 
 if __name__ == "__main__":
     import json
-    results = fetch_reddit_posts(8)
-    print(json.dumps(results, indent=2, ensure_ascii=False))
+    print(json.dumps(fetch_reddit_posts(6), indent=2, ensure_ascii=False))
