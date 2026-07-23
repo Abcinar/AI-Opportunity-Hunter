@@ -1,21 +1,5 @@
-
----
-
-### 4. `scoring.py`
-
-```python
 """
 AI Opportunity Hunter - Opportunity Score Engine
--------------------------------------------------
-Şeffaf, solo founder odaklı fırsat skorlama motoru.
-
-Formül:
-Opportunity Score = 
-    (0.25 × Momentum) +
-    (0.20 × Pain Clarity) +
-    (0.20 × Competition Gap) +
-    (0.20 × Solo Feasibility) +
-    (0.15 × Monetization Clarity)
 """
 
 from typing import Dict, Any
@@ -32,7 +16,7 @@ class SignalInput:
     time_waste_mentions: int = 0
     direct_competitors: int = 0
     big_player_exists: bool = False
-    tech_complexity: str = "medium"          # low | medium | high
+    tech_complexity: str = "medium"
     required_integrations: int = 0
     pricing_discussed: bool = False
     existing_paid_alternatives: bool = False
@@ -67,7 +51,6 @@ WEIGHTS = {
 
 def _calc_momentum(signals: SignalInput) -> int:
     hn_score = min(signals.hn_points / 4.0, 100)
-
     if signals.hn_days_ago <= 3:
         freshness = 100
     elif signals.hn_days_ago <= 7:
@@ -76,7 +59,6 @@ def _calc_momentum(signals: SignalInput) -> int:
         freshness = 60
     else:
         freshness = 30
-
     reddit_score = min(signals.reddit_upvotes / 2.0, 100)
     momentum = (hn_score * 0.50) + (freshness * 0.30) + (reddit_score * 0.20)
     return int(round(min(momentum, 100)))
@@ -99,7 +81,6 @@ def _calc_competition_gap(signals: SignalInput) -> int:
         gap = 55
     else:
         gap = 30
-
     if signals.big_player_exists:
         gap = max(gap - 20, 10)
     return int(gap)
@@ -129,7 +110,6 @@ def calculate_opportunity_score(signals: SignalInput) -> OpportunityScoreResult:
         solo_feasibility=_calc_solo_feasibility(signals),
         monetization_clarity=_calc_monetization_clarity(signals),
     )
-
     total = (
         breakdown.momentum * WEIGHTS["momentum"] +
         breakdown.pain_clarity * WEIGHTS["pain_clarity"] +
@@ -137,9 +117,7 @@ def calculate_opportunity_score(signals: SignalInput) -> OpportunityScoreResult:
         breakdown.solo_feasibility * WEIGHTS["solo_feasibility"] +
         breakdown.monetization_clarity * WEIGHTS["monetization_clarity"]
     )
-
     final_score = int(round(total))
-
     if final_score >= 80:
         label = "very_strong"
     elif final_score >= 65:
@@ -148,7 +126,6 @@ def calculate_opportunity_score(signals: SignalInput) -> OpportunityScoreResult:
         label = "medium"
     else:
         label = "weak"
-
     return OpportunityScoreResult(
         total_score=final_score,
         breakdown=breakdown,
@@ -186,9 +163,7 @@ if __name__ == "__main__":
         pricing_discussed=True,
         existing_paid_alternatives=True,
     )
-
     result = calculate_opportunity_score(example_signals)
-
     print("=" * 50)
     print("AI Opportunity Hunter - Score Engine")
     print("=" * 50)
@@ -200,5 +175,3 @@ if __name__ == "__main__":
     print(f"  Competition Gap       : {result.breakdown.competition_gap}")
     print(f"  Solo Feasibility      : {result.breakdown.solo_feasibility}")
     print(f"  Monetization Clarity  : {result.breakdown.monetization_clarity}")
-    print("\nJSON Çıktı:")
-    print(json.dumps(result_to_dict(result), indent=2, ensure_ascii=False))
