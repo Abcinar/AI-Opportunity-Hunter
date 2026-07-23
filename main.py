@@ -1,7 +1,5 @@
 """
 AI Opportunity Hunter - Main Entry Point
------------------------------------------
-Sinyal toplama + Opportunity Score hesaplama
 """
 
 import json
@@ -9,9 +7,10 @@ from datetime import datetime
 from sources.hn_fetcher import fetch_hacker_news
 from sources.reddit_fetcher import fetch_reddit_posts
 from scoring import SignalInput, calculate_opportunity_score, result_to_dict
+from rationale import generate_rationale
 
 
-def fetch_all_signals(limit_per_source: int = 12) -> dict:
+def fetch_all_signals(limit_per_source: int = 10) -> dict:
     print("=" * 60)
     print("AI Opportunity Hunter - Sinyal Toplama Başladı")
     print("=" * 60)
@@ -35,40 +34,65 @@ def fetch_all_signals(limit_per_source: int = 12) -> dict:
             "hacker_news": len(hn_posts),
             "reddit": len(reddit_posts),
         },
-        "posts": all_posts[:30],
+        "posts": all_posts[:20],
     }
 
 
-def demo_scoring():
+def analyze_top_opportunities(posts: list, top_n: int = 3):
+    """En yüksek sinyalli postları skorla + gerekçe üret."""
     print("\n" + "=" * 60)
-    print("Opportunity Score - Demo")
+    print(f"En İyi {top_n} Fırsat Analizi")
     print("=" * 60)
 
-    example = SignalInput(
-        hn_points=312,
-        hn_days_ago=4,
-        reddit_upvotes=140,
-        i_would_pay_count=6,
-        time_waste_mentions=4,
-        direct_competitors=2,
-        big_player_exists=False,
-        tech_complexity="medium",
-        required_integrations=2,
-        pricing_discussed=True,
-        existing_paid_alternatives=True,
-    )
+    results = []
 
-    result = calculate_opportunity_score(example)
+    for i, post in enumerate(posts[:top_n], 1):
+        title = post.get("title", "")
+        source = post.get("source", "")
+        points = post.get("points", 0) or post.get("score", 0)
+        comments = post.get("comments", 0)
 
-    print(f"\n  Toplam Skor           : {result.total_score}/100")
-    print(f"  Etiket                : {result.label}")
-    print(f"\n  Momentum              : {result.breakdown.momentum}")
-    print(f"  Pain Clarity          : {result.breakdown.pain_clarity}")
-    print(f"  Competition Gap       : {result.breakdown.competition_gap}")
-    print(f"  Solo Feasibility      : {result.breakdown.solo_feasibility}")
-    print(f"  Monetization Clarity  : {result.breakdown.monetization_clarity}")
+        # Basit skor (gerçek sinyal verisiyle daha sonra zenginleştirilecek)
+        signals = SignalInput(
+            hn_points=points if source == "hacker_news" else 0,
+            hn_days_ago=2,
+            reddit_upvotes=points if source == "reddit" else 0,
+            i_would_pay_count=3,
+            time_waste_mentions=2,
+            direct_competitors=2,
+            big_player_exists=False,
+            tech_complexity="medium",
+            required_integrations=1,
+            pricing_discussed=True,
+            existing_paid_alternatives=True,
+        )
 
-    return result_to_dict(result)
+        score_result = calculate_opportunity_score(signals)
+        rationale = generate_rationale(
+            title=title,
+            source=source,
+            points=points,
+            comments=comments,
+            score_breakdown=result_to_dict(score_result)["breakdown"],
+            language="tr",
+        )
+
+        print(f"\n--- Fırsat #{i} ---")
+        print(f"Başlık     : {title[:80]}...")
+        print(f"Kaynak     : {source} | Puan: {points} | Yorum: {comments}")
+        print(f"Skor       : {score_result.total_score}/100 ({score_result.label})")
+        print(f"Gerekçe    : {rationale}")
+
+        results.append({
+            "title": title,
+            "source": source,
+            "points": points,
+            "comments": comments,
+            "score": result_to_dict(score_result),
+            "rationale": rationale,
+        })
+
+    return results
 
 
 def save_signals(data: dict, filename: str = "daily_signals.json"):
@@ -78,9 +102,12 @@ def save_signals(data: dict, filename: str = "daily_signals.json"):
 
 
 if __name__ == "__main__":
-    signals = fetch_all_signals(limit_per_source=10)
+    signals = fetch_all_signals(limit_per_source=8)
     save_signals(signals)
-    demo_scoring()
+
+    # En iyi fırsatları analiz et + gerekçe üret
+    analyze_top_opportunities(signals["posts"], top_n=3)
+
     print("\n" + "=" * 60)
     print("Tamamlandı.")
     print("=" * 60)
