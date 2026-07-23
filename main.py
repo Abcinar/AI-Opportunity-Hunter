@@ -8,42 +8,68 @@ from sources.hn_fetcher import fetch_hacker_news
 from sources.reddit_fetcher import fetch_reddit_posts
 from scoring import SignalInput, calculate_opportunity_score, result_to_dict
 from rationale import generate_rationale
+from monitor import OpportunityMonitor
 
 
-def fetch_all_signals(limit_per_source: int = 10) -> dict:
-    print("=" * 60)
-    print("AI Opportunity Hunter - Sinyal Toplama Başladı")
-    print("=" * 60)
+def print_header(title: str):
+    print("\n" + "═" * 64)
+    print(f"  {title}")
+    print("═" * 64)
 
+
+def print_opportunity(index: int, post: dict, score_result, rationale: str):
+    title = post.get("title", "")[:70]
+    source = post.get("source", "")
+    points = post.get("points", 0) or post.get("score", 0)
+    comments = post.get("comments", 0)
+    total = score_result.total_score
+    label = score_result.label
+
+    label_tr = {
+        "very_strong": "Çok Güçlü",
+        "good": "İyi",
+        "medium": "Orta",
+        "weak": "Zayıf",
+    }.get(label, label)
+
+    print(f"""
+┌─ Fırsat #{index} ─────────────────────────────────────────────
+│  {title}
+│
+│  Kaynak   : {source.upper()}
+│  Etkileşim: {points} puan  ·  {comments} yorum
+│  Skor     : {total}/100  ({label_tr})
+│
+│  Momentum {score_result.breakdown.momentum:>3}  │  Pain {score_result.breakdown.pain_clarity:>3}  │  Gap {score_result.breakdown.competition_gap:>3}
+│  Solo     {score_result.breakdown.solo_feasibility:>3}  │  Money {score_result.breakdown.monetization_clarity:>3}
+│
+│  Gerekçe  :
+│  {rationale}
+└──────────────────────────────────────────────────────────────""")
+
+
+def fetch_all_signals(limit_per_source: int = 8) -> dict:
+    print_header("Sinyal Toplama")
     hn_posts = fetch_hacker_news(limit=limit_per_source)
-    print(f"  Hacker News  → {len(hn_posts)} sinyal alındı")
-
+    print(f"  ✓ Hacker News  → {len(hn_posts)} sinyal")
     reddit_posts = fetch_reddit_posts(limit=limit_per_source)
-    print(f"  Reddit       → {len(reddit_posts)} sinyal alındı")
+    print(f"  ✓ Reddit       → {len(reddit_posts)} sinyal")
 
     all_posts = hn_posts + reddit_posts
     all_posts.sort(
         key=lambda x: (x.get("points", 0) or x.get("score", 0), x.get("comments", 0)),
         reverse=True,
     )
-
     return {
         "fetched_at": datetime.now().isoformat(),
         "total_signals": len(all_posts),
-        "sources": {
-            "hacker_news": len(hn_posts),
-            "reddit": len(reddit_posts),
-        },
+        "sources": {"hacker_news": len(hn_posts), "reddit": len(reddit_posts)},
         "posts": all_posts[:20],
     }
 
 
-def analyze_top_opportunities(posts: list, top_n: int = 3):
-    """En yüksek sinyalli postları skorla + gerekçe üret."""
-    print("\n" + "=" * 60)
-    print(f"En İyi {top_n} Fırsat Analizi")
-    print("=" * 60)
-
+def analyze_top_opportunities(posts: list, top_n: int = 3, monitor: OpportunityMonitor = None):
+    print_header(f"En İyi {top_n} Fırsat")
     results = []
 
     for i, post in enumerate(posts[:top_n], 1):
@@ -51,8 +77,8 @@ def analyze_top_opportunities(posts: list, top_n: int = 3):
         source = post.get("source", "")
         points = post.get("points", 0) or post.get("score", 0)
         comments = post.get("comments", 0)
+        url = post.get("url", "")
 
-        # Basit skor (gerçek sinyal verisiyle daha sonra zenginleştirilecek)
         signals = SignalInput(
             hn_points=points if source == "hacker_news" else 0,
             hn_days_ago=2,
@@ -77,17 +103,22 @@ def analyze_top_opportunities(posts: list, top_n: int = 3):
             language="tr",
         )
 
-        print(f"\n--- Fırsat #{i} ---")
-        print(f"Başlık     : {title[:80]}...")
-        print(f"Kaynak     : {source} | Puan: {points} | Yorum: {comments}")
-        print(f"Skor       : {score_result.total_score}/100 ({score_result.label})")
-        print(f"Gerekçe    : {rationale}")
+        print_opportunity(i, post, score_result, rationale)
+
+        # İsteğe bağlı: yüksek skorluları otomatik takibe al
+        if monitor and score_result.total_score >= 75:
+            monitor.track(
+                title=title,
+                url=url,
+                source=source,
+                score=score_result.total_score,
+                notes="Otomatik takip (skor ≥ 75)",
+            )
 
         results.append({
             "title": title,
             "source": source,
             "points": points,
-            "comments": comments,
             "score": result_to_dict(score_result),
             "rationale": rationale,
         })
@@ -95,19 +126,28 @@ def analyze_top_opportunities(posts: list, top_n: int = 3):
     return results
 
 
-def save_signals(data: dict, filename: str = "daily_signals.json"):
+def save_json(data: dict, filename: str):
     with open(filename, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
-    print(f"\n  Veriler kaydedildi → {filename}")
+    print(f"\n  💾 Kaydedildi → {filename}")
 
 
 if __name__ == "__main__":
+    print("\n" + "█" * 64)
+    print("  AI OPPORTUNITY HUNTER")
+    print("  Solo Founder Fırsat Karar Motoru")
+    print("█" * 64)
+
+    monitor = OpportunityMonitor()
+
     signals = fetch_all_signals(limit_per_source=8)
-    save_signals(signals)
+    save_json(signals, "daily_signals.json")
 
-    # En iyi fırsatları analiz et + gerekçe üret
-    analyze_top_opportunities(signals["posts"], top_n=3)
+    analyze_top_opportunities(signals["posts"], top_n=3, monitor=monitor)
 
-    print("\n" + "=" * 60)
-    print("Tamamlandı.")
-    print("=" * 60)
+    print_header("Opportunity Monitor Özeti")
+    print(monitor.summary())
+
+    print("\n" + "█" * 64)
+    print("  Tamamlandı.")
+    print("█" * 64 + "\n")
