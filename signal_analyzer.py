@@ -103,7 +103,13 @@ def _count_keywords(text: str, keywords: list) -> int:
     text_lower = text.lower()
     return sum(1 for kw in keywords if kw in text_lower)
 
-
+def analyze_post(post: Dict[str, Any]) -> SignalInput:
+    title = post.get("title", "")
+    
+    # Fırsat değilse skorları düşük tut (ama yine de hesapla)
+    likely = is_likely_opportunity(title)
+    
+    # ... mevcut kodun devamı ...
 def analyze_post(post: Dict[str, Any]) -> SignalInput:
     """
     Tek bir post'tan SignalInput üretir.
