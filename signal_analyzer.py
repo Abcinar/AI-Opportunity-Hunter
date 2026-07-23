@@ -1,3 +1,60 @@
+# Fırsat sinyali veren kalıplar
+OPPORTUNITY_PATTERNS = [
+    r"show hn",
+    r"ask hn",
+    r"i built",
+    r"i made",
+    r"i launched",
+    r"alternative to",
+    r"open[- ]source",
+    r"self[- ]hosted",
+    r"saas",
+    r"for freelancers",
+    r"for indie",
+    r"for solo",
+    r"for small (business|teams|shops)",
+    r"mvp",
+    r"side project",
+    r"weekend project",
+    r"looking for",
+    r"need a tool",
+    r"is there a",
+    r"how do you",
+    r"what do you use",
+]
+
+# Elemek istediğimiz haber/tartışma kalıpları
+NOISE_PATTERNS = [
+    r"raises \$?\d",
+    r"acquires?",
+    r"announces?",
+    r"launches? ipo",
+    r"stock",
+    r"earnings",
+    r"layoffs?",
+    r"ceo of",
+    r"interview with",
+    r"passes away",
+    r"dies at",
+]
+
+
+def is_likely_opportunity(title: str) -> bool:
+    """Başlık fırsat sinyali taşıyor mu?"""
+    t = title.lower()
+
+    # Önce gürültü mü bak
+    for pat in NOISE_PATTERNS:
+        if re.search(pat, t):
+            return False
+
+    # Fırsat kalıbı var mı
+    for pat in OPPORTUNITY_PATTERNS:
+        if re.search(pat, t):
+            return True
+
+    # Hiçbiri yoksa: orta seviye — yüksek etkileşimliyse geçir
+    return False
 """
 AI Opportunity Hunter - Signal Analyzer
 ---------------------------------------
