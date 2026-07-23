@@ -6,9 +6,10 @@ import json
 from datetime import datetime
 from sources.hn_fetcher import fetch_hacker_news
 from sources.reddit_fetcher import fetch_reddit_posts
-from scoring import SignalInput, calculate_opportunity_score, result_to_dict
+from scoring import calculate_opportunity_score, result_to_dict
 from rationale import generate_rationale
 from monitor import OpportunityMonitor
+from signal_analyzer import analyze_post
 
 
 def print_header(title: str):
@@ -79,21 +80,10 @@ def analyze_top_opportunities(posts: list, top_n: int = 3, monitor: OpportunityM
         comments = post.get("comments", 0)
         url = post.get("url", "")
 
-        signals = SignalInput(
-            hn_points=points if source == "hacker_news" else 0,
-            hn_days_ago=2,
-            reddit_upvotes=points if source == "reddit" else 0,
-            i_would_pay_count=3,
-            time_waste_mentions=2,
-            direct_competitors=2,
-            big_player_exists=False,
-            tech_complexity="medium",
-            required_integrations=1,
-            pricing_discussed=True,
-            existing_paid_alternatives=True,
-        )
-
+        # Gerçek sinyal analizi
+        signals = analyze_post(post)
         score_result = calculate_opportunity_score(signals)
+
         rationale = generate_rationale(
             title=title,
             source=source,
@@ -105,14 +95,14 @@ def analyze_top_opportunities(posts: list, top_n: int = 3, monitor: OpportunityM
 
         print_opportunity(i, post, score_result, rationale)
 
-        # İsteğe bağlı: yüksek skorluları otomatik takibe al
-        if monitor and score_result.total_score >= 75:
+        # Yüksek skorluları otomatik takibe al
+        if monitor and score_result.total_score >= 70:
             monitor.track(
                 title=title,
                 url=url,
                 source=source,
                 score=score_result.total_score,
-                notes="Otomatik takip (skor ≥ 75)",
+                notes="Otomatik takip (skor ≥ 70)",
             )
 
         results.append({
