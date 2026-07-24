@@ -68,6 +68,9 @@ NOISE_PATTERNS = [
     r"ceo of",
     r"interview with",
     r"passes away",
+    r"what are you working on",
+    r"who is hiring",
+    r"who wants to be hired",
 ]
 
 
