@@ -14,6 +14,7 @@ from scoring import calculate_opportunity_score, result_to_dict
 from rationale import generate_rationale
 from monitor import OpportunityMonitor
 from signal_analyzer import analyze_post, is_likely_opportunity
+from sources.trends_fetcher import fetch_google_trends
 
 
 def print_header(title: str):
