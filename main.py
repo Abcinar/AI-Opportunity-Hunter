@@ -13,7 +13,7 @@ from scoring import calculate_opportunity_score, result_to_dict
 from rationale import generate_rationale
 from monitor import OpportunityMonitor
 from signal_analyzer import analyze_post, is_likely_opportunity
-
+from sources.betalists_fetcher import fetch_betalist
 
 def print_header(title: str):
     print("\n" + "═" * 64)
@@ -67,11 +67,14 @@ def fetch_all_signals(limit_per_source: int = 10) -> dict:
     ph_posts = fetch_producthunt(limit=limit_per_source)
     print(f"  ✓ Product Hunt    → {len(ph_posts)} sinyal")
 
+    betalist_posts = fetch_betalist(limit=limit_per_source)
+    print(f"  ✓ BetaList        → {len(betalist_posts)} sinyal")
+    
     reddit_posts = fetch_reddit_posts(limit=limit_per_source)
     print(f"  ✓ Reddit          → {len(reddit_posts)} sinyal")
 
-    all_posts = hn_posts + lobsters_posts + github_posts + ph_posts + reddit_posts
-    all_posts.sort(
+    all_posts = hn_posts + lobsters_posts + github_posts + ph_posts + betalist_posts + reddit_posts
+    (
         key=lambda x: (x.get("points", 0) or x.get("score", 0), x.get("comments", 0)),
         reverse=True,
     )
@@ -97,8 +100,8 @@ def analyze_top_opportunities(posts: list, top_n: int = 3, monitor=None):
 
     # Product Hunt postlarini her zaman aday say
     for p in posts:
-        if p.get("source") == "product_hunt" and p not in candidates:
-            candidates.append(p)
+        if p.get("source") =="product_hunt": len(ph_posts),
+            "betalist": len(betalist_posts),
 
     if len(candidates) < top_n:
         print(f"  (Filtrelenmis aday: {len(candidates)} — tum listeye bakiliyor)")
