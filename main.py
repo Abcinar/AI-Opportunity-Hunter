@@ -9,16 +9,17 @@ from sources.reddit_fetcher import fetch_reddit_posts
 from sources.lobsters_fetcher import fetch_lobsters
 from sources.github_fetcher import fetch_github_trending
 from sources.producthunt_fetcher import fetch_producthunt
+from sources.betalists_fetcher import fetch_betalist
 from scoring import calculate_opportunity_score, result_to_dict
 from rationale import generate_rationale
 from monitor import OpportunityMonitor
 from signal_analyzer import analyze_post, is_likely_opportunity
-from sources.betalists_fetcher import fetch_betalist
+
 
 def print_header(title: str):
-    print("\n" + "═" * 64)
+    print("\n" + "=" * 64)
     print(f"  {title}")
-    print("═" * 64)
+    print("=" * 64)
 
 
 def print_opportunity(index: int, post: dict, score_result, rationale: str):
@@ -37,44 +38,44 @@ def print_opportunity(index: int, post: dict, score_result, rationale: str):
     }.get(label, label)
 
     print(f"""
-┌─ Firsat #{index} ─────────────────────────────────────────────
-│  {title}
-│
-│  Kaynak   : {source.upper()}
-│  Etkilesim: {points} puan  ·  {comments} yorum
-│  Skor     : {total}/100  ({label_tr})
-│
-│  Momentum {score_result.breakdown.momentum:>3}  │  Pain {score_result.breakdown.pain_clarity:>3}  │  Gap {score_result.breakdown.competition_gap:>3}
-│  Solo     {score_result.breakdown.solo_feasibility:>3}  │  Money {score_result.breakdown.monetization_clarity:>3}
-│
-│  Gerekce  :
-│  {rationale}
-└──────────────────────────────────────────────────────────────""")
+--- Firsat #{index} ------------------------------------------
+  {title}
+
+  Kaynak   : {source.upper()}
+  Etkilesim: {points} puan  |  {comments} yorum
+  Skor     : {total}/100  ({label_tr})
+
+  Momentum {score_result.breakdown.momentum:>3}  |  Pain {score_result.breakdown.pain_clarity:>3}  |  Gap {score_result.breakdown.competition_gap:>3}
+  Solo     {score_result.breakdown.solo_feasibility:>3}  |  Money {score_result.breakdown.monetization_clarity:>3}
+
+  Gerekce  :
+  {rationale}
+--------------------------------------------------------------""")
 
 
 def fetch_all_signals(limit_per_source: int = 10) -> dict:
     print_header("Sinyal Toplama")
 
     hn_posts = fetch_hacker_news(limit=limit_per_source)
-    print(f"  ✓ Hacker News     → {len(hn_posts)} sinyal")
+    print(f"  + Hacker News     -> {len(hn_posts)} sinyal")
 
     lobsters_posts = fetch_lobsters(limit=limit_per_source)
-    print(f"  ✓ Lobsters        → {len(lobsters_posts)} sinyal")
+    print(f"  + Lobsters        -> {len(lobsters_posts)} sinyal")
 
     github_posts = fetch_github_trending(limit=limit_per_source)
-    print(f"  ✓ GitHub Trending → {len(github_posts)} sinyal")
+    print(f"  + GitHub Trending -> {len(github_posts)} sinyal")
 
     ph_posts = fetch_producthunt(limit=limit_per_source)
-    print(f"  ✓ Product Hunt    → {len(ph_posts)} sinyal")
+    print(f"  + Product Hunt    -> {len(ph_posts)} sinyal")
 
     betalist_posts = fetch_betalist(limit=limit_per_source)
-    print(f"  ✓ BetaList        → {len(betalist_posts)} sinyal")
-    
+    print(f"  + BetaList        -> {len(betalist_posts)} sinyal")
+
     reddit_posts = fetch_reddit_posts(limit=limit_per_source)
-    print(f"  ✓ Reddit          → {len(reddit_posts)} sinyal")
+    print(f"  + Reddit          -> {len(reddit_posts)} sinyal")
 
     all_posts = hn_posts + lobsters_posts + github_posts + ph_posts + betalist_posts + reddit_posts
-    (
+    all_posts.sort(
         key=lambda x: (x.get("points", 0) or x.get("score", 0), x.get("comments", 0)),
         reverse=True,
     )
@@ -87,6 +88,7 @@ def fetch_all_signals(limit_per_source: int = 10) -> dict:
             "lobsters": len(lobsters_posts),
             "github_trending": len(github_posts),
             "product_hunt": len(ph_posts),
+            "betalist": len(betalist_posts),
             "reddit": len(reddit_posts),
         },
         "posts": all_posts[:40],
@@ -98,13 +100,12 @@ def analyze_top_opportunities(posts: list, top_n: int = 3, monitor=None):
 
     candidates = [p for p in posts if is_likely_opportunity(p.get("title", ""))]
 
-    # Product Hunt postlarini her zaman aday say
     for p in posts:
-        if p.get("source") =="product_hunt": len(ph_posts),
-            "betalist": len(betalist_posts),
+        if p.get("source") in ("product_hunt", "betalist") and p not in candidates:
+            candidates.append(p)
 
     if len(candidates) < top_n:
-        print(f"  (Filtrelenmis aday: {len(candidates)} — tum listeye bakiliyor)")
+        print(f"  (Filtrelenmis aday: {len(candidates)} -- tum listeye bakiliyor)")
         candidates = posts
     else:
         print(f"  (Filtrelenmis aday: {len(candidates)})")
@@ -155,14 +156,14 @@ def analyze_top_opportunities(posts: list, top_n: int = 3, monitor=None):
 def save_json(data: dict, filename: str):
     with open(filename, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
-    print(f"\n  Kaydedildi → {filename}")
+    print(f"\n  Kaydedildi -> {filename}")
 
 
 if __name__ == "__main__":
-    print("\n" + "█" * 64)
+    print("\n" + "#" * 64)
     print("  AI OPPORTUNITY HUNTER")
     print("  Solo Founder Firsat Karar Motoru")
-    print("█" * 64)
+    print("#" * 64)
 
     monitor = OpportunityMonitor()
 
@@ -174,6 +175,6 @@ if __name__ == "__main__":
     print_header("Opportunity Monitor Ozeti")
     print(monitor.summary())
 
-    print("\n" + "█" * 64)
+    print("\n" + "#" * 64)
     print("  Tamamlandi.")
-    print("█" * 64 + "\n")
+    print("#" * 64 + "\n")
