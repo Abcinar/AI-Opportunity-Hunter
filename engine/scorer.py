@@ -18,10 +18,13 @@ LEVEL_SCORE = {
 
 
 WEIGHTS = {
-    "engagement": 0.35,
-    "momentum": 0.30,
-    "founder_fit": 0.20,
-    "confidence": 0.15,
+
+    "engagement":0.40,
+
+    "momentum":0.35,
+
+    "founder_fit":0.25
+
 }
 
 
