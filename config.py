@@ -2,7 +2,13 @@
 AI Opportunity Hunter Configuration
 """
 
-from pathlib import Path
+from pathlib import Path 
+
+DATA_DIR = Path("data")
+
+DAILY_SIGNALS_FILE = DATA_DIR / "daily_signals.json"
+OPPORTUNITIES_FILE = DATA_DIR / "opportunities.json"
+TRACKED_FILE = DATA_DIR / "tracked_opportunities.json"
 
 # Proje dizini
 BASE_DIR = Path(__file__).resolve().parent
