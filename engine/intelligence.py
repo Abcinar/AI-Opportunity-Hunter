@@ -163,7 +163,15 @@ def analyze_signal(signal: Dict) -> Dict:
         "source": signal.get("source"),
         "evidence": evidence,
     }
+{
+    "type":"momentum",
+    "level":"high",
+    "confidence":0.91,
 
+    "importance":0.82,
+
+    "reason":"Strong GitHub activity"
+}
 
 # --------------------------------------------------
 # Toplu Analiz
