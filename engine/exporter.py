@@ -8,7 +8,7 @@ Görevi:
 """
 
 import json
-from pathlib import Path
+
 
 from config import (
     DAILY_SIGNALS_FILE,
@@ -21,7 +21,7 @@ def save_daily_signals(data: dict):
 
     DAILY_SIGNALS_FILE.parent.mkdir(
     parents=True,
-    exist_ok=True
+    exist_ok=True,
 )
 
     with open(
