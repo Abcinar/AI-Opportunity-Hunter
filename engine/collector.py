@@ -93,7 +93,7 @@ class Collector:
         }
 
 
-def collect_all_sources():
+def collect_signals()
 
     collector = Collector()
 
