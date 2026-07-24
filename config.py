@@ -2,26 +2,25 @@
 AI Opportunity Hunter Configuration
 """
 
-from pathlib import Path 
+from pathlib import Path
 
-DATA_DIR = Path("data")
+# --------------------------------------------------
+# Project Paths
+# --------------------------------------------------
+
+BASE_DIR = Path(__file__).resolve().parent
+
+DATA_DIR = BASE_DIR / "data"
+DATA_DIR.mkdir(parents=True, exist_ok=True)
 
 DAILY_SIGNALS_FILE = DATA_DIR / "daily_signals.json"
 OPPORTUNITIES_FILE = DATA_DIR / "opportunities.json"
 TRACKED_FILE = DATA_DIR / "tracked_opportunities.json"
 
-# Proje dizini
-BASE_DIR = Path(__file__).resolve().parent
+# --------------------------------------------------
+# Fetch Limits
+# --------------------------------------------------
 
-# Veri klasörü
-DATA_DIR = BASE_DIR / "data"
-DATA_DIR.mkdir(exist_ok=True)
-
-# JSON dosyaları
-DAILY_SIGNALS_FILE = DATA_DIR / "daily_signals.json"
-TRACKED_FILE = DATA_DIR / "tracked_opportunities.json"
-
-# Fetch ayarları
 GITHUB_LIMIT = 10
 HN_LIMIT = 10
 GOOGLE_LIMIT = 10
