@@ -6,6 +6,8 @@ import json
 from datetime import datetime
 from sources.hn_fetcher import fetch_hacker_news
 from sources.reddit_fetcher import fetch_reddit_posts
+from sources.lobsters_fetcher import fetch_lobsters
+from sources.github_fetcher import fetch_github_trending
 from scoring import calculate_opportunity_score, result_to_dict
 from rationale import generate_rationale
 from monitor import OpportunityMonitor
@@ -49,33 +51,45 @@ def print_opportunity(index: int, post: dict, score_result, rationale: str):
 └──────────────────────────────────────────────────────────────""")
 
 
-def fetch_all_signals(limit_per_source: int = 12) -> dict:
+def fetch_all_signals(limit_per_source: int = 10) -> dict:
     print_header("Sinyal Toplama")
-    hn_posts = fetch_hacker_news(limit=limit_per_source)
-    print(f"  ✓ Hacker News  → {len(hn_posts)} sinyal")
-    reddit_posts = fetch_reddit_posts(limit=limit_per_source)
-    print(f"  ✓ Reddit       → {len(reddit_posts)} sinyal")
 
-    all_posts = hn_posts + reddit_posts
+    hn_posts = fetch_hacker_news(limit=limit_per_source)
+    print(f"  ✓ Hacker News     → {len(hn_posts)} sinyal")
+
+    lobsters_posts = fetch_lobsters(limit=limit_per_source)
+    print(f"  ✓ Lobsters        → {len(lobsters_posts)} sinyal")
+
+    github_posts = fetch_github_trending(limit=limit_per_source)
+    print(f"  ✓ GitHub Trending → {len(github_posts)} sinyal")
+
+    reddit_posts = fetch_reddit_posts(limit=limit_per_source)
+    print(f"  ✓ Reddit          → {len(reddit_posts)} sinyal")
+
+    all_posts = hn_posts + lobsters_posts + github_posts + reddit_posts
     all_posts.sort(
         key=lambda x: (x.get("points", 0) or x.get("score", 0), x.get("comments", 0)),
         reverse=True,
     )
+
     return {
         "fetched_at": datetime.now().isoformat(),
         "total_signals": len(all_posts),
-        "sources": {"hacker_news": len(hn_posts), "reddit": len(reddit_posts)},
-        "posts": all_posts[:30],
+        "sources": {
+            "hacker_news": len(hn_posts),
+            "lobsters": len(lobsters_posts),
+            "github_trending": len(github_posts),
+            "reddit": len(reddit_posts),
+        },
+        "posts": all_posts[:40],
     }
 
 
 def analyze_top_opportunities(posts: list, top_n: int = 3, monitor: OpportunityMonitor = None):
     print_header(f"En İyi {top_n} Fırsat")
 
-    # Önce fırsat olma ihtimali yüksek olanları filtrele
     candidates = [p for p in posts if is_likely_opportunity(p.get("title", ""))]
 
-    # Yeterli aday yoksa tüm listeye geri dön
     if len(candidates) < top_n:
         print(f"  (Filtrelenmiş aday: {len(candidates)} — tüm listeye bakılıyor)")
         candidates = posts
@@ -91,7 +105,6 @@ def analyze_top_opportunities(posts: list, top_n: int = 3, monitor: OpportunityM
         comments = post.get("comments", 0)
         url = post.get("url", "")
 
-        # Gerçek sinyal analizi
         signals = analyze_post(post)
         score_result = calculate_opportunity_score(signals)
 
@@ -106,7 +119,6 @@ def analyze_top_opportunities(posts: list, top_n: int = 3, monitor: OpportunityM
 
         print_opportunity(i, post, score_result, rationale)
 
-        # Yüksek skorluları otomatik takibe al
         if monitor and score_result.total_score >= 65:
             monitor.track(
                 title=title,
@@ -141,7 +153,7 @@ if __name__ == "__main__":
 
     monitor = OpportunityMonitor()
 
-    signals = fetch_all_signals(limit_per_source=12)
+    signals = fetch_all_signals(limit_per_source=10)
     save_json(signals, "daily_signals.json")
 
     analyze_top_opportunities(signals["posts"], top_n=3, monitor=monitor)
