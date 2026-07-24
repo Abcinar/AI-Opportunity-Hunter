@@ -19,3 +19,4 @@ Founder Fit        %15
 +
 
 Confidence         %10
+87/100
