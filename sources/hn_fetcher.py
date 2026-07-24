@@ -9,6 +9,27 @@ from datetime import datetime
 import re
 from typing import List, Dict
 
+def fetch_hacker_news(limit: int = 20) -> List[Dict]:
+    """Front page + Show + Ask birleştirir."""
+    front = _parse_hn_page("https://news.ycombinator.com/", limit=10)
+    time.sleep(1.5)   # rate limit önleme
+
+    show = _parse_hn_page("https://news.ycombinator.com/show", limit=8)
+    time.sleep(1.5)
+
+    ask = _parse_hn_page("https://news.ycombinator.com/ask", limit=8)
+
+    seen = set()
+    merged = []
+    for post in front + show + ask:
+        key = post["title"].lower().strip()
+        if key not in seen:
+            seen.add(key)
+            merged.append(post)
+
+    merged.sort(key=lambda x: (x.get("points", 0), x.get("comments", 0)), reverse=True)
+    return merged[:limit]
+
 
 def _parse_hn_page(url: str, limit: int = 15) -> List[Dict]:
     posts = []
