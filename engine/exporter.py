@@ -72,6 +72,11 @@ def load_tracked():
 
 def save_tracked(data):
 
+    TRACKED_FILE.parent.mkdir(
+        parents=True,
+        exist_ok=True,
+    )
+
     with open(
         TRACKED_FILE,
         "w",
@@ -84,9 +89,13 @@ def save_tracked(data):
             ensure_ascii=False,
             indent=2,
         )
+
 def save_opportunities(data):
 
-    OPPORTUNITIES_FILE.parent.mkdir(exist_ok=True)
+    OPPORTUNITIES_FILE.parent.mkdir(
+        parents=True,
+        exist_ok=True,
+    )
 
     with open(
         OPPORTUNITIES_FILE,
