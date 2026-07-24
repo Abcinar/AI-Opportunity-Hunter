@@ -81,3 +81,32 @@ def save_tracked(data):
             ensure_ascii=False,
             indent=2,
         )
+def save_opportunities(data):
+
+    OPPORTUNITIES_FILE.parent.mkdir(exist_ok=True)
+
+    with open(
+        OPPORTUNITIES_FILE,
+        "w",
+        encoding="utf-8",
+    ) as f:
+
+        json.dump(
+            data,
+            f,
+            ensure_ascii=False,
+            indent=2,
+        )
+
+
+def load_opportunities():
+
+    if not OPPORTUNITIES_FILE.exists():
+        return []
+
+    with open(
+        OPPORTUNITIES_FILE,
+        encoding="utf-8",
+    ) as f:
+
+        return json.load(f)
