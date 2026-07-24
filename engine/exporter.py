@@ -19,7 +19,10 @@ from config import (
 
 def save_daily_signals(data: dict):
 
-    DAILY_SIGNALS_FILE.parent.mkdir(exist_ok=True)
+    DAILY_SIGNALS_FILE.parent.mkdir(
+    parents=True,
+    exist_ok=True
+)
 
     with open(
         DAILY_SIGNALS_FILE,
