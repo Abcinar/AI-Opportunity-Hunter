@@ -22,7 +22,15 @@ def recommend(score: Dict) -> Dict:
         decision = "SKIP"
 
     return {
-        "decision": decision,
-        "overall_score": overall,
-        "confidence": score["confidence"],
-    }
+
+    "decision":decision,
+
+    "overall_score":overall,
+
+    "confidence":score["confidence"],
+
+    "emoji":emoji,
+
+    "color":color
+
+}
