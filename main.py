@@ -106,12 +106,12 @@ def fetch_all_signals(limit_per_source: int = 10) -> dict:
 def analyze_top_opportunities(posts: list, top_n: int = 3, monitor=None):
     print_header(f"En Iyi {top_n} Firsat")
 
+    
     candidates = [p for p in posts if is_likely_opportunity(p.get("title", ""))]
-
-    for p in posts:
-        if p.get("source") in ("product_hunt", "betalist") and p not in candidates:
+            for p in posts:
+        if p.get("source") in ("product_hunt", "betalist", "google_trends") and p not in candidates:
             candidates.append(p)
-
+        
     if len(candidates) < top_n:
         print(f"  (Filtrelenmis aday: {len(candidates)} -- tum listeye bakiliyor)")
         candidates = posts
