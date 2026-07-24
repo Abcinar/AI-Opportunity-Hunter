@@ -12,6 +12,7 @@ from pathlib import Path
 
 from config import (
     DAILY_SIGNALS_FILE,
+    OPPORTUNITIES_FILE,
     TRACKED_FILE,
 )
 
