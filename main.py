@@ -12,6 +12,7 @@ from scoring import calculate_opportunity_score, result_to_dict
 from rationale import generate_rationale
 from monitor import OpportunityMonitor
 from signal_analyzer import analyze_post, is_likely_opportunity
+from sources.producthunt_fetcher import fetch_producthunt
 
 
 def print_header(title: str):
