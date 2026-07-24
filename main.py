@@ -67,8 +67,11 @@ def fetch_all_signals(limit_per_source: int = 10) -> dict:
     reddit_posts = fetch_reddit_posts(limit=limit_per_source)
     print(f"  ✓ Reddit          → {len(reddit_posts)} sinyal")
 
-    all_posts = hn_posts + lobsters_posts + github_posts + reddit_posts
-    all_posts.sort(
+    ph_posts = fetch_producthunt(limit=limit_per_source)
+    print(f"  ✓ Product Hunt    → {len(ph_posts)} sinyal")
+
+    all_posts = hn_posts + lobsters_posts + github_posts + ph_posts + reddit_posts
+    (
         key=lambda x: (x.get("points", 0) or x.get("score", 0), x.get("comments", 0)),
         reverse=True,
     )
@@ -81,6 +84,7 @@ def fetch_all_signals(limit_per_source: int = 10) -> dict:
             "lobsters": len(lobsters_posts),
             "github_trending": len(github_posts),
             "reddit": len(reddit_posts),
+            "product_hunt": len(ph_posts),
         },
         "posts": all_posts[:40],
     }
