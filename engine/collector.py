@@ -93,8 +93,6 @@ class Collector:
         }
 
 
-def collect_signals()
-
+def collect_signals():
     collector = Collector()
-
     return collector.collect()
