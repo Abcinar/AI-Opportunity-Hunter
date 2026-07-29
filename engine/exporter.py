@@ -1,124 +1,78 @@
 """
-AI Opportunity Hunter
-Exporter Engine
-
-Görevi:
-- JSON dosyalarını kaydetmek
-- JSON dosyalarını okumak
+AI Opportunity Hunter - Exporter Engine
+---------------------------------------
+Verileri yapılandırılmış JSON dosyalarına kaydetmekten sorumludur.
+Single Source of Truth (opportunities.json) kuralına uyar.
 """
 
 import json
-
+import os
+import logging
+from typing import List, Dict, Any
 
 from config import (
-    DAILY_SIGNALS_FILE,
     OPPORTUNITIES_FILE,
-    TRACKED_FILE,
+    DAILY_SIGNALS_FILE,
+    TRACKED_OPPORTUNITIES_FILE
 )
 
-
-def save_daily_signals(data: dict):
-
-    DAILY_SIGNALS_FILE.parent.mkdir(
-    parents=True,
-    exist_ok=True,
-)
-
-    with open(
-        DAILY_SIGNALS_FILE,
-        "w",
-        encoding="utf-8",
-    ) as f:
-
-        json.dump(
-            data,
-            f,
-            ensure_ascii=False,
-            indent=2,
-        )
+logger = logging.getLogger(__name__)
 
 
-def load_daily_signals():
-
-    if not DAILY_SIGNALS_FILE.exists():
-        return {
-            "posts": [],
-            "sources": {},
-            "fetched_at": "",
-        }
-
-    with open(
-        DAILY_SIGNALS_FILE,
-        encoding="utf-8",
-    ) as f:
-
-        return json.load(f)
+def _save_json(filepath: str, data: Any) -> None:
+    """Belirtilen veriyi güvenli bir şekilde JSON dosyasına yazar."""
+    try:
+        # Klasör yoksa oluştur
+        os.makedirs(os.path.dirname(filepath), exist_ok=True)
+        
+        with open(filepath, 'w', encoding='utf-8') as f:
+            json.dump(data, f, indent=4, ensure_ascii=False)
+            
+        logger.info(f"Veri başarıyla dışa aktarıldı: {filepath}")
+    except Exception as e:
+        logger.error(f"JSON kaydetme hatası ({filepath}): {str(e)}")
 
 
-def load_tracked():
-
-    if not TRACKED_FILE.exists():
-        return {
-            "opportunities": []
-        }
-
-    with open(
-        TRACKED_FILE,
-        encoding="utf-8",
-    ) as f:
-
-        return json.load(f)
-
-
-def save_tracked(data):
-
-    TRACKED_FILE.parent.mkdir(
-        parents=True,
-        exist_ok=True,
-    )
-
-    with open(
-        TRACKED_FILE,
-        "w",
-        encoding="utf-8",
-    ) as f:
-
-        json.dump(
-            data,
-            f,
-            ensure_ascii=False,
-            indent=2,
-        )
-
-def save_opportunities(data):
-
-    OPPORTUNITIES_FILE.parent.mkdir(
-        parents=True,
-        exist_ok=True,
-    )
-
-    with open(
-        OPPORTUNITIES_FILE,
-        "w",
-        encoding="utf-8",
-    ) as f:
-
-        json.dump(
-            data,
-            f,
-            ensure_ascii=False,
-            indent=2,
-        )
-
-
-def load_opportunities():
-
-    if not OPPORTUNITIES_FILE.exists():
+def _load_json(filepath: str) -> Any:
+    """Belirtilen JSON dosyasını okur. Dosya yoksa boş liste döner."""
+    if not os.path.exists(filepath):
+        logger.warning(f"Dosya bulunamadı, yeni oluşturulacak: {filepath}")
+        return []
+        
+    try:
+        with open(filepath, 'r', encoding='utf-8') as f:
+            return json.load(f)
+    except Exception as e:
+        logger.error(f"JSON okuma hatası ({filepath}): {str(e)}")
         return []
 
-    with open(
-        OPPORTUNITIES_FILE,
-        encoding="utf-8",
-    ) as f:
 
-        return json.load(f)
+def export_opportunities(opportunities: List[Dict[str, Any]]) -> None:
+    """
+    Sistemin ana veri kaynağını (opportunities.json) günceller.
+    Single Source of Truth prensibi gereği tüm platform bu dosyayı okur.
+    """
+    _save_json(OPPORTUNITIES_FILE, opportunities)
+
+
+def export_daily_signals(signals: List[Dict[str, Any]]) -> None:
+    """Günlük ham veya yarı-işlenmiş sinyal listesini kaydeder."""
+    _save_json(DAILY_SIGNALS_FILE, signals)
+
+
+def export_tracked_opportunities(tracked_data: List[Dict[str, Any]]) -> None:
+    """
+    Kullanıcının takibe aldığı (Tracked) fırsatları kaydeder.
+    Eski adıyla TRACKED_FILE, yeni adıyla TRACKED_OPPORTUNITIES_FILE kullanır.
+    """
+    _save_json(TRACKED_OPPORTUNITIES_FILE, tracked_data)
+
+
+def load_opportunities() -> List[Dict[str, Any]]:
+    """Mevcut fırsatları (opportunities.json) okur ve döndürür."""
+    return _load_json(OPPORTUNITIES_FILE)
+
+
+def load_tracked_opportunities() -> List[Dict[str, Any]]:
+    """Mevcut takip edilen fırsatları okur ve döndürür."""
+    return _load_json(TRACKED_OPPORTUNITIES_FILE)
