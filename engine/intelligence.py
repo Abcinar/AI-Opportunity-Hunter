@@ -135,8 +135,129 @@ def build_evidence(signal: Dict) -> List[Dict]:
 
     # Founder Fit
     level, confidence = _founder_fit(title)
+# --------------------------------------------------
+# Category Engine
+# --------------------------------------------------
 
-    evidence.append({
+CATEGORY_RULES = {
+    "AI": [
+        "ai",
+        "llm",
+        "gpt",
+        "agent",
+        "copilot",
+        "assistant",
+        "rag",
+        "embedding",
+        "prompt",
+        "model",
+    ],
+
+    "Developer Tools": [
+        "api",
+        "sdk",
+        "framework",
+        "library",
+        "tool",
+        "cli",
+        "dashboard",
+        "devops",
+        "workflow",
+    ],
+
+    "Cyber Security": [
+        "security",
+        "auth",
+        "oauth",
+        "jwt",
+        "password",
+        "encryption",
+        "vulnerability",
+        "firewall",
+    ],
+
+    "Data": [
+        "database",
+        "sql",
+        "postgres",
+        "analytics",
+        "warehouse",
+        "etl",
+        "pipeline",
+    ],
+
+    "Productivity": [
+        "notes",
+        "calendar",
+        "task",
+        "todo",
+        "automation",
+        "organizer",
+    ]
+}
+def _detect_category(title: str) -> tuple[str, str]:
+    """
+    Başlığa göre kategori belirler.
+    """
+
+    text = title.lower()
+
+    for category, keywords in CATEGORY_RULES.items():
+
+        for keyword in keywords:
+
+            if keyword in text:
+
+                return category, keyword
+
+    return "Other", ""
+    TREND_LEVELS = {
+    90: "exploding",
+    75: "hot",
+    55: "growing",
+    0: "weak",
+}
+
+
+def _trend_strength(evidence: List[Dict]) -> str:
+    """
+    Evidence üzerinden trend gücü üretir.
+    """
+
+    score = 0
+
+    for item in evidence:
+
+        if item["type"] == "engagement":
+
+            if item["level"] == "very_high":
+                score += 45
+
+            elif item["level"] == "high":
+                score += 35
+
+            elif item["level"] == "medium":
+                score += 20
+
+        elif item["type"] == "momentum":
+
+            if item["level"] == "very_high":
+                score += 45
+
+            elif item["level"] == "high":
+                score += 35
+
+            elif item["level"] == "medium":
+                score += 20
+
+    for threshold, level in TREND_LEVELS.items():
+
+        if score >= threshold:
+
+            return level
+
+    return "weak"
+evidence.append({
         "type": "founder_fit",
         "level": level,
         "confidence": confidence,
