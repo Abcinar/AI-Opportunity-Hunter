@@ -2,7 +2,18 @@
 AI Opportunity Hunter - Configuration
 """
 
-# Engine Versiyonları
+# ==========================================
+# 1. COLLECTOR ENGINE AYARLARI (Eski ayarların)
+# ==========================================
+GITHUB_LIMIT = 10     # Kendi projendeki eski değere göre burayı güncelleyebilirsin
+HN_LIMIT = 30         # Varsa Hacker News limiti
+REDDIT_LIMIT = 30     # Varsa Reddit limiti
+# (Eğer daha önce config.py'de API key veya başka limitler varsa onları da buraya eklemelisin)
+
+
+# ==========================================
+# 2. INTELLIGENCE ENGINE AYARLARI (Yeni eklenenler)
+# ==========================================
 INTELLIGENCE_ENGINE_VERSION = "2.1.0"
 RULES_VERSION = "1.1.0"
 
