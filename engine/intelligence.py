@@ -257,7 +257,7 @@ def _trend_strength(evidence: List[Dict]) -> str:
             return level
 
     return "weak"
-evidence.append({
+    evidence.append({
         "type": "founder_fit",
         "level": level,
         "confidence": confidence,
