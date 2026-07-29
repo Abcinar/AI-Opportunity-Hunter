@@ -1,279 +1,511 @@
 """
-Opportunity Intelligence Engine V2
-----------------------------------
-Bu modül, Normalizer'dan gelen standartlaştırılmış sinyalleri alır ve 
-yapılandırılmış içgörülere (intelligence) dönüştürür. 
-Puanlama (Scoring) yapmaz; sadece analiz üretir.
+Opportunity Intelligence Engine V2 (Refined)
+--------------------------------------------
+AI Opportunity Hunter projesinin analiz katmanı.
+Sinyalleri alır, anlamlandırır ve yapılandırılmış zeka (intelligence) üretir.
+Tamamen Rule-Based V1 mimarisiyle çalışır. LLM veya harici API içermez.
 
-İçerdiği Motorlar:
-- Evidence Engine: Somut kanıtları ve acı noktalarını çıkarır.
-- Category Engine: Sinyali uygun startup kategorilerine ayırır.
-- Trend Engine: Pazar trendini ve momentumu analiz eder.
-- Market Engine: Pazar dinamiklerini (B2B/B2C) belirler.
-- Startup Engine: Solo kurucular için yapılabilirliği değerlendirir.
+En Önemli Kural: Single Source of Truth (opportunities.json)
+Bu modül puan, karar veya öneri (recommendation) üretmez; yalnızca analiz eder.
 """
 
 import re
-import logging
-from typing import List, Dict, Any, Optional
+import time
 from datetime import datetime, timezone
-
-# Loglama ayarları
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
-logger = logging.getLogger(__name__)
+from typing import Any
 
 
-class EvidenceEngine:
-    """Metin içindeki somut kanıtları, şikayetleri ve arayışları tespit eder."""
+class BaseEngine:
+    """Tüm motorlar için temel yardımcı fonksiyonları barındıran üst sınıf."""
+    
+    @staticmethod
+    def _count_keywords(text: str, keywords: list[str]) -> int:
+        """Metin içindeki anahtar kelime eşleşme sayısını döndürür."""
+        text_lower = text.lower()
+        return sum(1 for kw in keywords if kw in text_lower)
+    
+    @staticmethod
+    def _extract_sentences(text: str, keywords: list[str]) -> list[str]:
+        """Belirli anahtar kelimeleri içeren cümleleri çıkarır."""
+        sentences = re.split(r'(?<=[.!?]) +', text)
+        matched = []
+        for sentence in sentences:
+            sentence_lower = sentence.lower()
+            if any(kw in sentence_lower for kw in keywords):
+                matched.append(sentence.strip())
+        return matched
+
+    @staticmethod
+    def _find_matched_keywords(text: str, keywords: list[str]) -> list[str]:
+        """Metinde eşleşen spesifik anahtar kelimeleri döndürür."""
+        text_lower = text.lower()
+        return [kw for kw in keywords if kw in text_lower]
+
+
+class EvidenceEngine(BaseEngine):
+    """Sinyal içindeki somut kanıtları (acı noktaları, şikayetler, çözümler) tespit eder."""
     
     PAIN_KEYWORDS = [
         "hate", "struggle", "annoying", "tired of", "wish there was",
         "is there a tool", "how do you manage", "takes too long", "expensive",
-        "nefret ediyorum", "yoruldum", "keşke", "nasıl çözüyorsunuz", "çok pahalı"
+        "hard to", "sucks", "frustrating", "issue", "problem"
     ]
     
     SOLUTION_KEYWORDS = [
         "built this", "my solution", "wrote a script", "workaround",
-        "bunu yaptım", "çözümüm", "script yazdım", "alternatif"
+        "alternative to", "open source alternative", "fixed it by"
     ]
 
-    def extract_evidence(self, text: str) -> Dict[str, Any]:
-        """Metni analiz ederek acı noktalarını ve olası çözümleri yapılandırır."""
-        text_lower = text.lower()
-        
-        pain_points_found = [kw for kw in self.PAIN_KEYWORDS if kw in text_lower]
-        solutions_found = [kw for kw in self.SOLUTION_KEYWORDS if kw in text_lower]
-        
-        has_clear_pain = len(pain_points_found) > 0
-        has_workaround = len(solutions_found) > 0
-        
-        evidence_score_base = (len(pain_points_found) * 0.5) + (len(solutions_found) * 0.5)
+    def analyze(self, text: str) -> dict[str, Any]:
+        """Kanıt analizini çalıştırır."""
+        pain_points = self._extract_sentences(text, self.PAIN_KEYWORDS)
+        solutions = self._extract_sentences(text, self.SOLUTION_KEYWORDS)
         
         return {
-            "has_clear_pain": has_clear_pain,
-            "has_workaround": has_workaround,
-            "pain_keywords_detected": pain_points_found,
-            "solution_keywords_detected": solutions_found,
-            "evidence_strength": min(1.0, evidence_score_base) # 0.0 ile 1.0 arası normalize
+            "has_clear_pain": len(pain_points) > 0,
+            "has_workaround": len(solutions) > 0,
+            "extracted_pain_points": pain_points,
+            "extracted_solutions": solutions,
+            "evidence_count": len(pain_points) + len(solutions)
         }
 
 
-class CategoryEngine:
-    """Sinyalleri bilinen mikro-startup kategorilerine sınıflandırır."""
+class CategoryEngine(BaseEngine):
+    """Sinyali ana kategoriye ve alt kategoriye ayırır."""
     
     CATEGORIES = {
-        "DevTools": ["api", "developer", "deploy", "cli", "github", "react", "backend", "framework"],
+        "DevTools": ["api", "developer", "deploy", "cli", "github", "react", "backend", "framework", "aws", "docker"],
         "SaaS": ["subscription", "mrr", "dashboard", "b2b", "saas", "platform", "tenant"],
-        "AI/ML": ["openai", "llm", "chatgpt", "machine learning", "ai", "prompt", "generator"],
-        "Productivity": ["notion", "todo", "calendar", "notes", "workflow", "automate"],
-        "Creator Economy": ["newsletter", "youtube", "audience", "monetize", "patreon", "gumroad"],
-        "Marketing": ["seo", "ads", "conversion", "landing page", "leads", "email marketing"]
+        "AI/ML": ["openai", "llm", "chatgpt", "machine learning", "ai", "prompt", "generator", "huggingface"],
+        "Productivity": ["notion", "todo", "calendar", "notes", "workflow", "automate", "efficiency"],
+        "Creator Economy": ["newsletter", "youtube", "audience", "monetize", "patreon", "gumroad", "creator"],
+        "Marketing": ["seo", "ads", "conversion", "landing page", "leads", "email marketing", "analytics"]
+    }
+    
+    SUB_CATEGORIES = {
+        "Infrastructure": ["aws", "docker", "kubernetes", "hosting"],
+        "Content Generation": ["generator", "prompt", "write", "copywriting"],
+        "Task Management": ["todo", "kanban", "calendar", "tracker"],
+        "Data Analytics": ["analytics", "metrics", "dashboard", "tracking"]
     }
 
-    def determine_categories(self, text: str, tags: List[str]) -> List[str]:
-        """İçerik ve etiketlere bakarak sinyalin kategorilerini belirler."""
-        matched_categories = set()
-        text_lower = text.lower()
-        combined_tags = [tag.lower() for tag in tags]
-
-        for category, keywords in self.CATEGORIES.items():
-            # Metin içi kontrol
-            if any(kw in text_lower for kw in keywords):
-                matched_categories.add(category)
-            # Tag kontrol
-            if any(kw in combined_tags for kw in keywords):
-                matched_categories.add(category)
+    def analyze(self, text: str, tags: list[str]) -> dict[str, str]:
+        """Kategori analizini çalıştırır."""
+        combined_text = f"{text} {' '.join(tags)}".lower()
+        
+        primary_category = "Uncategorized"
+        max_matches = 0
+        
+        for cat, keywords in self.CATEGORIES.items():
+            matches = self._count_keywords(combined_text, keywords)
+            if matches > max_matches:
+                max_matches = matches
+                primary_category = cat
                 
-        if not matched_categories:
-            matched_categories.add("Uncategorized")
-            
-        return list(matched_categories)
-
-
-class TrendEngine:
-    """Sinyalin momentumunu ve popülaritesini analiz eder."""
-    
-    def analyze_momentum(self, signal: Dict[str, Any]) -> Dict[str, Any]:
-        """Upvote, yorum sayısı ve zamana bağlı ivmeyi hesaplar."""
-        upvotes = signal.get("upvotes", 0)
-        comments = signal.get("comments", 0)
-        created_at = signal.get("created_at") # ISO 8601 string beklenir
+        sub_category = "General"
+        max_sub_matches = 0
         
-        # Basit bir age-penalty algoritması
-        age_in_hours = 24 
-        if created_at:
-            try:
-                created_date = datetime.fromisoformat(created_at.replace("Z", "+00:00"))
-                now = datetime.now(timezone.utc)
-                age_in_hours = max(1, (now - created_date).total_seconds() / 3600)
-            except ValueError:
-                logger.warning(f"Tarih formatı ayrıştırılamadı: {created_at}")
-
-        # Hacker News tarzı momentum hesaplama: (Upvotes + Comments) / Age^1.5
-        velocity = (upvotes + (comments * 2)) / (age_in_hours ** 1.5)
-        
-        is_viral = velocity > 5.0  # Threshold değeri
-        
+        for sub, keywords in self.SUB_CATEGORIES.items():
+            matches = self._count_keywords(combined_text, keywords)
+            if matches > max_sub_matches:
+                max_sub_matches = matches
+                sub_category = sub
+                
         return {
-            "velocity": round(velocity, 4),
-            "age_in_hours": round(age_in_hours, 2),
-            "is_viral": is_viral,
-            "engagement_ratio": round(comments / max(1, upvotes), 2)
+            "primary_category": primary_category,
+            "sub_category": sub_category
         }
 
 
-class MarketEngine:
-    """Pazar türünü (B2B/B2C) ve muhtemel ödeme gücünü (Willingness to Pay) analiz eder."""
+class TrendEngine(BaseEngine):
+    """Sinyalin etkileşim metriklerine göre trend gücünü belirler."""
     
-    B2B_KEYWORDS = ["enterprise", "team", "b2b", "agency", "client", "business", "company", "employee"]
-    B2C_KEYWORDS = ["personal", "b2c", "individual", "hobby", "family", "student", "myself"]
+    HIGH_ENGAGEMENT_THRESHOLD = 100
+    MEDIUM_ENGAGEMENT_THRESHOLD = 20
+
+    def analyze(self, upvotes: int, comments: int) -> dict[str, str]:
+        """Trend gücünü analiz eder."""
+        total_engagement = upvotes + (comments * 2)
+        
+        if total_engagement >= self.HIGH_ENGAGEMENT_THRESHOLD:
+            trend_strength = "Strong"
+        elif total_engagement >= self.MEDIUM_ENGAGEMENT_THRESHOLD:
+            trend_strength = "Moderate"
+        else:
+            trend_strength = "Weak"
+            
+        return {
+            "trend_strength": trend_strength,
+            "engagement_tier": trend_strength
+        }
+
+
+class MarketEngine(BaseEngine):
+    """Pazar tipini (B2B/B2C) ve hedef kitleyi analiz eder."""
     
-    def analyze_market(self, text: str) -> Dict[str, Any]:
-        """Metinden yola çıkarak pazar analizini gerçekleştirir."""
+    B2B_KEYWORDS = ["enterprise", "team", "b2b", "agency", "client", "business", "company", "employee", "startup", "founder"]
+    B2C_KEYWORDS = ["personal", "b2c", "individual", "hobby", "family", "student", "myself", "consumer"]
+    
+    TARGET_CUSTOMERS = {
+        "Developers": ["developer", "engineer", "programmer", "coder", "devops", "aws"],
+        "Designers": ["designer", "ui", "ux", "figma"],
+        "Marketers": ["marketer", "seo", "agency", "sales"],
+        "Founders": ["founder", "startup", "entrepreneur", "indie hacker"]
+    }
+    
+    MARKET_SIZE_INDICATORS = {
+        "Niche": ["niche", "specific", "specialized", "small team"],
+        "Large": ["enterprise", "global", "millions", "everyone", "massive"]
+    }
+
+    def analyze(self, text: str) -> dict[str, str]:
+        """Pazar analizini çalıştırır."""
         text_lower = text.lower()
         
-        b2b_score = sum(1 for kw in self.B2B_KEYWORDS if kw in text_lower)
-        b2c_score = sum(1 for kw in self.B2C_KEYWORDS if kw in text_lower)
+        b2b_score = self._count_keywords(text_lower, self.B2B_KEYWORDS)
+        b2c_score = self._count_keywords(text_lower, self.B2C_KEYWORDS)
         
-        target_audience = "B2B" if b2b_score > b2c_score else "B2C"
-        if b2b_score == b2c_score:
-            target_audience = "Hybrid/Unknown"
+        market_type = "Hybrid"
+        if b2b_score > b2c_score:
+            market_type = "B2B"
+        elif b2c_score > b2b_score:
+            market_type = "B2C"
             
-        # Basit "Ödeme İsteği" (Willingness to pay) analizi
-        wtp_keywords = ["pay for", "buy", "subscribe", "expensive", "cost", "pricing"]
-        willingness_to_pay = any(kw in text_lower for kw in wtp_keywords)
+        target_customer = "General"
+        max_target_matches = 0
+        for audience, keywords in self.TARGET_CUSTOMERS.items():
+            matches = self._count_keywords(text_lower, keywords)
+            if matches > max_target_matches:
+                max_target_matches = matches
+                target_customer = audience
+                
+        market_size = "Medium"
+        niche_score = self._count_keywords(text_lower, self.MARKET_SIZE_INDICATORS["Niche"])
+        large_score = self._count_keywords(text_lower, self.MARKET_SIZE_INDICATORS["Large"])
         
+        if niche_score > large_score:
+            market_size = "Niche"
+        elif large_score > niche_score:
+            market_size = "Large"
+            
         return {
-            "target_audience": target_audience,
-            "willingness_to_pay_signal": willingness_to_pay,
-            "market_clarity_score": b2b_score + b2c_score # Pazarın ne kadar net ifade edildiği
+            "market_type": market_type,
+            "target_customer": target_customer,
+            "market_size": market_size
         }
 
 
-class StartupEngine:
-    """Solo founder'lar ve Indie Hacker'lar için uygunluk analizi."""
+class BusinessModelEngine(BaseEngine):
+    """Uygun iş modellerini ağırlıklı olarak tahmin eder."""
     
-    COMPLEXITY_FLAGS = ["hardware", "legal", "compliance", "medical", "enterprise sales", "blockchain", "web3"]
-    
-    def evaluate_solo_feasibility(self, text: str, categories: List[str]) -> Dict[str, Any]:
-        """Projenin tek kişi tarafından yapılıp yapılamayacağını öngörür."""
+    MODELS = {
+        "SaaS": ["subscription", "mrr", "monthly", "saas", "tier", "recurring", "monthly fee"],
+        "API": ["api", "endpoint", "webhook", "token", "developer access", "request limit"],
+        "Freemium": ["free tier", "freemium", "community edition", "upgrade for", "premium features"],
+        "Enterprise": ["enterprise", "custom SLA", "contact sales", "security compliance", "sso"],
+        "Marketplace": ["marketplace", "platform", "connect buyers", "commission", "fee per transaction"],
+        "White Label": ["white label", "reseller", "custom branding", "agency plan"]
+    }
+
+    def analyze(self, text: str) -> dict[str, float]:
+        """İş modeli analizini çalıştırarak her model için bir güven skoru üretir."""
+        model_scores = {}
         text_lower = text.lower()
         
-        # Kompleksite cezaları
-        complexity_hits = [flag for flag in self.COMPLEXITY_FLAGS if flag in text_lower]
+        total_keywords_found = 0
+        raw_scores = {}
         
-        # Avantajlar (SaaS ve DevTools solo için genellikle daha uygundur)
-        is_indie_friendly = "SaaS" in categories or "DevTools" in categories or "Productivity" in categories
-        
-        solo_feasibility_score = 1.0 # Başlangıç mükemmel
-        
-        if complexity_hits:
-            solo_feasibility_score -= (len(complexity_hits) * 0.3)
+        for model, keywords in self.MODELS.items():
+            matches = self._count_keywords(text_lower, keywords)
+            raw_scores[model] = matches
+            total_keywords_found += matches
             
-        if not is_indie_friendly:
-            solo_feasibility_score -= 0.2
+        if total_keywords_found == 0:
+            return {"SaaS": 0.5, "Undetermined": 1.0} # Default assumption with indicator
             
-        solo_feasibility_score = max(0.0, min(1.0, solo_feasibility_score))
+        for model, score in raw_scores.items():
+            if score > 0:
+                # 0.0 - 1.0 aralığına normalize et ve ağırlıklandır
+                confidence = min(1.0, (score / total_keywords_found) + (score * 0.1))
+                model_scores[model] = round(confidence, 2)
+                
+        return dict(sorted(model_scores.items(), key=lambda item: item[1], reverse=True))
+
+
+class CompetitionEngine(BaseEngine):
+    """Rekabet düzeyini ve nedenlerini analiz eder."""
+    
+    HIGH_COMPETITION_KEYWORDS = ["alternative to", "better than", "vs", "competitor", "crowded", "saturated", "clone"]
+    LOW_COMPETITION_KEYWORDS = ["first of its kind", "no tools for", "couldn't find", "nothing exists", "untapped"]
+
+    def analyze(self, text: str) -> dict[str, Any]:
+        """Rekabet seviyesini ve belirleyici anahtar kelimeleri döndürür."""
+        text_lower = text.lower()
         
+        high_matched = self._find_matched_keywords(text_lower, self.HIGH_COMPETITION_KEYWORDS)
+        low_matched = self._find_matched_keywords(text_lower, self.LOW_COMPETITION_KEYWORDS)
+        
+        high_score = len(high_matched)
+        low_score = len(low_matched)
+        
+        competition_level = "Medium"
+        reason = "No strong competition indicators found."
+        matched_keywords = []
+        
+        if high_score > low_score:
+            competition_level = "High"
+            reason = "Mentions direct competitors or alternative solutions."
+            matched_keywords = high_matched
+        elif low_score > high_score:
+            competition_level = "Low"
+            reason = "Indicates a lack of existing solutions or tools."
+            matched_keywords = low_matched
+            
         return {
-            "is_solo_friendly": solo_feasibility_score > 0.6,
-            "solo_feasibility_score": round(solo_feasibility_score, 2),
-            "complexity_warnings": complexity_hits
+            "competition_level": competition_level,
+            "reason": reason,
+            "matched_keywords": matched_keywords
         }
 
 
-# Global Engine Örneklemeleri (Tekrar tekrar initialize etmemek için)
-evidence_engine = EvidenceEngine()
-category_engine = CategoryEngine()
-trend_engine = TrendEngine()
-market_engine = MarketEngine()
-startup_engine = StartupEngine()
+class ProblemEngine(BaseEngine):
+    """Sinyalin işaret ettiği temel problemi, hedef kitle ile birleştirerek özetler."""
+
+    def analyze(self, evidence_data: dict[str, Any], market_data: dict[str, str]) -> str:
+        """Problem tanımını analiz eder ve yapılandırır."""
+        target = market_data.get("target_customer", "Users")
+        
+        if evidence_data["extracted_pain_points"]:
+            # İlk acı noktasını al ve temizle
+            first_pain = evidence_data["extracted_pain_points"][0]
+            # Basit bir kural tabanlı özet oluştur (LLM kullanmadan)
+            return f"{target} waste time or struggle with: '{first_pain}'"
+            
+        return "Implicit problem gap."
 
 
-def analyze_signal(signal: Dict[str, Any]) -> Dict[str, Any]:
+class OpportunityEngine(BaseEngine):
+    """Sinyaldeki çözüm arayışını detaylı bir fırsat yapısına dönüştürür."""
+    
+    PRODUCT_TYPES = {
+        "Micro SaaS": ["dashboard", "tool", "monthly", "simple", "manager"],
+        "API Service": ["api", "endpoint", "developer tool", "integrate"],
+        "Browser Extension": ["chrome", "extension", "plugin", "browser"],
+        "Automation Script": ["automate", "zapier", "script", "workflow", "sync"]
+    }
+    
+    DELIVERY_METHODS = {
+        "Web App": ["dashboard", "website", "platform", "saas"],
+        "CLI Tool": ["cli", "terminal", "command line"],
+        "Integration": ["zapier", "slack", "discord bot", "github action"]
+    }
+
+    def analyze(self, text: str, problem_statement: str, founder_fit: dict[str, str]) -> dict[str, str]:
+        """Fırsatın ürün tipini, teslimat yöntemini ve fikrini belirler."""
+        text_lower = text.lower()
+        
+        # Ürün Tipi Belirleme
+        product_type = "Micro SaaS" # Default fallback
+        max_pt_matches = 0
+        for p_type, keywords in self.PRODUCT_TYPES.items():
+            matches = self._count_keywords(text_lower, keywords)
+            if matches > max_pt_matches:
+                max_pt_matches = matches
+                product_type = p_type
+                
+        # Teslimat Yöntemi Belirleme
+        delivery = "Web App" # Default fallback
+        max_del_matches = 0
+        for d_type, keywords in self.DELIVERY_METHODS.items():
+            matches = self._count_keywords(text_lower, keywords)
+            if matches > max_del_matches:
+                max_del_matches = matches
+                delivery = d_type
+                
+        # Zorluk Derecesi Belirleme (Founder Fit verisiyle entegre)
+        difficulty = "Medium"
+        if founder_fit.get("founder_fit_level") == "High":
+            difficulty = "Low"
+        elif founder_fit.get("founder_fit_level") == "Low":
+            difficulty = "High"
+            
+        # Fikir Cümlesi Üretimi
+        idea_statement = f"A {product_type} delivered as a {delivery} that solves the following: {problem_statement}"
+        
+        return {
+            "idea": idea_statement,
+            "product_type": product_type,
+            "delivery": delivery,
+            "difficulty": difficulty
+        }
+
+
+class WhyNowEngine(BaseEngine):
+    """Zamanlama ve aciliyet faktörlerini inceler."""
+    
+    URGENCY_KEYWORDS = ["just released", "new update", "now possible", "recent changes", "trending now", "rapidly growing", "api update"]
+
+    def analyze(self, text: str) -> dict[str, Any]:
+        """Zamanlama nedenlerini analiz eder."""
+        matches = self._count_keywords(text.lower(), self.URGENCY_KEYWORDS)
+        return {
+            "has_urgency_signal": matches > 0,
+            "why_now_strength": "High" if matches >= 2 else ("Medium" if matches == 1 else "Low")
+        }
+
+
+class FounderFitEngine(BaseEngine):
+    """Solo kurucular için uygunluk durumunu inceler."""
+    
+    RED_FLAGS = ["hardware", "legal", "compliance", "medical", "enterprise sales", "blockchain", "web3", "heavy capital", "factory"]
+    GREEN_FLAGS = ["api wrapper", "micro saas", "extension", "plugin", "template", "script", "no-code"]
+
+    def analyze(self, text: str) -> dict[str, str]:
+        """Kurucu uyumunu (Solo Founder fit) analiz eder."""
+        text_lower = text.lower()
+        
+        red_flags_count = self._count_keywords(text_lower, self.RED_FLAGS)
+        green_flags_count = self._count_keywords(text_lower, self.GREEN_FLAGS)
+        
+        fit_level = "Medium"
+        if green_flags_count > red_flags_count:
+            fit_level = "High"
+        elif red_flags_count > 0:
+            fit_level = "Low"
+            
+        return {
+            "founder_fit_level": fit_level
+        }
+
+
+class MetadataEngine:
+    """Analiz işleminin meta verilerini üretir."""
+    
+    ENGINE_VERSION = "2.1.0"
+    RULES_VERSION = "1.1.0"
+
+    def analyze(self, analysis_time_ms: float) -> dict[str, Any]:
+        """Meta verileri oluşturur."""
+        return {
+            "analyzed_at": datetime.now(timezone.utc).isoformat(),
+            "engine_version": self.ENGINE_VERSION,
+            "rules_version": self.RULES_VERSION,
+            "analysis_time_ms": round(analysis_time_ms, 2)
+        }
+
+
+# Motorların modül seviyesinde başlatılması
+_evidence_engine = EvidenceEngine()
+_category_engine = CategoryEngine()
+_trend_engine = TrendEngine()
+_market_engine = MarketEngine()
+_business_model_engine = BusinessModelEngine()
+_competition_engine = CompetitionEngine()
+_problem_engine = ProblemEngine()
+_opportunity_engine = OpportunityEngine()
+_why_now_engine = WhyNowEngine()
+_founder_fit_engine = FounderFitEngine()
+_metadata_engine = MetadataEngine()
+
+
+def _calculate_confidence(evidence: dict[str, Any], problem: str, opportunity: dict[str, str], market: dict[str, str], category: dict[str, str]) -> float:
     """
-    Tek bir normalize edilmiş sinyali alır ve Intelligence katmanından geçirir.
+    Analizin genel güven seviyesini ağırlıklı olarak hesaplar.
+    Sonuç 0.0 ile 1.0 arasında bir değer döner.
+    Ağırlıklar: Evidence %35, Problem %20, Opportunity %20, Market %15, Category %10.
+    """
+    score = 0.0
+    
+    # 1. Evidence (%35)
+    ev_score = 0.0
+    if evidence.get("has_clear_pain"): ev_score += 0.5
+    if evidence.get("has_workaround"): ev_score += 0.5
+    score += ev_score * 0.35
+    
+    # 2. Problem (%20)
+    if problem != "Implicit problem gap.": 
+        score += 0.20
+        
+    # 3. Opportunity (%20)
+    if opportunity.get("product_type") and opportunity.get("product_type") != "Unknown": 
+        score += 0.20
+        
+    # 4. Market (%15)
+    if market.get("market_type") != "Hybrid" or market.get("target_customer") != "General": 
+        score += 0.15
+        
+    # 5. Category (%10)
+    if category.get("primary_category") != "Uncategorized": 
+        score += 0.10
+        
+    return round(score, 2)
+
+
+def analyze_signal(signal: dict[str, Any]) -> dict[str, Any]:
+    """
+    Tek bir standardize sinyali analiz eder ve intelligence verisini ekler.
     
     Args:
-        signal (dict): Normalizer'dan çıkan standart sözlük yapısı.
-                       Beklenen anahtarlar: id, title, content, url, source, upvotes, comments, created_at, tags
+        signal (dict): Normalizer katmanından gelen ham sinyal sözlüğü.
                        
     Returns:
-        dict: Zenginleştirilmiş zeka verisini içeren dictionary.
+        dict: 'intelligence' anahtarı eklenmiş, zenginleştirilmiş sinyal.
     """
-    try:
-        # 1. Metin hazırlığı (Title ve Content birleştirilir)
-        title = signal.get("title", "")
-        content = signal.get("content", "")
-        full_text = f"{title}. {content}"
-        tags = signal.get("tags", [])
-        
-        # 2. Engine Çalıştırmaları
-        evidence_data = evidence_engine.extract_evidence(full_text)
-        categories = category_engine.determine_categories(full_text, tags)
-        trend_data = trend_engine.analyze_momentum(signal)
-        market_data = market_engine.analyze_market(full_text)
-        startup_data = startup_engine.evaluate_solo_feasibility(full_text, categories)
-        
-        # 3. Zenginleştirilmiş veriyi derleme (Single Source of Truth yapısına uygun)
-        enriched_signal = signal.copy()
-        
-        enriched_signal["intelligence"] = {
-            "analyzed_at": datetime.now(timezone.utc).isoformat(),
-            "evidence": evidence_data,
-            "categories": categories,
-            "trend": trend_data,
-            "market": market_data,
-            "startup_feasibility": startup_data
-        }
-        
-        logger.debug(f"Signal {signal.get('id')} başarıyla analiz edildi.")
-        return enriched_signal
-        
-    except Exception as e:
-        logger.error(f"Sinyal analizinde hata (ID: {signal.get('id')}): {str(e)}")
-        # Hata durumunda sinyalin orjinalini bozmadan geri dön, logla.
-        signal["intelligence_error"] = str(e)
-        return signal
+    start_time = time.perf_counter()
+    
+    title = str(signal.get("title", ""))
+    content = str(signal.get("content", ""))
+    full_text = f"{title}. {content}"
+    tags = signal.get("tags", [])
+    upvotes = int(signal.get("upvotes", 0))
+    comments = int(signal.get("comments", 0))
+
+    evidence = _evidence_engine.analyze(full_text)
+    market = _market_engine.analyze(full_text)
+    category = _category_engine.analyze(full_text, tags)
+    founder_fit = _founder_fit_engine.analyze(full_text)
+    
+    problem = _problem_engine.analyze(evidence, market)
+    opportunity = _opportunity_engine.analyze(full_text, problem, founder_fit)
+    
+    intelligence_payload = {
+        "evidence": evidence,
+        "category": category,
+        "trend_strength": _trend_engine.analyze(upvotes, comments),
+        "market_type": market,
+        "business_models": _business_model_engine.analyze(full_text),
+        "competition_level": _competition_engine.analyze(full_text),
+        "problem": problem,
+        "opportunity": opportunity,
+        "why_now": _why_now_engine.analyze(full_text),
+        "founder_fit": founder_fit
+    }
+    
+    intelligence_payload["confidence_score"] = _calculate_confidence(
+        evidence=evidence,
+        problem=problem,
+        opportunity=opportunity,
+        market=market,
+        category=category
+    )
+    
+    analysis_time_ms = (time.perf_counter() - start_time) * 1000
+    intelligence_payload["analysis_metadata"] = _metadata_engine.analyze(analysis_time_ms)
+    
+    enriched_signal = signal.copy()
+    enriched_signal["intelligence"] = intelligence_payload
+    
+    return enriched_signal
 
 
-def analyze_signals(signals: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+def analyze_signals(signals: list[dict[str, Any]]) -> list[dict[str, Any]]:
     """
-    Birden fazla sinyali toplu halde analiz eder.
+    Sinyal listesini toplu olarak analiz eder.
     
     Args:
-        signals (list): Normalize edilmiş sinyal sözlükleri listesi.
+        signals (list): Normalizer'dan gelen sinyaller listesi.
         
     Returns:
-        list: İçgörü (intelligence) verisi eklenmiş sinyal listesi.
+        list: İçgörü (intelligence) eklenmiş sinyal listesi.
     """
-    logger.info(f"Toplam {len(signals)} sinyal için Intelligence Engine başlatılıyor...")
-    
-    analyzed_signals = []
-    for signal in signals:
-        result = analyze_signal(signal)
-        analyzed_signals.append(result)
-        
-    logger.info("Intelligence analizi tamamlandı.")
-    return analyzed_signals
-
-
-if __name__ == "__main__":
-    # Geliştirme ve test aşaması için küçük bir mock veri simülasyonu
-    test_signals = [
-        {
-            "id": "hn_12345",
-            "title": "Ask HN: Is there a tool for managing multiple AWS accounts easily?",
-            "content": "I hate having to switch roles all the time. It takes too long and is really annoying. I wish there was a simple dashboard.",
-            "url": "https://news.ycombinator.com/item?id=12345",
-            "source": "Hacker News",
-            "upvotes": 120,
-            "comments": 45,
-            "created_at": datetime.now(timezone.utc).isoformat(),
-            "tags": ["aws", "devops"]
-        }
-    ]
-    
-    results = analyze_signals(test_signals)
-    import json
-    print(json.dumps(results, indent=2, ensure_ascii=False))
+    return [analyze_signal(signal) for signal in signals]
