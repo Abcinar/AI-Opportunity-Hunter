@@ -1,28 +1,20 @@
 """
-AI Opportunity Hunter Configuration
+AI Opportunity Hunter - Configuration
 """
 
-from pathlib import Path
+# Engine Versiyonları
+INTELLIGENCE_ENGINE_VERSION = "2.1.0"
+RULES_VERSION = "1.1.0"
 
-# --------------------------------------------------
-# Project Paths
-# --------------------------------------------------
+# Trend Engine Eşik Değerleri
+TREND_HIGH_ENGAGEMENT_THRESHOLD = 100
+TREND_MEDIUM_ENGAGEMENT_THRESHOLD = 20
 
-BASE_DIR = Path(__file__).resolve().parent
-
-DATA_DIR = BASE_DIR / "data"
-DATA_DIR.mkdir(parents=True, exist_ok=True)
-
-DAILY_SIGNALS_FILE = DATA_DIR / "daily_signals.json"
-OPPORTUNITIES_FILE = DATA_DIR / "opportunities.json"
-TRACKED_FILE = DATA_DIR / "tracked_opportunities.json"
-
-# --------------------------------------------------
-# Fetch Limits
-# --------------------------------------------------
-
-GITHUB_LIMIT = 10
-HN_LIMIT = 10
-GOOGLE_LIMIT = 10
-PRODUCTHUNT_LIMIT = 10
-BETALIST_LIMIT = 10
+# Güven Skoru (Confidence) Ağırlıkları
+CONFIDENCE_WEIGHTS = {
+    "evidence": 0.35,
+    "problem": 0.20,
+    "opportunity": 0.20,
+    "market": 0.15,
+    "category": 0.10
+}
