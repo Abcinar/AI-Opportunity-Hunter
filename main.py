@@ -38,11 +38,11 @@ def print_opportunity(index: int, opportunity: dict):
     decision_val = decision.get("decision", "SKIP")
 
     emoji_map = {
-        "BUILD": "🚀",
-        "INVESTIGATE": "🔍",
-        "WATCH": "👀",
-        "SKIP": "❌",
-    }
+            "BUILD": "🚀",
+            "INVESTIGATE": "✅",  # Yeşil onay işareti (alternatif yeşil ok: "➡️" veya "➔")
+            "WATCH": "🔭",        # Gözlemleme (İzleme) için teleskop (veya mevcut göz: "👀")
+            "SKIP": "❌",         # Çöpe atılanlar
+        }
 
     emoji = emoji_map.get(decision_val, "•")
 
