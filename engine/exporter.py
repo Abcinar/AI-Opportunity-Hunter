@@ -82,4 +82,11 @@ def load_tracked_opportunities() -> List[Dict[str, Any]]:
 # ==========================================
 save_daily_signals = export_daily_signals
 save_opportunities = export_opportunities
+save_tracked_opportunities = export_tracked_opportunities 
+# ==========================================
+# BACKWARD COMPATIBILITY (Geriye Dönük Uyumluluk)
+# main.py ve diğer eski modüllerin bozulmaması için:
+# ==========================================
+save_daily_signals = export_daily_signals
+save_opportunities = export_opportunities
 save_tracked_opportunities = export_tracked_opportunities
