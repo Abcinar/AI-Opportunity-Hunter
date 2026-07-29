@@ -1,4 +1,5 @@
 """
+main.py
 AI Opportunity Hunter
 Startup Decision Engine V1
 
@@ -29,11 +30,12 @@ def print_header(title: str):
 
 def print_opportunity(index: int, opportunity: dict):
 
-    analysis = opportunity["analysis"]
-    decision = analysis["decision"]
+    analysis = opportunity.get("analysis", {})
+    decision = analysis.get("decision", {})
 
-    score = decision["overall_score"]
-    confidence = decision["confidence"]
+    score = decision.get("overall_score", 0)
+    confidence = decision.get("confidence", 0)
+    decision_val = decision.get("decision", "SKIP")
 
     emoji_map = {
         "BUILD": "🚀",
@@ -42,19 +44,32 @@ def print_opportunity(index: int, opportunity: dict):
         "SKIP": "❌",
     }
 
-    emoji = emoji_map.get(decision["decision"], "•")
+    emoji = emoji_map.get(decision_val, "•")
 
-    print(f"\n[{index}] {emoji} {opportunity['title'][:70]}")
-    print(f"    Source     : {opportunity['source']}")
+    title = opportunity.get('title', '')[:70]
+    source = opportunity.get('source', 'Unknown')
+
+    print(f"\n[{index}] {emoji} {title}")
+    print(f"    Source     : {source}")
     print(f"    Score      : {score}/100")
     print(f"    Confidence : {confidence}%")
-    print(f"    Decision   : {decision['decision']}")
+    print(f"    Decision   : {decision_val}")
 
     print("    Evidence   :")
 
-    for ev in analysis["evidence"]:
-        level = ev["level"].replace("_", " ").title()
-        print(f"      ✓ {ev['type'].replace('_',' ').title()} → {level}")
+    evidence_data = analysis.get("evidence", [])
+    
+    # Geriye dönük uyumluluk ve yeni V2 yapısı için güvenli döngü
+    if isinstance(evidence_data, list):
+        for ev in evidence_data:
+            if isinstance(ev, dict):
+                level = ev.get("level", "unknown").replace("_", " ").title()
+                ev_type = ev.get("type", "unknown").replace("_", " ").title()
+                print(f"      ✓ {ev_type} → {level}")
+    elif isinstance(evidence_data, dict):
+        for key, value in evidence_data.items():
+            key_formatted = str(key).replace("_", " ").title()
+            print(f"      ✓ {key_formatted} → {value}")
 
 
 # --------------------------------------------------
@@ -72,10 +87,13 @@ def main():
     print("\n[1/6] Collecting signals...")
 
     signals = collect_signals()
+    if not isinstance(signals, dict):
+        signals = {"total_signals": 0, "posts": []}
 
     save_daily_signals(signals)
 
-    print(f"Collected: {signals['total_signals']} signals")
+    total_signals = signals.get('total_signals', 0)
+    print(f"Collected: {total_signals} signals")
 
     # --------------------------------------------------
     # STEP 2 - Normalize
@@ -83,7 +101,8 @@ def main():
 
     print("\n[2/6] Normalizing signals...")
 
-    normalized = normalize_posts(signals["posts"])
+    posts = signals.get("posts", [])
+    normalized = normalize_posts(posts)
 
     print(f"Normalized: {len(normalized)} signals")
 
@@ -106,11 +125,15 @@ def main():
     opportunities = []
 
     for signal, analysis in zip(normalized, analyses):
+        
+        if not isinstance(analysis, dict):
+            analysis = {}
 
-        score_result = calculate_score(
-            analysis["evidence"]
-        )
+        # V2 intelligence yapısını güvenli bir şekilde kontrol et
+        intelligence = analysis.get("intelligence", analysis)
+        evidence = intelligence.get("evidence", {})
 
+        score_result = calculate_score(evidence)
         recommendation = recommend(score_result)
 
         opportunity = {
@@ -118,7 +141,7 @@ def main():
             "analysis": {
                 "score": score_result,
                 "decision": recommendation,
-                "evidence": analysis["evidence"],
+                "evidence": evidence,
             },
         }
 
@@ -126,7 +149,7 @@ def main():
 
     # En yüksek skora göre sırala
     opportunities.sort(
-        key=lambda x: x["analysis"]["decision"]["overall_score"],
+        key=lambda x: x.get("analysis", {}).get("decision", {}).get("overall_score", 0),
         reverse=True,
     )
 
@@ -148,22 +171,22 @@ def main():
 
     build_count = sum(
         1 for o in opportunities
-        if o["analysis"]["decision"]["decision"] == "BUILD"
+        if o.get("analysis", {}).get("decision", {}).get("decision") == "BUILD"
     )
 
     investigate_count = sum(
         1 for o in opportunities
-        if o["analysis"]["decision"]["decision"] == "INVESTIGATE"
+        if o.get("analysis", {}).get("decision", {}).get("decision") == "INVESTIGATE"
     )
 
     watch_count = sum(
         1 for o in opportunities
-        if o["analysis"]["decision"]["decision"] == "WATCH"
+        if o.get("analysis", {}).get("decision", {}).get("decision") == "WATCH"
     )
 
     skip_count = sum(
         1 for o in opportunities
-        if o["analysis"]["decision"]["decision"] == "SKIP"
+        if o.get("analysis", {}).get("decision", {}).get("decision") == "SKIP"
     )
 
     print("\nDecision Distribution")
