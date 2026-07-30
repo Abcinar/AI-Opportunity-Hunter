@@ -30,6 +30,16 @@ def main():
 
         # STEP 2 Normalize
         print("\n[2/6] Normalizing signals...")
+    
+    # Gelen veri bir sözlük (dict) ise, önce içindeki tüm listeleri
+    # birleştirerek tek boyutlu (flat) bir liste haline getiriyoruz.
+    if isinstance(raw_signals, dict):
+        flat_signals = []
+        for items in raw_signals.values():
+            if isinstance(items, list):
+                flat_signals.extend(items)
+        normalized = normalize_posts(flat_signals)
+    else:
         normalized = normalize_posts(raw_signals)
 
         # STEP 3 Analyze
