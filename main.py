@@ -140,14 +140,6 @@ recommendation = recommend(score_result)
 
 opportunity = {
     **signal,
-    "analysis": {
-        "score": score_result,
-        "decision": recommendation,
-        "evidence": intelligence.get("evidence", {}),
-    },
-}
-opportunity = {
-    **signal,
     "intelligence": intelligence,
     "analysis": {
         "score": score_result,
@@ -155,7 +147,8 @@ opportunity = {
         "evidence": intelligence.get("evidence", {}),
     },
 }
-        opportunities.append(opportunity)
+
+opportunities.append(opportunity)
 
     # En yüksek skora göre sırala
     opportunities.sort(
