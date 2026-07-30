@@ -131,20 +131,30 @@ def main():
 
         # V2 intelligence yapısını güvenli bir şekilde kontrol et
         intelligence = analysis.get("intelligence", analysis)
-        evidence = intelligence.get("evidence", {})
 
-        score_result = calculate_score(evidence)
-        recommendation = recommend(score_result)
+signal["intelligence"] = intelligence
 
-        opportunity = {
-            **signal,
-            "analysis": {
-                "score": score_result,
-                "decision": recommendation,
-                "evidence": evidence,
-            },
-        }
+score_result = calculate_score(signal)
 
+recommendation = recommend(score_result)
+
+opportunity = {
+    **signal,
+    "analysis": {
+        "score": score_result,
+        "decision": recommendation,
+        "evidence": intelligence.get("evidence", {}),
+    },
+}
+opportunity = {
+    **signal,
+    "intelligence": intelligence,
+    "analysis": {
+        "score": score_result,
+        "decision": recommendation,
+        "evidence": intelligence.get("evidence", {}),
+    },
+}
         opportunities.append(opportunity)
 
     # En yüksek skora göre sırala
