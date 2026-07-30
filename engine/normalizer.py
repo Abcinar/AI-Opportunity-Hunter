@@ -1,106 +1,96 @@
-"""
-AI Opportunity Hunter
-Signal Normalizer
-
-Görevleri:
-- Tüm kaynakları ortak veri modeline dönüştürmek
-- Eksik alanları tamamlamak
-- Basit duplicate temizliği yapmak
-"""
-
-from __future__ import annotations
-
-from datetime import datetime
 import hashlib
-from typing import Dict, List
+from datetime import datetime, timezone
+from typing import Dict, Any, List
 
 
-def generate_id(title: str, source: str) -> str:
-    """Başlık + kaynak kullanarak benzersiz ID üretir."""
-    key = f"{source}:{title}".lower().strip()
-    return hashlib.md5(key.encode("utf-8")).hexdigest()[:12]
+class Normalizer:
+    def __init__(self) -> None:
+        pass
 
+    def normalize(self, signals: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+        normalized_signals: List[Dict[str, Any]] = []
+        seen_ids = set()
 
-def normalize_post(post: Dict) -> Dict:
-    """Tek bir kaynağı standart Opportunity Signal formatına çevirir."""
+        for post in signals:
+            if not isinstance(post, dict):
+                continue
 
-    title = str(post.get("title", "")).strip()
+            source = str(post.get("source") or "").strip()
+            if not source:
+                source = "unknown"
 
-    source = str(post.get("source", "unknown")).strip()
+            title = str(post.get("title") or "").strip()
 
-    url = str(post.get("url", "")).strip()
+            raw_id_string = f"{source}_{title}"
+            record_id = hashlib.md5(raw_id_string.encode("utf-8")).hexdigest()
 
-    points = int(post.get("points") or post.get("score") or 0)
+            if record_id in seen_ids:
+                continue
+            seen_ids.add(record_id)
 
-    comments = int(post.get("comments") or 0)
+            summary = str(
+                post.get("summary") or 
+                post.get("content") or 
+                post.get("description") or 
+                ""
+            ).strip()
+            
+            content = summary
 
-    fetched = post.get("fetched_at")
+            raw_points = post.get("points")
+            if raw_points is None:
+                raw_points = post.get("score")
+            if raw_points is None:
+                raw_points = post.get("upvotes")
 
-    if not fetched:
-        fetched = datetime.utcnow().isoformat()
+            try:
+                points = int(raw_points) if raw_points is not None else 0
+            except (ValueError, TypeError):
+                points = 0
 
-    return {
-        "id": generate_id(title, source),
+            upvotes = points
+            engagement = points
 
-        "title": title,
+            raw_comments = post.get("comments")
+            if raw_comments is None:
+                raw_comments = post.get("num_comments")
 
-        "summary": "",
+            try:
+                comments = int(raw_comments) if raw_comments is not None else 0
+            except (ValueError, TypeError):
+                comments = 0
 
-        "source": source,
+            tags = post.get("tags")
+            if not isinstance(tags, list):
+                tags = []
 
-        "url": url,
+            category = str(post.get("category") or "unknown").strip()
+            language = str(post.get("language") or "unknown").strip()
+            url = str(post.get("url") or "").strip()
 
-        "engagement": points,
+            collected_at = str(
+                post.get("fetched_at") or 
+                post.get("collected_at") or 
+                datetime.now(timezone.utc).isoformat()
+            ).strip()
 
-        "points": points,
+            normalized_signal = {
+                "id": record_id,
+                "title": title,
+                "summary": summary,
+                "content": content,
+                "source": source,
+                "url": url,
+                "engagement": engagement,
+                "points": points,
+                "upvotes": upvotes,
+                "comments": comments,
+                "category": category,
+                "tags": tags,
+                "language": language,
+                "collected_at": collected_at
+            }
 
-        "comments": comments,
+            normalized_signals.append(normalized_signal)
 
-        "category": "unknown",
-
-        "tags": [],
-
-        "language": "unknown",
-
-        "collected_at": fetched,
-    }
-
-
-def remove_duplicates(posts: List[Dict]) -> List[Dict]:
-    """
-    Aynı başlığa sahip kayıtları temizler.
-
-    İlk sürümde sadece title bazlı duplicate kontrolü yapıyoruz.
-    """
-
-    seen = set()
-
-    cleaned = []
-
-    for post in posts:
-
-        key = post["title"].lower().strip()
-
-        if key in seen:
-            continue
-
-        seen.add(key)
-
-        cleaned.append(post)
-
-    return cleaned
-
-
-def normalize_posts(posts: List[Dict]) -> List[Dict]:
-    """
-    Tüm postları normalize eder.
-    """
-
-    normalized = []
-
-    for post in posts:
-        normalized.append(normalize_post(post))
-
-    normalized = remove_duplicates(normalized)
-
-    return normalized
+        return normalized_signals
