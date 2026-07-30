@@ -4,7 +4,7 @@ import logging
 # Proje içi modüller (Mevcut mimarinize göre yolları güncelleyebilirsiniz)
 from engine.collector import collect_signals
 from engine.normalizer import normalize_posts
-from engine.analyzer import analyze_signals
+from engine.intelligence import analyze_signals
 from engine.scorer import calculate_score
 from engine.recommender import recommend
 from engine.exporter import save_daily_signals, save_opportunities
