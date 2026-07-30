@@ -1,17 +1,14 @@
 import sys
 import logging
 
-# Proje içi modüller (Mevcut mimarinize göre yolları güncelleyebilirsiniz)
 from engine.collector import collect_signals
 from engine.normalizer import normalize_posts
-from engine.intelligence import analyze_signals
+from engine.analyzer import analyze_signals
 from engine.scorer import calculate_score
 from engine.recommender import recommend
 from engine.exporter import save_daily_signals, save_opportunities
 
-
 def main():
-    # ÇÖZÜM 4: İzlenebilirlik için Logging konfigürasyonu eklendi
     logging.basicConfig(
         level=logging.INFO,
         format="%(asctime)s [%(levelname)s] %(message)s",
@@ -22,10 +19,6 @@ def main():
     print("  AI Opportunity Hunter - Startup Decision Engine V1")
     print("================================================================\n")
 
-    # ÇÖZÜM 1: Ağ ve veri hatalarına karşı tüm pipeline Try-Except içine alındı
-    try:
-        # STEP 1 Collect
-        # ÇÖZÜM 1: Ağ ve veri hatalarına karşı tüm pipeline Try-Except içine alındı
     try:
         # STEP 1 Collect
         print("[1/6] Collecting signals...")
@@ -33,9 +26,6 @@ def main():
 
         # STEP 2 Normalize
         print("\n[2/6] Normalizing signals...")
-        
-        # Gelen veri bir sözlük (dict) ise, önce içindeki tüm listeleri
-        # birleştirerek tek boyutlu (flat) bir liste haline getiriyoruz.
         if isinstance(raw_signals, dict):
             flat_signals = []
             for items in raw_signals.values():
@@ -45,7 +35,7 @@ def main():
         else:
             normalized = normalize_posts(raw_signals)
 
-        # STEP 3 Analyze (Bu kısım ve aşağısı else: bloğu ile aynı hizada olmalı)
+        # STEP 3 Analyze
         print("\n[3/6] Building evidence...")
         analyses = analyze_signals(normalized)
 
@@ -54,8 +44,6 @@ def main():
         opportunities = []
 
         for signal, analysis in zip(normalized, analyses):
-
-            # ÇÖZÜM 3: Intelligence verisi dict veya obje (dataclass) ise güvenle okuma garantisi
             if isinstance(analysis, dict):
                 intelligence = analysis.get("intelligence", analysis)
             elif hasattr(analysis, "intelligence"):
@@ -68,7 +56,6 @@ def main():
             score_result = calculate_score(signal)
             recommendation = recommend(score_result)
 
-            # ÇÖZÜM 2: Tip Uyuşmazlığına karşı 'evidence' değişkeninin güvenli ayrıştırılması
             evidence_data = intelligence.get("evidence", {}) if isinstance(intelligence, dict) else {}
 
             opportunity = {
@@ -80,7 +67,6 @@ def main():
                     "evidence": evidence_data,
                 },
             }
-
             opportunities.append(opportunity)
 
         opportunities.sort(
@@ -94,6 +80,9 @@ def main():
         save_opportunities(opportunities)
 
     except Exception as e:
+        logging.error(f"Pipeline çalışırken kritik bir hata oluştu: {e}")
+        sys.exit(1)
+
     # STEP 6 Summary
     print("\n[6/6] Final Summary\n")
     
@@ -171,7 +160,6 @@ def main():
     print("\n################################################################")
     print("  Pipeline completed successfully.")
     print("################################################################")
-
 
 if __name__ == "__main__":
     main()
