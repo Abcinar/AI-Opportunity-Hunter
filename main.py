@@ -122,37 +122,30 @@ def main():
 
     print("\n[4/6] Calculating opportunity scores...")
 
-    opportunities = []
-
     for signal, analysis in zip(normalized, analyses):
-        
-        if not isinstance(analysis, dict):
-            analysis = {}
 
-        # V2 intelligence yapısını güvenli bir şekilde kontrol et
-        intelligence = analysis.get("intelligence", analysis)
+    if not isinstance(analysis, dict):
+        analysis = {}
 
-signal["intelligence"] = intelligence
+    intelligence = analysis.get("intelligence", analysis)
 
-score_result = calculate_score(signal)
+    signal["intelligence"] = intelligence
 
-recommendation = recommend(score_result)
+    score_result = calculate_score(signal)
 
-opportunity = {
-    **signal,
-    "intelligence": intelligence,
-    "analysis": {
-        "score": score_result,
-        "decision": recommendation,
-        "evidence": intelligence.get("evidence", {}),
-    },
-}
+    recommendation = recommend(score_result)
 
-opportunities.append(opportunity)
+    opportunity = {
+        **signal,
+        "intelligence": intelligence,
+        "analysis": {
+            "score": score_result,
+            "decision": recommendation,
+            "evidence": intelligence.get("evidence", {}),
+        },
+    }
 
-    # En yüksek skora göre sırala
-    opportunities.sort(
-        key=lambda x: x.get("analysis", {}).get("decision", {}).get("overall_score", 0),
+    opportunities.append(opportunity)
         reverse=True,
     )
 
