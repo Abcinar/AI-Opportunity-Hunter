@@ -25,27 +25,27 @@ def main():
     # ÇÖZÜM 1: Ağ ve veri hatalarına karşı tüm pipeline Try-Except içine alındı
     try:
         # STEP 1 Collect
+        # ÇÖZÜM 1: Ağ ve veri hatalarına karşı tüm pipeline Try-Except içine alındı
+    try:
+        # STEP 1 Collect
         print("[1/6] Collecting signals...")
-    raw_signals = collect_signals()
-
-    if isinstance(raw_signals, dict):
-        ...
+        raw_signals = collect_signals()
 
         # STEP 2 Normalize
         print("\n[2/6] Normalizing signals...")
-    
-    # Gelen veri bir sözlük (dict) ise, önce içindeki tüm listeleri
-    # birleştirerek tek boyutlu (flat) bir liste haline getiriyoruz.
-    if isinstance(raw_signals, dict):
-        flat_signals = []
-        for items in raw_signals.values():
-            if isinstance(items, list):
-                flat_signals.extend(items)
-        normalized = normalize_posts(flat_signals)
-    else:
-        normalized = normalize_posts(raw_signals)
+        
+        # Gelen veri bir sözlük (dict) ise, önce içindeki tüm listeleri
+        # birleştirerek tek boyutlu (flat) bir liste haline getiriyoruz.
+        if isinstance(raw_signals, dict):
+            flat_signals = []
+            for items in raw_signals.values():
+                if isinstance(items, list):
+                    flat_signals.extend(items)
+            normalized = normalize_posts(flat_signals)
+        else:
+            normalized = normalize_posts(raw_signals)
 
-        # STEP 3 Analyze
+        # STEP 3 Analyze (Bu kısım ve aşağısı else: bloğu ile aynı hizada olmalı)
         print("\n[3/6] Building evidence...")
         analyses = analyze_signals(normalized)
 
@@ -94,9 +94,6 @@ def main():
         save_opportunities(opportunities)
 
     except Exception as e:
-        logging.error(f"Pipeline çalışırken kritik bir hata oluştu: {e}")
-        sys.exit(1)
-
     # STEP 6 Summary
     print("\n[6/6] Final Summary\n")
     
