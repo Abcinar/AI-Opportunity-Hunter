@@ -26,7 +26,10 @@ def main():
     try:
         # STEP 1 Collect
         print("[1/6] Collecting signals...")
-        raw_signals = collect_signals()
+    raw_signals = collect_signals()
+
+    if isinstance(raw_signals, dict):
+        ...
 
         # STEP 2 Normalize
         print("\n[2/6] Normalizing signals...")
