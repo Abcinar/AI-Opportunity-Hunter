@@ -4828,3 +4828,278 @@ Gerçek zekâ,
 yalnızca analiz yapabilmek değil,
 
 analizlerinin kalitesini zaman içinde artırabilmektir.
+---
+
+# OPPORTUNITY INTELLIGENCE MANİFESTOSU
+
+## Giriş
+
+İnsanlık uzun yıllardır veriyi analiz etmeye çalıştı.
+
+Sonra bilgiyi analiz etmeye başladı.
+
+Ardından karar destek sistemleri geliştirildi.
+
+Yapay zekâ ile birlikte analiz kapasitesi büyük ölçüde arttı.
+
+Ancak hâlâ eksik olan önemli bir alan bulunmaktadır.
+
+Bu alan,
+
+fırsatların sistematik olarak keşfedilmesi,
+
+doğrulanması,
+
+değerlendirilmesi
+
+ve önceliklendirilmesidir.
+
+AI Opportunity Hunter,
+
+bu boşluğu doldurmak amacıyla geliştirilmiştir.
+
+Bu yaklaşımın adı:
+
+Opportunity Intelligence'tır.
+
+---
+
+# OPPORTUNITY INTELLIGENCE NEDİR?
+
+Opportunity Intelligence;
+
+değişimleri,
+
+problemleri,
+
+müşteri davranışlarını,
+
+kanıtları,
+
+riskleri,
+
+gelir modellerini,
+
+ve teknolojik gelişmeleri birlikte değerlendirerek,
+
+ticari değeri yüksek fırsatları sistematik biçimde keşfetme disiplinidir.
+
+Bu disiplin;
+
+yalnızca veri analizi değildir.
+
+Yalnızca pazar araştırması değildir.
+
+Yalnızca girişimcilik değildir.
+
+Opportunity Intelligence,
+
+bu alanların kesişiminde yer alan bağımsız bir düşünce sistemidir.
+
+---
+
+# TEMEL AMAÇ
+
+Opportunity Intelligence'ın amacı;
+
+daha fazla fikir üretmek değildir.
+
+Daha doğru fırsatları,
+
+daha erken,
+
+daha güvenilir,
+
+ve daha açıklanabilir biçimde ortaya çıkarmaktır.
+
+---
+
+# TEMEL PRENSİPLER
+
+Opportunity Intelligence aşağıdaki temel ilkelere dayanır.
+
+Problem odaklı düşünür.
+
+Kanıt temelli karar verir.
+
+Müşteriyi merkeze alır.
+
+Riski görünür kılar.
+
+Momentum analiz eder.
+
+Değişimi takip eder.
+
+Geleceği tahmin etmeye değil,
+
+olasılıkları değerlendirmeye çalışır.
+
+---
+
+# OPPORTUNITY INTELLIGENCE DÖNGÜSÜ
+
+```
+Değişim
+
+↓
+
+Sinyal
+
+↓
+
+Problem
+
+↓
+
+Kanıt
+
+↓
+
+Müşteri
+
+↓
+
+Çözüm
+
+↓
+
+İş Modeli
+
+↓
+
+Gelir
+
+↓
+
+Risk
+
+↓
+
+Karar
+
+↓
+
+Öğrenme
+
+↓
+
+Bilgi
+
+↓
+
+Yeni Fırsatlar
+```
+
+---
+
+# OPPORTUNITY INTELLIGENCE'IN TEMEL SORULARI
+
+Her analiz aşağıdaki sorulara cevap aramalıdır.
+
+Ne değişiyor?
+
+Kim etkileniyor?
+
+Hangi problem oluşuyor?
+
+Kim bu problem için ödeme yapar?
+
+Bugünkü çözümler neden yetersiz?
+
+Yapay zekâ nasıl değer üretir?
+
+En büyük risk nedir?
+
+Bu fırsat neden şimdi ortaya çıkıyor?
+
+Beş yıl sonra hâlâ var olacak mı?
+
+---
+
+# GELENEKSEL YAKLAŞIMLARDAN FARKI
+
+Business Intelligence,
+
+geçmişi açıklar.
+
+Market Research,
+
+bugünü açıklar.
+
+Forecasting,
+
+geleceği tahmin etmeye çalışır.
+
+Opportunity Intelligence ise;
+
+değişim ile ticari değer arasındaki ilişkiyi analiz ederek,
+
+henüz olgunlaşmamış fırsatları sistematik şekilde keşfetmeye odaklanır.
+
+---
+
+# UYGULAMA ALANLARI
+
+Opportunity Intelligence;
+
+Startup keşfi
+
+Mikro SaaS
+
+Kurumsal inovasyon
+
+Ürün stratejisi
+
+Yapay zekâ ürünleri
+
+Yatırım analizi
+
+Dijital dönüşüm
+
+Operasyon optimizasyonu
+
+Yeni iş modeli geliştirme
+
+alanlarında kullanılabilir.
+
+---
+
+# DOKTRİN
+
+Fırsatlar tesadüfen bulunmaz.
+
+Doğru şekilde analiz edilir.
+
+Doğru şekilde doğrulanır.
+
+Doğru şekilde önceliklendirilir.
+
+Ve doğru zamanda uygulanır.
+
+Opportunity Intelligence,
+
+şans üretmez.
+
+Belirsizliği azaltır.
+
+---
+
+# SONUÇ
+
+AI Opportunity Hunter,
+
+yalnızca bir yazılım geliştirme projesi değildir.
+
+Amacı,
+
+Opportunity Intelligence yaklaşımını uygulanabilir,
+
+ölçülebilir,
+
+ve tekrar üretilebilir hale getirmektir.
+
+Bu Constitution,
+
+yalnızca bu ürünün değil,
+
+Opportunity Intelligence disiplininin de temel referans dokümanlarından biri olmayı hedeflemektedir.
