@@ -1449,3 +1449,856 @@ Opportunity Score
 ├── Execution Score
 └── Evidence Score
 ```
+---
+
+# KURUCU PSİKOLOJİSİ VE KARAR MOTORU
+
+## Giriş
+
+En iyi fikir her zaman en iyi girişimi oluşturmaz.
+
+En iyi girişim;
+
+Doğru fikir,
+
+Doğru kurucu,
+
+Doğru zaman,
+
+Doğru pazar,
+
+Doğru uygulama
+
+bir araya geldiğinde ortaya çıkar.
+
+AI Opportunity Hunter yalnızca fırsatları analiz etmez.
+
+Kurucunun bu fırsatı başarıya ulaştırma olasılığını da değerlendirir.
+
+---
+
+# FOUNDER FIT
+
+Her kurucu aynı değildir.
+
+Bu nedenle aynı fırsat,
+
+farklı kurucular için tamamen farklı sonuçlar üretebilir.
+
+Motor şu soruları cevaplamalıdır.
+
+Bu fırsat bu kurucu için gerçekten uygun mu?
+
+---
+
+## Deneyim
+
+Kurucu daha önce bu sektörde çalıştı mı?
+
+Alan bilgisine sahip mi?
+
+Problemi bizzat yaşadı mı?
+
+Sektörün dilini biliyor mu?
+
+---
+
+## Teknik Yetkinlik
+
+MVP geliştirilebilir mi?
+
+Yapay zekâ kullanılabilir mi?
+
+Dış kaynak gerekecek mi?
+
+Teknik risk nedir?
+
+---
+
+## Dağıtım Gücü
+
+Ürün yapılabilir.
+
+Peki satılabilir mi?
+
+Motor şunları değerlendirmelidir.
+
+Kurucunun erişebileceği müşteri kitlesi var mı?
+
+Topluluğu var mı?
+
+Markası var mı?
+
+İçerik üretebiliyor mu?
+
+Satış yapabiliyor mu?
+
+---
+
+## Sermaye Gereksinimi
+
+Bazı fikirler büyük yatırım ister.
+
+Bazıları ise tek kişiyle başlayabilir.
+
+Motor fırsatı değerlendirirken;
+
+Minimum sermaye
+
+Tahmini ilk yatırım
+
+Nakit akışı ihtiyacı
+
+Geri dönüş süresi
+
+gibi metrikleri dikkate almalıdır.
+
+---
+
+## Öğrenme Eğrisi
+
+Her iş aynı hızda öğrenilemez.
+
+Motor şu soruyu sorar.
+
+Bu işi öğrenmek ne kadar zaman alır?
+
+Aylar mı?
+
+Yıllar mı?
+
+Haftalar mı?
+
+---
+
+# FOUNDER RISK
+
+Başarısızlık çoğu zaman fikirden değil,
+
+kurucu ile fikir arasındaki uyumsuzluktan kaynaklanır.
+
+Bu nedenle Founder Risk puanı oluşturulmalıdır.
+
+Yüksek Founder Risk
+
+↓
+
+Daha düşük öneri.
+
+---
+
+# KARAR PRENSİBİ
+
+Harika bir fikir,
+
+yanlış kurucu için kötü bir yatırımdır.
+
+Ortalama bir fikir,
+
+doğru kurucu için milyon dolarlık şirkete dönüşebilir.
+
+AI Opportunity Hunter bunu ayırt edebilmelidir.
+
+---
+
+# İŞ GERÇEKLİĞİ MOTORU
+
+Teknoloji,
+
+iş değildir.
+
+Kod,
+
+şirket değildir.
+
+Yapay zekâ,
+
+müşteri değildir.
+
+Motor her fırsatı gerçek dünya açısından sorgular.
+
+---
+
+## Gerçeklik Kontrolü
+
+Müşteri gerçekten ödeme yapacak mı?
+
+Bu problem bugün çözülüyor mu?
+
+İnsanlar alternatif kullanıyor mu?
+
+Excel kullanıyorlar mı?
+
+WhatsApp kullanıyorlar mı?
+
+E-posta ile mi çözüyorlar?
+
+Ajans mı kiralıyorlar?
+
+Freelancer mı çalıştırıyorlar?
+
+Bu sorular gerçek talebin göstergesidir.
+
+---
+
+# PARA TESTİ
+
+En önemli doğrulama şudur.
+
+Bugün bu problem için para harcanıyor mu?
+
+Eğer cevap evetse,
+
+iş fırsatı güçlenir.
+
+Eğer cevap hayırsa,
+
+motor çok daha temkinli davranmalıdır.
+
+---
+
+# ZAMAN TESTİ
+
+İnsanlar bu problemi
+
+haftada bir mi yaşıyor?
+
+Her gün mü?
+
+Günde onlarca kez mi?
+
+Problemin tekrar sıklığı,
+
+iş fırsatının kalitesini doğrudan etkiler.
+
+---
+
+# ALTERNATİF TESTİ
+
+Hiç rakip yok.
+
+Bu bazen fırsattır.
+
+Bazen ise pazarın olmadığını gösterir.
+
+Çok fazla rakip var.
+
+Bu bazen risktir.
+
+Bazen ise büyük talebin göstergesidir.
+
+Motor bu ayrımı yapabilmelidir.
+
+---
+
+# GERÇEKLİK PUANI
+
+Her fırsat sonunda bir "Gerçeklik Puanı" üretmelidir.
+
+Bu puan;
+
+Gerçek müşteri
+
+Gerçek problem
+
+Gerçek ödeme isteği
+
+Gerçek kullanım
+
+Gerçek pazar
+
+Gerçek uygulanabilirlik
+
+unsurlarından oluşmalıdır.
+
+Yüksek Opportunity Score,
+
+düşük Gerçeklik Puanı ile birlikte geliyorsa,
+
+motor BUILD önerisi vermemelidir.
+
+---
+
+# MİMARİ NOTLARI
+
+İleride aşağıdaki modüller geliştirilebilir.
+
+FounderAnalyzer
+
+FounderFitEngine
+
+RealityEngine
+
+PaymentDetector
+
+MarketValidator
+
+RiskAnalyzer
+
+RealityScore
+
+BusinessReadinessEngine
+
+Bu modüller birbirinden bağımsız geliştirilmelidir.
+
+---
+
+# GELECEK VİZYONU
+
+Uzun vadede AI Opportunity Hunter,
+
+yalnızca fırsat bulan bir sistem olmayacaktır.
+
+Kurucunun,
+
+hangi fırsatta başarı şansının daha yüksek olduğunu da hesaplayan
+
+bir Founder Intelligence Platform olacaktır.
+
+İşte bu,
+
+ürünü sıradan analiz araçlarından ayıran en önemli özelliklerden biri olacaktır.
+---
+
+# FIRSAT YAŞAM DÖNGÜSÜ (OPPORTUNITY LIFECYCLE)
+
+## Giriş
+
+Her fırsat doğar.
+
+Büyür.
+
+Olgunlaşır.
+
+Doygunluğa ulaşır.
+
+Ve sonunda değerini kaybeder.
+
+AI Opportunity Hunter yalnızca fırsatın bugününü değil,
+
+hangi yaşam evresinde olduğunu da analiz etmelidir.
+
+---
+
+# YAŞAM DÖNGÜSÜ
+
+```
+Fikir
+
+↓
+
+İlk Problemler
+
+↓
+
+İlk Çözümler
+
+↓
+
+İlk Müşteriler
+
+↓
+
+Erken Pazar
+
+↓
+
+Hızlı Büyüme
+
+↓
+
+Olgun Pazar
+
+↓
+
+Doygunluk
+
+↓
+
+Gerileme
+
+↓
+
+Yerini Yeni Bir Fırsata Bırakır
+```
+
+---
+
+# EVRE 1
+
+## Gizli Problem
+
+Henüz ürün yoktur.
+
+İnsanlar problemi yaşamaktadır.
+
+Fakat çözüm konuşulmamaktadır.
+
+Belirtiler
+
+- Forum şikayetleri
+- Reddit tartışmaları
+- Manuel işler
+- Excel çözümleri
+- WhatsApp operasyonları
+
+En değerli fırsatlar genellikle burada doğar.
+
+---
+
+# EVRE 2
+
+## İlk Çözümler
+
+Bazı insanlar problemi çözmeye başlar.
+
+Çözümler genellikle
+
+- Excel
+
+- Notion
+
+- Google Sheets
+
+- Zapier
+
+- Make
+
+- Python Script
+
+şeklindedir.
+
+Bu aşama doğrulanmış problem anlamına gelir.
+
+---
+
+# EVRE 3
+
+## İlk Ürünler
+
+İlk SaaS ürünleri ortaya çıkar.
+
+Henüz pazar lideri yoktur.
+
+Fiyatlar değişkendir.
+
+Ürünler eksiktir.
+
+Bu dönem giriş yapmak için oldukça değerlidir.
+
+---
+
+# EVRE 4
+
+## Büyüme
+
+Yatırımlar gelir.
+
+Rakip sayısı artar.
+
+İçerik üreticileri konuşmaya başlar.
+
+Google aramaları yükselir.
+
+İş ilanları çoğalır.
+
+API ekosistemi oluşur.
+
+---
+
+# EVRE 5
+
+## Olgunluk
+
+Pazar oturmuştur.
+
+Müşteriler bilinçlidir.
+
+Liderler oluşmuştur.
+
+Giriş maliyeti yükselmiştir.
+
+Fırsatlar hâlâ vardır.
+
+Ancak farklılaşmak zorlaşmıştır.
+
+---
+
+# EVRE 6
+
+## Doygunluk
+
+Benzer ürünler çoğalmıştır.
+
+Fiyat rekabeti başlar.
+
+Yenilik hızı düşer.
+
+Kârlılık azalır.
+
+Motor bu evrede daha dikkatli davranmalıdır.
+
+---
+
+# EVRE 7
+
+## Gerileme
+
+Teknoloji değişmiştir.
+
+Yeni çözümler çıkmıştır.
+
+Müşteri davranışı değişmiştir.
+
+Eski pazar küçülmektedir.
+
+Motor bu aşamada yeni nesil fırsatları araştırmalıdır.
+
+---
+
+# YAŞAM DÖNGÜSÜ ANALİZİ
+
+Her fırsat için aşağıdaki sorular cevaplanmalıdır.
+
+Pazar hangi evrede?
+
+Rakipler hangi evrede?
+
+Müşteriler hangi evrede?
+
+Teknoloji hangi evrede?
+
+Yapay zekâ hangi evrede?
+
+Bu cevaplar Opportunity Lifecycle Score'u oluşturacaktır.
+
+---
+
+# LIFECYCLE SCORE
+
+Motor aşağıdaki kriterleri değerlendirmelidir.
+
+Pazar Yaşı
+
+Rekabet Yoğunluğu
+
+Büyüme Hızı
+
+Teknolojik Değişim
+
+Müşteri Adaptasyonu
+
+Yatırım Hareketliliği
+
+Her kriter toplam yaşam döngüsü puanını etkiler.
+
+---
+
+# STRATEJİ ÖNERİLERİ
+
+Her yaşam evresi farklı strateji gerektirir.
+
+Gizli Problem
+
+→ Araştır.
+
+İlk Çözüm
+
+→ Hızlı doğrula.
+
+İlk Ürün
+
+→ MVP geliştir.
+
+Büyüme
+
+→ Ölçeklen.
+
+Olgunluk
+
+→ Farklılaş.
+
+Doygunluk
+
+→ Nişe odaklan.
+
+Gerileme
+
+→ Yeni fırsat ara.
+
+---
+
+# MİMARİ NOTLARI
+
+İleride aşağıdaki modüller geliştirilebilir.
+
+OpportunityLifecycle
+
+LifecycleAnalyzer
+
+LifecycleScore
+
+MarketStageDetector
+
+GrowthAnalyzer
+
+CompetitionAgeDetector
+
+LifecycleRecommendationEngine
+
+---
+
+# TASARIM İLKESİ
+
+Motor hiçbir fırsatı yalnızca bugünkü durumuna göre değerlendirmemelidir.
+
+En önemli soru şudur.
+
+Bu fırsat bugün nerede?
+
+Ve
+
+Beş yıl sonra nerede olacak?
+
+Gerçek Opportunity Intelligence,
+
+geleceği bugünden okuyabilme becerisidir.
+---
+
+# OPPORTUNITY VALIDATION FRAMEWORK
+
+## Giriş
+
+Bir fikrin iyi görünmesi, onun iyi bir iş fırsatı olduğu anlamına gelmez.
+
+AI Opportunity Hunter hiçbir fırsatı yalnızca popüler olduğu için önermez.
+
+Her fırsat, sistematik bir doğrulama sürecinden geçirilmelidir.
+
+Bu sürece Opportunity Validation Framework adı verilir.
+
+---
+
+# DOĞRULAMA İLKELERİ
+
+Her fırsat aşağıdaki sorulara cevap verebilmelidir.
+
+Gerçek bir problem var mı?
+
+Bu problem sürekli yaşanıyor mu?
+
+İnsanlar bugün bu problemi çözmeye çalışıyor mu?
+
+Bu problem için para harcanıyor mu?
+
+Yapay zekâ anlamlı bir avantaj sağlayabiliyor mu?
+
+Fırsat ölçeklenebilir mi?
+
+---
+
+# AŞAMA 1
+
+## Problem Doğrulaması
+
+Motor aşağıdaki kanıtları aramalıdır.
+
+Forum şikayetleri
+
+Sosyal medya yorumları
+
+Reddit başlıkları
+
+Destek talepleri
+
+Google aramaları
+
+Manuel süreçler
+
+Tekrarlayan operasyonlar
+
+Problemin yalnızca var olması yeterli değildir.
+
+Problemin sürekli tekrar etmesi gerekir.
+
+---
+
+# AŞAMA 2
+
+## Müşteri Doğrulaması
+
+Motor aşağıdaki soruların cevabını aramalıdır.
+
+Kim kullanacak?
+
+Kim ödeme yapacak?
+
+Kim karar verecek?
+
+Kim fayda sağlayacak?
+
+Bu dört sorunun cevabı net değilse fırsat düşük güven seviyesinde değerlendirilmelidir.
+
+---
+
+# AŞAMA 3
+
+## Çözüm Doğrulaması
+
+Mevcut çözümler analiz edilmelidir.
+
+Hiç çözüm yoksa neden yok?
+
+Çözüm varsa neden insanlar hâlâ şikâyet ediyor?
+
+Hangi özellikler eksik?
+
+Hangi süreçler manuel?
+
+Çözüm gerçekten farklılık oluşturuyor mu?
+
+---
+
+# AŞAMA 4
+
+## Gelir Doğrulaması
+
+Gelir, varsayımların en güçlü testidir.
+
+Motor aşağıdaki göstergeleri incelemelidir.
+
+Abonelik modelleri
+
+Lisans ücretleri
+
+Ajans hizmetleri
+
+Danışmanlık ücretleri
+
+Freelance hizmetleri
+
+Pazar yerleri
+
+İnsanlar zaten ödeme yapıyorsa risk azalır.
+
+---
+
+# AŞAMA 5
+
+## Rekabet Doğrulaması
+
+Rekabet yalnızca rakip sayısı değildir.
+
+Motor aşağıdaki kriterleri değerlendirmelidir.
+
+Rakiplerin büyüklüğü
+
+Ürün kalitesi
+
+Fiyatlandırma
+
+Kullanıcı memnuniyeti
+
+İnovasyon hızı
+
+Müşteri sadakati
+
+Rakiplerin zayıf yönleri
+
+---
+
+# AŞAMA 6
+
+## Yapay Zekâ Doğrulaması
+
+Yapay zekâ gerçekten gerekli mi?
+
+Yoksa sadece pazarlama amacıyla mı ekleniyor?
+
+Motor şu soruları cevaplamalıdır.
+
+AI otomasyon sağlıyor mu?
+
+AI kaliteyi artırıyor mu?
+
+AI maliyeti düşürüyor mu?
+
+AI kullanıcı deneyimini iyileştiriyor mu?
+
+Gerçek avantaj oluşturmayan AI kullanımı düşük puan almalıdır.
+
+---
+
+# AŞAMA 7
+
+## Ölçeklenebilirlik
+
+Bir fırsatın büyüme potansiyeli analiz edilmelidir.
+
+Yeni ülkelere açılabilir mi?
+
+Yeni sektörlere uyarlanabilir mi?
+
+Yeni müşteri segmentlerine ulaşabilir mi?
+
+Teknik altyapı büyümeye uygun mu?
+
+---
+
+# VALIDATION SCORE
+
+Her doğrulama aşaması bağımsız puan üretmelidir.
+
+Bu puanlar tek başına kullanılmamalıdır.
+
+Validation Score,
+
+Opportunity Score,
+
+Reality Score,
+
+Evidence Score
+
+ile birlikte değerlendirilmelidir.
+
+---
+
+# RED FLAG KONTROLLERİ
+
+Motor aşağıdaki durumlarda uyarı üretmelidir.
+
+Kanıt yok.
+
+Ödeme isteği yok.
+
+Müşteri tanımlanamıyor.
+
+Problem çok nadir.
+
+Yasal risk yüksek.
+
+Teknoloji henüz hazır değil.
+
+Platform bağımlılığı çok yüksek.
+
+Bu uyarılar nihai öneriyi doğrudan etkilemelidir.
+
+---
+
+# TASARIM FELSEFESİ
+
+Doğrulama yapılmamış hiçbir fikir yatırım tavsiyesi değildir.
+
+AI Opportunity Hunter,
+
+varsayımları değil,
+
+kanıtları ödüllendiren bir sistem olarak tasarlanmalıdır.
+
+Her öneri,
+
+tekrar üretilebilir,
+
+ölçülebilir,
+
+ve açıklanabilir kanıtlarla desteklenmelidir.
