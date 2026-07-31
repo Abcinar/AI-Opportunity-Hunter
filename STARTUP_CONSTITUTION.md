@@ -521,3 +521,252 @@ AI Opportunity Hunter will never recommend building something simply because it 
 It will recommend building something because evidence suggests it can become a valuable business.
 
 That difference defines this product.
+---
+
+# THE OPPORTUNITY INTELLIGENCE ENGINE
+
+## Introduction
+
+An AI model does not create opportunities.
+
+It discovers them.
+
+The intelligence engine exists to transform raw information into investment-grade business opportunities.
+
+Every decision made by the engine must follow a repeatable reasoning process.
+
+Random recommendations are unacceptable.
+
+Explainable reasoning is mandatory.
+
+---
+
+# THE THINKING PIPELINE
+
+Every signal entering the system follows the same decision path.
+
+```text
+Raw Signal
+      │
+      ▼
+Signal Classification
+      │
+      ▼
+Evidence Extraction
+      │
+      ▼
+Problem Detection
+      │
+      ▼
+Customer Identification
+      │
+      ▼
+Pain Measurement
+      │
+      ▼
+Market Validation
+      │
+      ▼
+Revenue Validation
+      │
+      ▼
+AI Leverage Analysis
+      │
+      ▼
+Competition Analysis
+      │
+      ▼
+Execution Analysis
+      │
+      ▼
+Confidence Calculation
+      │
+      ▼
+Final Recommendation
+```
+
+No step may be skipped.
+
+---
+
+# STEP 1 — SIGNAL CLASSIFICATION
+
+Every collected item must first answer one question.
+
+"What is this?"
+
+Possible classifications:
+
+- News
+- Complaint
+- Feature Request
+- Question
+- Workflow
+- Manual Process
+- Market Shift
+- Regulation
+- Technology
+- Community Discussion
+- Opportunity Candidate
+
+The engine must never assume every signal is valuable.
+
+Most signals are noise.
+
+---
+
+# STEP 2 — EVIDENCE EXTRACTION
+
+Evidence is the foundation of confidence.
+
+The engine searches for indicators such as:
+
+- repeated complaints
+- repeated questions
+- repetitive work
+- expensive workflows
+- missing automation
+- customer frustration
+- migration to competitors
+- manual processes
+- waiting time
+- lost revenue
+- wasted effort
+
+The greater the evidence,
+
+the higher the confidence.
+
+---
+
+# STEP 3 — PROBLEM DETECTION
+
+Every opportunity begins with a problem.
+
+The engine asks:
+
+What is actually broken?
+
+Who suffers?
+
+Why does it happen?
+
+How often does it happen?
+
+Can software reduce the pain?
+
+If no clear problem exists,
+
+the opportunity score must decrease.
+
+---
+
+# STEP 4 — CUSTOMER IDENTIFICATION
+
+No customer,
+
+No business.
+
+The engine identifies:
+
+- Individual
+- Freelancer
+- Startup
+- SMB
+- Enterprise
+- Developer
+- Designer
+- Accountant
+- Teacher
+- Healthcare
+- Government
+
+If no identifiable customer exists,
+
+the signal remains observation only.
+
+---
+
+# STEP 5 — PAIN ANALYSIS
+
+Pain determines urgency.
+
+Pain is evaluated using:
+
+Frequency
+
+Intensity
+
+Cost
+
+Time Loss
+
+Emotional Frustration
+
+Operational Risk
+
+Revenue Loss
+
+The strongest businesses usually eliminate the strongest pain.
+
+---
+
+# STEP 6 — MARKET VALIDATION
+
+The engine asks:
+
+Is this problem experienced by enough people?
+
+Questions include:
+
+How many people?
+
+How often?
+
+Growing or shrinking?
+
+Local or global?
+
+Seasonal or permanent?
+
+The goal is not a large market.
+
+The goal is a valuable market.
+
+---
+
+# STEP 7 — REVENUE VALIDATION
+
+The most important question:
+
+Will someone pay?
+
+Evidence includes:
+
+Current subscriptions
+
+Existing competitors
+
+Consulting services
+
+Agency services
+
+Manual labor
+
+Existing software
+
+If money already changes hands,
+
+the opportunity becomes stronger.
+
+---
+
+# INTELLIGENCE RULE
+
+Never recommend an opportunity simply because AI can build it.
+
+Recommend it only if customers already demonstrate demand.
+
+Demand creates businesses.
+
+Technology only accelerates them.
