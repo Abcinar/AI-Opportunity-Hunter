@@ -4617,3 +4617,214 @@ her fırsatı önce sorgular,
 sonra değerlendirir,
 
 en son öneride bulunur.
+---
+
+# KENDİNİ GELİŞTİREN MOTOR (SELF-EVOLUTION ENGINE)
+
+## Giriş
+
+En güçlü yazılımlar yalnızca çalışan yazılımlar değildir.
+
+En güçlü yazılımlar,
+
+zamanla daha iyi karar vermeyi öğrenen sistemlerdir.
+
+AI Opportunity Hunter,
+
+sabit kurallarla çalışan bir analiz motoru olarak başlamalıdır.
+
+Ancak uzun vadeli hedefi,
+
+öğrenebilen,
+
+kendini değerlendirebilen,
+
+ve kontrollü şekilde gelişebilen
+
+bir Opportunity Intelligence Platform olmaktır.
+
+---
+
+# TEMEL PRENSİP
+
+Sistem yalnızca fırsatları analiz etmez.
+
+Kendi analizlerini de analiz eder.
+
+Her öneri,
+
+ileride yeniden değerlendirilebilir olmalıdır.
+
+Motor şu soruyu düzenli olarak sormalıdır.
+
+"Geçmişte verdiğim bu öneri gerçekten doğru muydu?"
+
+---
+
+# GERİ BİLDİRİM DÖNGÜSÜ
+
+Her BUILD önerisi,
+
+belirli aralıklarla yeniden incelenmelidir.
+
+Örneğin;
+
+30 Gün
+
+90 Gün
+
+180 Gün
+
+365 Gün
+
+Bu incelemeler sonucunda sistem;
+
+ilk analiz ile gerçek sonucu karşılaştırmalıdır.
+
+---
+
+# KARAR DOĞRULAMA
+
+Her önemli öneri için aşağıdaki sorular cevaplanmalıdır.
+
+Fırsat gerçekten büyüdü mü?
+
+Beklenen gelir oluştu mu?
+
+Müşteri talebi arttı mı?
+
+Momentum devam etti mi?
+
+Riskler doğru tahmin edildi mi?
+
+Kurucu uyumu doğru değerlendirildi mi?
+
+---
+
+# HATA ANALİZİ
+
+Yanlış tahminler başarısızlık değildir.
+
+Yanlış tahminlerden öğrenmemek başarısızlıktır.
+
+Motor her yanlış tahmini sınıflandırmalıdır.
+
+Yanlış Problem Analizi
+
+Yanlış Müşteri Analizi
+
+Yanlış Momentum Yorumu
+
+Yanlış Risk Tahmini
+
+Yanlış Gelir Beklentisi
+
+Yanlış Rekabet Değerlendirmesi
+
+---
+
+# MODEL GELİŞİMİ
+
+Motor hiçbir zaman doğrudan kendini değiştirmemelidir.
+
+Önce öneri üretmelidir.
+
+Daha sonra bu öneriler insan tarafından incelenmelidir.
+
+Onaylanan değişiklikler bilgi tabanına eklenmelidir.
+
+Kontrolsüz öğrenme,
+
+kontrolsüz hatalara neden olabilir.
+
+---
+
+# BİLGİ EVRİMİ
+
+Bilgiler üç sınıfa ayrılmalıdır.
+
+Geçerli Bilgiler
+
+Şüpheli Bilgiler
+
+Arşivlenmiş Bilgiler
+
+Her bilgi,
+
+kanıt durumuna göre bu sınıflar arasında taşınabilmelidir.
+
+---
+
+# GÜVEN KALİBRASYONU
+
+Motor zamanla kendi güven puanlarını da test etmelidir.
+
+Örneğin;
+
+%95 güven ile verilen önerilerin gerçekten ne kadar doğru çıktığı ölçülmelidir.
+
+Eğer sistem sürekli fazla güven üretiyorsa,
+
+Confidence Engine yeniden kalibre edilmelidir.
+
+---
+
+# BAŞARI METRİKLERİ
+
+Motor yalnızca Opportunity Score üretmemelidir.
+
+Kendi performansını da ölçmelidir.
+
+Örnek metrikler
+
+Doğru BUILD oranı
+
+Yanlış BUILD oranı
+
+Doğru SKIP oranı
+
+Yanlış SKIP oranı
+
+Risk tahmin doğruluğu
+
+Momentum tahmin doğruluğu
+
+Kurucu uyumu doğruluğu
+
+Gerçekleşen gelir tahmini
+
+---
+
+# EVRİM PRENSİBİ
+
+Her yeni sürüm,
+
+önceki sürümden
+
+daha açıklanabilir,
+
+daha tutarlı,
+
+ve daha ölçülebilir olmalıdır.
+
+Yeni özellik eklemek,
+
+eski doğruluğu bozmamalıdır.
+
+---
+
+# TASARIM FELSEFESİ
+
+AI Opportunity Hunter'ın en büyük avantajı,
+
+daha fazla veri toplaması değildir.
+
+En büyük avantajı,
+
+geçmiş kararlarından sistematik şekilde öğrenebilmesidir.
+
+Gerçek zekâ,
+
+yalnızca analiz yapabilmek değil,
+
+analizlerinin kalitesini zaman içinde artırabilmektir.
