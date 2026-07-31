@@ -5199,3 +5199,122 @@ tutarlılığı,
 açıklanabilirliği
 
 ve uzun yıllar boyunca geçerliliğini koruyabilmesi ile ölçülür.
+---
+
+# MÜHENDİSLİK FELSEFESİ (ENGINEERING PHILOSOPHY)
+
+## Amaç
+
+Bu bölüm, AI Opportunity Hunter'ın yazılım geliştirme kültürünü tanımlar.
+
+Kod yalnızca çalışan komutlardan oluşmaz.
+
+Kod;
+
+düşüncenin,
+
+mimarinin,
+
+ve tasarım kararlarının somutlaşmış halidir.
+
+Bu nedenle mühendislik süreci yalnızca yazılım üretmeyi değil,
+
+doğru kararları sürdürülebilir biçimde hayata geçirmeyi hedeflemelidir.
+
+---
+
+# TEMEL MÜHENDİSLİK İLKELERİ
+
+## 1. Düşünce Önce Gelir
+
+Her satır kod,
+
+önce bir tasarım kararına dayanmalıdır.
+
+Belgelendirilmemiş fikirler,
+
+doğrudan üretim koduna dönüşmemelidir.
+
+---
+
+## 2. Mimari Koddan Üstündür
+
+Kod değişebilir.
+
+Kütüphaneler değişebilir.
+
+Programlama dili değişebilir.
+
+Ancak doğru mimari,
+
+uzun yıllar yaşayabilir.
+
+---
+
+## 3. Açıklanabilirlik
+
+Her önemli modül şu soruya cevap verebilmelidir.
+
+"Neden var?"
+
+Bu soruya cevap veremeyen modüller yeniden değerlendirilmelidir.
+
+---
+
+## 4. Test Edilebilirlik
+
+Her algoritma,
+
+her karar,
+
+her skor,
+
+otomatik olarak doğrulanabilir olmalıdır.
+
+Test edilemeyen bir sistem,
+
+güvenilir değildir.
+
+---
+
+## 5. İzlenebilirlik
+
+Bir kararın hangi veriyle,
+
+hangi kuralla,
+
+hangi algoritmayla üretildiği geriye dönük olarak izlenebilmelidir.
+
+---
+
+## 6. Basitlik
+
+En iyi çözüm,
+
+en fazla kod yazan çözüm değildir.
+
+En az karmaşıklıkla aynı değeri üreten çözümdür.
+
+---
+
+## 7. Sürekli İyileştirme
+
+Her sürüm,
+
+önceki sürümden en az bir ölçülebilir konuda daha iyi olmalıdır.
+
+---
+
+# SONUÇ
+
+Mühendislik;
+
+yalnızca kod yazma sanatı değildir.
+
+Doğru düşünceyi,
+
+doğru mimariyle,
+
+doğru kalite standartlarıyla,
+
+uzun ömürlü sistemlere dönüştürme disiplinidir.
