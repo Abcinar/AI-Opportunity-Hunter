@@ -3685,3 +3685,216 @@ AI Opportunity Hunter,
 geçici fırsatların peşinden koşan bir sistem değil,
 
 uzun vadeli değer oluşturabilecek şirketlerin temelini keşfeden bir platform olarak tasarlanmalıdır.
+---
+
+# BİLGİ MOTORU (KNOWLEDGE ENGINE)
+
+## Giriş
+
+Her analiz tamamlandıktan sonra sistem yalnızca sonuç üretmemelidir.
+
+Aynı zamanda öğrenmelidir.
+
+AI Opportunity Hunter'ın en büyük avantajı;
+
+her yeni analizle daha zengin bir bilgi tabanı oluşturmasıdır.
+
+Bilgi,
+
+sistemin en değerli sermayesidir.
+
+---
+
+# TEMEL FELSEFE
+
+Veri geçicidir.
+
+Bilgi kalıcıdır.
+
+Bilgelik ise,
+
+bilginin doğru zamanda doğru karar için kullanılabilmesidir.
+
+Motor yalnızca veri toplamaz.
+
+Veriyi bilgiye,
+
+bilgiyi içgörüye,
+
+içgörüyü karara dönüştürür.
+
+---
+
+# BİLGİ KATMANLARI
+
+Bilgi tabanı aşağıdaki katmanlardan oluşmalıdır.
+
+Ham Veri
+
+↓
+
+İşlenmiş Veri
+
+↓
+
+Sinyal
+
+↓
+
+Kanıt
+
+↓
+
+İçgörü
+
+↓
+
+Pattern
+
+↓
+
+Kural
+
+↓
+
+Bilgi
+
+↓
+
+Karar
+
+---
+
+# PATTERN OLUŞUMU
+
+Tek bir olay,
+
+pattern oluşturmaz.
+
+Motor yalnızca tekrar eden davranışları pattern olarak kaydetmelidir.
+
+Pattern oluşabilmesi için;
+
+aynı davranış,
+
+bağımsız kaynaklarda,
+
+tekrar eden şekilde gözlemlenmelidir.
+
+---
+
+# BİLGİ TÜRLERİ
+
+Motor aşağıdaki bilgi tiplerini saklamalıdır.
+
+Problem Pattern'leri
+
+Başarılı SaaS Pattern'leri
+
+Başarısız Startup Pattern'leri
+
+AI Kullanım Pattern'leri
+
+Müşteri Davranış Pattern'leri
+
+Gelir Modeli Pattern'leri
+
+Fiyatlandırma Pattern'leri
+
+Dağıtım Pattern'leri
+
+Büyüme Pattern'leri
+
+Moat Pattern'leri
+
+---
+
+# BİLGİNİN YAŞAM DÖNGÜSÜ
+
+Her bilgi sonsuza kadar doğru değildir.
+
+Motor;
+
+oluşturduğu bilgileri,
+
+belirli aralıklarla yeniden değerlendirmelidir.
+
+Eskiyen bilgiler güncellenmeli,
+
+geçersiz bilgiler arşivlenmelidir.
+
+---
+
+# ÇELİŞKİ YÖNETİMİ
+
+Yeni bilgiler,
+
+eski bilgilerle çelişebilir.
+
+Motor hiçbir zaman eski bilgiyi körü körüne korumamalıdır.
+
+Çelişkiler işaretlenmeli,
+
+kanıtlar yeniden analiz edilmelidir.
+
+Doğru bilgi,
+
+otoriteye değil,
+
+kanıta dayanmalıdır.
+
+---
+
+# GÜVEN SKORU
+
+Her bilgi için bağımsız bir güven puanı oluşturulmalıdır.
+
+Bu puan aşağıdaki unsurlardan etkilenmelidir.
+
+Kaynak kalitesi
+
+Kaynak çeşitliliği
+
+Tekrarlanabilirlik
+
+Güncellik
+
+Kanıt yoğunluğu
+
+Uzman görüşü
+
+---
+
+# BİLGİ AĞI
+
+Bilgiler birbirinden bağımsız değildir.
+
+Motor ilişkileri saklamalıdır.
+
+Problem ↔ Müşteri
+
+Müşteri ↔ Gelir Modeli
+
+Gelir ↔ Dağıtım
+
+Dağıtım ↔ Büyüme
+
+Büyüme ↔ Momentum
+
+Momentum ↔ Fırsat
+
+Bu yapı zamanla bir Opportunity Knowledge Graph oluşturacaktır.
+
+---
+
+# TASARIM FELSEFESİ
+
+AI Opportunity Hunter'ın gerçek gücü,
+
+kaç veri kaynağı kullandığında değil,
+
+öğrendiklerini ne kadar iyi hatırlayıp yeniden kullanabildiğinde ortaya çıkar.
+
+Her analiz,
+
+sistemin kolektif zekâsını güçlendirmelidir.
