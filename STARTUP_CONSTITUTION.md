@@ -5318,3 +5318,146 @@ doğru mimariyle,
 doğru kalite standartlarıyla,
 
 uzun ömürlü sistemlere dönüştürme disiplinidir.
+---
+
+# PLATFORM PRENSİPLERİ (PLATFORM PRINCIPLES)
+
+## Amaç
+
+AI Opportunity Hunter yalnızca tek bir uygulama değildir.
+
+Farklı veri kaynaklarını,
+
+analiz motorlarını,
+
+yapay zekâ modellerini,
+
+ve kullanıcı arayüzlerini
+
+aynı mimari altında bir araya getiren genişletilebilir bir platformdur.
+
+Bu bölüm platformun uzun vadeli gelişim ilkelerini tanımlar.
+
+---
+
+# 1. MODÜLERLİK
+
+Her bileşen bağımsız geliştirilebilir olmalıdır.
+
+Collector değişebilir.
+
+Scoring Engine değişebilir.
+
+LLM değişebilir.
+
+Dashboard değişebilir.
+
+Ancak platform çalışmaya devam etmelidir.
+
+---
+
+# 2. DEĞİŞTİRİLEBİLİRLİK
+
+Hiçbir teknoloji kalıcı değildir.
+
+Platform;
+
+Python,
+
+Rust,
+
+Go,
+
+veya gelecekte ortaya çıkacak farklı teknolojilere uyum sağlayabilecek şekilde tasarlanmalıdır.
+
+---
+
+# 3. SAĞLAM ARAYÜZLER
+
+Bileşenler birbirlerine doğrudan bağımlı olmamalıdır.
+
+İletişim;
+
+tanımlı sözleşmeler (contracts),
+
+API'ler
+
+ve olay mesajları üzerinden yapılmalıdır.
+
+---
+
+# 4. GENİŞLETİLEBİLİRLİK
+
+Yeni veri kaynağı eklemek,
+
+mevcut sistemi değiştirmeyi gerektirmemelidir.
+
+Yeni analiz motorları,
+
+yeni skorlayıcılar,
+
+yeni yapay zekâ modelleri
+
+kolayca entegre edilebilmelidir.
+
+---
+
+# 5. GÖZLEMLENEBİLİRLİK
+
+Platform yalnızca çalışmamalıdır.
+
+Kendi durumunu da raporlayabilmelidir.
+
+Loglar,
+
+metrikler,
+
+uyarılar,
+
+ve performans göstergeleri
+
+platformun ayrılmaz parçalarıdır.
+
+---
+
+# 6. DAYANIKLILIK
+
+Bir bileşenin hata vermesi,
+
+tüm sistemi durdurmamalıdır.
+
+Platform,
+
+kısmi arızalara karşı dayanıklı olmalıdır.
+
+---
+
+# 7. AÇIK STANDARTLAR
+
+Mümkün olan her yerde
+
+açık veri formatları,
+
+açık protokoller
+
+ve taşınabilir teknolojiler tercih edilmelidir.
+
+---
+
+# 8. EVRİM
+
+Platform,
+
+bugünkü ihtiyaçlar kadar
+
+gelecekte ortaya çıkabilecek kullanım senaryolarını da destekleyebilecek esneklikte tasarlanmalıdır.
+
+---
+
+# SONUÇ
+
+Platformun başarısı,
+
+kaç satır kod içerdiğiyle değil;
+
+kaç yıl boyunca geliştirilebilir kaldığıyla ölçülür.
