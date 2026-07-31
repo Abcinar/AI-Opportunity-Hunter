@@ -1041,3 +1041,411 @@ the recommendation must become more conservative.
 AI Opportunity Hunter should think like an experienced founder.
 
 Not like an enthusiastic AI model.
+---
+
+# OPPORTUNITY DNA
+
+## Introduction
+
+Every successful business shares a common genetic structure.
+
+This structure is independent of industry, technology, country, or time.
+
+AI Opportunity Hunter calls this structure:
+
+**Opportunity DNA**
+
+The purpose of the Intelligence Engine is not merely to score opportunities.
+
+Its primary responsibility is to reconstruct the DNA of every potential business.
+
+Only opportunities with healthy DNA should receive strong recommendations.
+
+---
+
+# DNA COMPONENTS
+
+Every opportunity consists of multiple independent genetic components.
+
+Each component contributes to the overall health of the opportunity.
+
+```
+Opportunity DNA
+
+├── Problem DNA
+├── Customer DNA
+├── Market DNA
+├── Revenue DNA
+├── Timing DNA
+├── Competition DNA
+├── AI DNA
+├── Founder DNA
+├── Execution DNA
+└── Evidence DNA
+```
+
+The absence of one component weakens the entire opportunity.
+
+---
+
+# PROBLEM DNA
+
+Questions
+
+Is there a real problem?
+
+How painful is it?
+
+How often does it occur?
+
+Can software reduce the pain?
+
+Can the problem be measured?
+
+Healthy Problem DNA
+
+✓ Frequent
+
+✓ Expensive
+
+✓ Frustrating
+
+✓ Observable
+
+Weak Problem DNA
+
+Temporary
+
+Rare
+
+Emotional only
+
+Already solved
+
+---
+
+# CUSTOMER DNA
+
+Without customers,
+
+there is no business.
+
+The engine identifies
+
+Who suffers?
+
+Who pays?
+
+Who decides?
+
+Who benefits?
+
+Healthy Customer DNA
+
+Known customer
+
+Known workflow
+
+Known budget
+
+Known motivation
+
+Weak Customer DNA
+
+Unknown audience
+
+No purchasing authority
+
+No identifiable workflow
+
+---
+
+# MARKET DNA
+
+Large markets are attractive.
+
+Growing markets are powerful.
+
+Growing markets with painful problems create exceptional opportunities.
+
+Questions
+
+Is demand increasing?
+
+Can the market sustain new entrants?
+
+Is regulation changing?
+
+Is technology changing?
+
+---
+
+# REVENUE DNA
+
+Revenue proves reality.
+
+People vote with money.
+
+Healthy Revenue DNA
+
+Existing spending
+
+Subscription market
+
+Consulting market
+
+Agency market
+
+Manual labor
+
+High switching costs
+
+Weak Revenue DNA
+
+Nobody pays.
+
+Everyone expects free.
+
+No existing market.
+
+---
+
+# TIMING DNA
+
+Many great ideas fail because they arrive too early.
+
+Or too late.
+
+The engine evaluates
+
+Technology readiness
+
+Customer readiness
+
+Market readiness
+
+Infrastructure
+
+Regulation
+
+Timing is a multiplier.
+
+---
+
+# COMPETITION DNA
+
+Competition is not automatically negative.
+
+Strong competition proves demand.
+
+Questions
+
+How crowded?
+
+How differentiated?
+
+How expensive?
+
+How mature?
+
+Can AI create an advantage?
+
+Healthy Competition DNA
+
+Demand proven
+
+Weak incumbents
+
+Poor UX
+
+Slow innovation
+
+Weak Competition DNA
+
+Winner takes all
+
+Impossible differentiation
+
+Extreme network effects
+
+---
+
+# AI DNA
+
+Artificial Intelligence must create leverage.
+
+Not decoration.
+
+Questions
+
+Can AI automate?
+
+Can AI accelerate?
+
+Can AI personalize?
+
+Can AI reduce cost?
+
+If AI adds no meaningful leverage,
+
+AI should not be included.
+
+---
+
+# FOUNDER DNA
+
+Not every founder should build every business.
+
+Founder Fit evaluates
+
+Skills
+
+Experience
+
+Network
+
+Resources
+
+Execution capability
+
+The best opportunity for one founder
+
+may be a terrible opportunity for another.
+
+---
+
+# EXECUTION DNA
+
+Ideas are easy.
+
+Execution is difficult.
+
+Questions
+
+Can an MVP be built?
+
+Can customers be reached?
+
+Can distribution happen?
+
+Can the product scale?
+
+Execution risk should reduce Opportunity Score.
+
+---
+
+# EVIDENCE DNA
+
+Evidence is the immune system of Opportunity DNA.
+
+Without evidence,
+
+every conclusion becomes speculation.
+
+Evidence Sources
+
+Customer complaints
+
+Community discussions
+
+Support tickets
+
+Search behavior
+
+Migration patterns
+
+Manual work
+
+Pricing pages
+
+Public APIs
+
+Job postings
+
+Documentation gaps
+
+Evidence must always outweigh intuition.
+
+---
+
+# DNA HEALTH
+
+Opportunity DNA should be evaluated as a complete organism.
+
+Weak DNA in one area can sometimes be compensated by exceptional strength elsewhere.
+
+However,
+
+multiple weak components almost always predict failure.
+
+The engine must evaluate the complete genetic profile before making a recommendation.
+
+No single metric should dominate the final decision.
+
+Opportunity quality emerges from the interaction of all DNA components.
+
+That interaction defines the true strength of a business opportunity. 
+---
+
+# SCORING FRAMEWORK V3
+
+## Purpose
+
+The Scoring Framework transforms qualitative observations into measurable business intelligence.
+
+Its purpose is not to predict the future.
+
+Its purpose is to reduce uncertainty.
+
+Every score represents probability.
+
+Never certainty.
+
+---
+
+# DESIGN PRINCIPLES
+
+The scoring engine follows five permanent principles.
+
+1. Transparent
+
+Every score must be explainable.
+
+2. Modular
+
+Every score can evolve independently.
+
+3. Evidence Driven
+
+Evidence always has priority over assumptions.
+
+4. Comparable
+
+Two opportunities can always be compared objectively.
+
+5. Adaptive
+
+Weights may evolve as the engine learns.
+
+---
+
+# THE SCORING MODEL
+
+The final Opportunity Score is composed of multiple independent dimensions.
+
+```
+
+```
+Opportunity Score
+
+├── Problem Score
+├── Customer Score
+├── Market Score
+├── Revenue Score
+├── Timing Score
+├── AI Leverage Score
+├── Competition Score
+├── Founder Fit Score
+├── Execution Score
+└── Evidence Score
+```
