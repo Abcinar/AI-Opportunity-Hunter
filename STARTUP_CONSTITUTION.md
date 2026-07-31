@@ -5461,3 +5461,177 @@ Platformun başarısı,
 kaç satır kod içerdiğiyle değil;
 
 kaç yıl boyunca geliştirilebilir kaldığıyla ölçülür.
+
+---
+
+# MÜHENDİSLİK YÖNETİŞİMİ (ENGINEERING GOVERNANCE)
+
+## Amaç
+
+Bu bölüm, AI Opportunity Hunter'ın teknik kararlarının nasıl alınacağını, değerlendirileceğini ve uzun vadede nasıl korunacağını tanımlar.
+
+İyi mühendislik yalnızca doğru kod yazmak değildir.
+
+Doğru kararları, doğru zamanda, doğru gerekçelerle alabilmektir.
+
+---
+
+# KARAR HİYERARŞİSİ
+
+Platformdaki teknik kararlar aşağıdaki sıraya göre değerlendirilmelidir.
+
+1. Constitution
+
+Temel ilkeler.
+
+Değişmesi en zor katmandır.
+
+---
+
+2. Doctrine
+
+Düşünce sistemi.
+
+Karar felsefesi.
+
+---
+
+3. Architecture
+
+Sistem tasarımı.
+
+Servis sınırları.
+
+Veri akışları.
+
+---
+
+4. Specifications
+
+Teknik tanımlar.
+
+API sözleşmeleri.
+
+Veri modelleri.
+
+---
+
+5. Implementation
+
+Kod.
+
+---
+
+Hiçbir kod değişikliği, üst katmanlarla çelişmemelidir.
+
+---
+
+# DEĞİŞİKLİK SÜRECİ
+
+Her önemli teknik değişiklik aşağıdaki adımları izlemelidir.
+
+Problem tanımı
+
+↓
+
+Alternatif çözümler
+
+↓
+
+Artı ve eksiler
+
+↓
+
+Seçilen yaklaşım
+
+↓
+
+Beklenen etkiler
+
+↓
+
+Riskler
+
+↓
+
+Başarı kriterleri
+
+↓
+
+Karar kaydı (ADR)
+
+---
+
+# KALİTE KAPILARI
+
+Üretime alınacak her önemli değişiklik aşağıdaki soruları geçmelidir.
+
+Bu değişiklik gerçekten gerekli mi?
+
+Constitution ile uyumlu mu?
+
+Mimariyi sadeleştiriyor mu?
+
+Performansı koruyor mu?
+
+Testleri geçti mi?
+
+Açıklanabilir mi?
+
+Geri alınabilir mi?
+
+---
+
+# TEKNİK BORÇ POLİTİKASI
+
+Teknik borç tamamen kaçınılacak bir durum değildir.
+
+Ancak;
+
+bilinçli,
+
+ölçülebilir,
+
+ve planlı olmalıdır.
+
+Her teknik borcun;
+
+gerekçesi,
+
+etkisi,
+
+ve kaldırılma planı belgelenmelidir.
+
+---
+
+# KOD SAHİPLİĞİ
+
+Her modülün açık bir sahibi olmalıdır.
+
+Sahipsiz modüller zamanla kalite kaybeder.
+
+Kod sahipliği;
+
+sorumluluk,
+
+inceleme,
+
+ve bakım yükümlülüğünü içerir.
+
+---
+
+# GERİYE DÖNÜK UYUMLULUK
+
+Mümkün olan her durumda geriye dönük uyumluluk korunmalıdır.
+
+Uyumsuz değişiklikler açık şekilde sürümlendirilmeli ve belgelenmelidir.
+
+---
+
+# BAŞARI KRİTERİ
+
+Mühendislik başarısı;
+
+kaç satır kod yazıldığıyla değil,
+
+kaç yıl boyunca güvenle geliştirilebildiğiyle ölçülür.
