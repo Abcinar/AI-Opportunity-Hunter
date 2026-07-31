@@ -5103,3 +5103,99 @@ Bu Constitution,
 yalnızca bu ürünün değil,
 
 Opportunity Intelligence disiplininin de temel referans dokümanlarından biri olmayı hedeflemektedir.
+---
+
+# CONSTITUTION YÖNETİM MODELİ
+
+## Amaç
+
+Bu Constitution yaşayan bir dokümandır.
+
+Amacı yalnızca bilgi depolamak değil, bilgi kalitesini korumaktır.
+
+---
+
+# DEĞİŞİKLİK PRENSİPLERİ
+
+Hiçbir yeni bölüm yalnızca belgeyi büyütmek amacıyla eklenmemelidir.
+
+Her yeni içerik aşağıdaki sorulara cevap vermelidir.
+
+Yeni bir ilke mi tanımlıyor?
+
+Mevcut bir boşluğu mu dolduruyor?
+
+Karar kalitesini artırıyor mu?
+
+Uygulanabilir mi?
+
+Test edilebilir mi?
+
+---
+
+# TEKRAR YÖNETİMİ
+
+Benzer içerikler çoğaldığında:
+
+- Birleştirilmelidir.
+- Tek referans noktası oluşturulmalıdır.
+- Çelişkiler giderilmelidir.
+- Gereksiz tekrarlar kaldırılmalıdır.
+
+---
+
+# SÜRÜM YÖNETİMİ
+
+Constitution sürümler halinde yönetilmelidir.
+
+Örnek:
+
+v1.0
+
+İlk temel prensipler.
+
+v2.0
+
+Opportunity Intelligence.
+
+v3.0
+
+Self-Evolution Engine.
+
+v4.0
+
+Architecture Mapping.
+
+Her sürüm için değişiklik günlüğü tutulmalıdır.
+
+---
+
+# İZLENEBİLİRLİK
+
+Her önemli ilke aşağıdaki unsurlarla ilişkilendirilmelidir.
+
+İlgili modüller
+
+İlgili testler
+
+İlgili veri kaynakları
+
+İlgili metrikler
+
+İlgili karar kayıtları
+
+Böylece bir ilkenin yazılım üzerindeki etkisi açıkça takip edilebilir.
+
+---
+
+# SON İLKE
+
+Bu Constitution'ın başarısı satır sayısıyla değil;
+
+ürettiği kararların doğruluğu,
+
+tutarlılığı,
+
+açıklanabilirliği
+
+ve uzun yıllar boyunca geçerliliğini koruyabilmesi ile ölçülür.
