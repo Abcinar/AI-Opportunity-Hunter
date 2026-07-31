@@ -3131,3 +3131,306 @@ kodu takip etmemelidir.
 Her büyük mimari değişiklik,
 
 önce Constitution üzerinde değerlendirilmelidir.
+---
+
+# FIRSAT OLUŞUM MODELİ (OPPORTUNITY EMERGENCE MODEL)
+
+## Giriş
+
+Hiçbir fırsat yoktan var olmaz.
+
+Her fırsat,
+
+bir değişimin sonucudur.
+
+AI Opportunity Hunter'ın temel görevi yalnızca mevcut fırsatları bulmak değildir.
+
+Henüz görünmeyen fırsatların oluşum sürecini anlamaktır.
+
+Bu nedenle motor, fırsatları değil;
+
+fırsatları oluşturan değişimleri analiz etmelidir.
+
+---
+
+# TEMEL İLKE
+
+Her fırsatın arkasında en az bir değişim bulunur.
+
+Bu değişim;
+
+teknolojik,
+
+ekonomik,
+
+hukuki,
+
+sosyal,
+
+davranışsal
+
+veya operasyonel olabilir.
+
+Motor değişimi tespit ederse,
+
+gelecekte oluşacak fırsatı herkesten önce görebilir.
+
+---
+
+# DEĞİŞİM TÜRLERİ
+
+Motor aşağıdaki değişim sınıflarını sürekli takip etmelidir.
+
+Teknolojik Değişim
+
+Yapay zekâ gelişmeleri
+
+Yeni API'ler
+
+Yeni modeller
+
+Yeni altyapılar
+
+---
+
+Davranışsal Değişim
+
+Kullanıcı alışkanlıkları
+
+Çalışma biçimleri
+
+İletişim yöntemleri
+
+Satın alma davranışları
+
+---
+
+Ekonomik Değişim
+
+Maliyet artışları
+
+Yeni gelir modelleri
+
+Kur değişimleri
+
+Yeni yatırım eğilimleri
+
+---
+
+Hukuki Değişim
+
+Yeni yönetmelikler
+
+Vergi düzenlemeleri
+
+KVKK
+
+GDPR
+
+Sektörel zorunluluklar
+
+---
+
+Operasyonel Değişim
+
+Manuel süreçler
+
+Artan iş yükü
+
+Tekrarlayan görevler
+
+İnsan hataları
+
+Verimsizlik
+
+---
+
+# DEĞİŞİM → PROBLEM
+
+Her değişim,
+
+yeni problemler üretir.
+
+Motor şu soruyu sormalıdır.
+
+Bu değişim,
+
+hangi yeni problemi oluşturuyor?
+
+Henüz kimsenin konuşmadığı problemler,
+
+en değerli fırsatların başlangıcıdır.
+
+---
+
+# PROBLEM → ÇÖZÜM
+
+Problem doğrulandıktan sonra
+
+çözüm seçenekleri değerlendirilmelidir.
+
+Motor tek çözüm üretmemelidir.
+
+Bir problem için birden fazla çözüm yolu önermelidir.
+
+---
+
+# ÇÖZÜM → İŞ MODELİ
+
+Her çözüm,
+
+iyi bir iş değildir.
+
+Motor aşağıdaki iş modellerini değerlendirmelidir.
+
+SaaS
+
+Mikro SaaS
+
+API
+
+Marketplace
+
+Ajans
+
+Danışmanlık
+
+Plugin
+
+Browser Extension
+
+Desktop
+
+Mobile
+
+Enterprise
+
+Open Core
+
+Hybrid
+
+---
+
+# İŞ MODELİ → GELİR
+
+Her iş modeli için
+
+uygun gelir modeli belirlenmelidir.
+
+Abonelik
+
+Kullanım Bazlı
+
+Lisans
+
+Komisyon
+
+Freemium
+
+Kurumsal Satış
+
+Reklam
+
+Tek Seferlik Satış
+
+Gelir modeli,
+
+iş modeliyle uyumlu olmalıdır.
+
+---
+
+# GELİR → SAVUNMA HATTI
+
+İyi fikirler kopyalanabilir.
+
+İyi şirketler korunabilir.
+
+Motor aşağıdaki savunma mekanizmalarını analiz etmelidir.
+
+Marka
+
+Veri
+
+Topluluk
+
+Dağıtım
+
+Teknoloji
+
+Entegrasyonlar
+
+Network Etkisi
+
+Operasyonel Üstünlük
+
+---
+
+# FIRSAT OLUŞUM ZİNCİRİ
+
+```
+Değişim
+
+↓
+
+Yeni Problem
+
+↓
+
+Tekrarlayan Problem
+
+↓
+
+Kanıt
+
+↓
+
+Çözüm
+
+↓
+
+İş Modeli
+
+↓
+
+Gelir Modeli
+
+↓
+
+Savunma Hattı
+
+↓
+
+Şirket
+```
+
+---
+
+# TASARIM FELSEFESİ
+
+Çoğu insan,
+
+şirketleri analiz eder.
+
+AI Opportunity Hunter,
+
+şirketlerden önce gelen değişimleri analiz eder.
+
+Çünkü
+
+değişim,
+
+problemi oluşturur.
+
+Problem,
+
+iş fırsatını oluşturur.
+
+İş fırsatı ise,
+
+başarılı şirketlerin doğduğu yerdir.
+
+Motorun amacı,
+
+şirketleri takip etmek değil,
+
+şirketlerin doğacağı zemini herkesten önce tespit etmektir.
