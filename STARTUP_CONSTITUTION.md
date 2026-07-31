@@ -5635,3 +5635,200 @@ Mühendislik başarısı;
 kaç satır kod yazıldığıyla değil,
 
 kaç yıl boyunca güvenle geliştirilebildiğiyle ölçülür.
+---
+
+# PLATFORM YÖNETİŞİM MODELİ (PLATFORM GOVERNANCE MODEL)
+
+## Amaç
+
+AI Opportunity Hunter uzun ömürlü bir platform olarak tasarlanmaktadır.
+
+Uzun ömürlü platformlar yalnızca iyi kod sayesinde değil,
+
+iyi yönetişim sayesinde gelişir.
+
+Bu bölüm,
+
+platformun teknik,
+
+mimari
+
+ve stratejik kararlarının nasıl yönetileceğini tanımlar.
+
+---
+
+# TEMEL PRENSİP
+
+Hiçbir birey,
+
+hiçbir modül,
+
+hiçbir teknoloji
+
+platformdan daha önemli değildir.
+
+Platform,
+
+kişilerden bağımsız yaşayabilmelidir.
+
+---
+
+# KARAR SINIFLARI
+
+Kararlar beş seviyeye ayrılır.
+
+---
+
+## Level 1
+
+Constitution Decisions
+
+En üst düzey kararlar.
+
+Nadiren değişir.
+
+---
+
+## Level 2
+
+Architecture Decisions
+
+ADR kayıtları.
+
+Servis sınırları.
+
+Veri akışları.
+
+---
+
+## Level 3
+
+Engineering Decisions
+
+Kod organizasyonu.
+
+Framework seçimi.
+
+Performans.
+
+---
+
+## Level 4
+
+Operational Decisions
+
+Deployment.
+
+Monitoring.
+
+Alert.
+
+Scaling.
+
+---
+
+## Level 5
+
+Experimental Decisions
+
+Yeni fikirler.
+
+Prototipler.
+
+Deneysel algoritmalar.
+
+---
+
+# DEĞİŞİKLİK YÖNETİMİ
+
+Yeni fikirler doğrudan Constitution'a eklenmez.
+
+Önce:
+
+RFC
+
+↓
+
+Prototype
+
+↓
+
+Validation
+
+↓
+
+ADR
+
+↓
+
+Implementation
+
+↓
+
+Production
+
+↓
+
+Constitution Reference
+
+---
+
+# PLATFORM HAFIZASI
+
+Platform hiçbir teknik kararını unutmamalıdır.
+
+Her önemli karar belgelenmelidir.
+
+Her önemli hata belgelenmelidir.
+
+Her önemli başarı belgelenmelidir.
+
+Kurumsal hafıza,
+
+platformun en değerli varlıklarından biridir.
+
+---
+
+# TEKNİK EVRİM
+
+Teknoloji değişebilir.
+
+Programlama dili değişebilir.
+
+Yapay zekâ modelleri değişebilir.
+
+Veritabanı değişebilir.
+
+Ancak platformun temel ilkeleri korunmalıdır.
+
+---
+
+# GÜVEN İLKESİ
+
+Kullanıcı güveni,
+
+kısa vadeli büyümeden daha değerlidir.
+
+Şeffaflık,
+
+izlenebilirlik
+
+ve doğrulanabilirlik
+
+her zaman öncelikli olmalıdır.
+
+---
+
+# SONUÇ
+
+AI Opportunity Hunter,
+
+yalnızca geliştirilen bir yazılım değildir.
+
+Sürekli öğrenen,
+
+sürekli gelişen,
+
+kurumsal hafızasını koruyan,
+
+ve uzun yıllar boyunca evrim geçirebilecek bir platform olarak tasarlanmalıdır.
