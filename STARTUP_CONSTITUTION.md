@@ -1,0 +1,179 @@
+# STARTUP_CONSTITUTION.md
+
+> **AI Opportunity Hunter**
+> Startup Constitution
+> Version 3.0
+>
+> "We don't chase trends.
+> We discover businesses."
+
+---
+
+# TABLE OF CONTENTS
+
+1. Preface
+2. Vision
+3. Mission
+4. Core Values
+5. Startup Philosophy
+6. First Principles Thinking
+7. Opportunity Manifesto
+8. What Is (and Isn't) an Opportunity?
+9. Opportunity Thinking Framework
+10. Customer-First Mindset
+11. Pain Theory
+12. Market Theory
+13. Revenue Theory
+14. AI Leverage Framework
+15. Founder Fit
+16. Opportunity Lifecycle
+17. Intelligence Engine Blueprint
+18. Scoring Framework
+19. Decision Engine
+20. Explainable AI Principles
+21. Dashboard Philosophy
+22. Data Collection Principles
+23. Source Evaluation Rules
+24. Anti-Principles
+25. Development Standards
+26. AI Collaboration Standards
+27. GitHub Standards
+28. Product Roadmap
+29. Long-Term Vision
+30. Constitution
+
+---
+
+# 1. PREFACE
+
+Most startups fail because they build products before understanding problems.
+
+AI Opportunity Hunter exists to reverse that process.
+
+Our mission is not to collect news, trends, or viral content.
+
+Our mission is to discover real business opportunities hidden inside signals generated every day by developers, founders, customers, communities, and markets.
+
+We believe that every successful startup begins with one thing:
+
+A painful problem that enough people are willing to pay to solve.
+
+Technology is never the starting point.
+
+Artificial Intelligence is not the product.
+
+AI is only a tool used to understand reality faster and better.
+
+Every design decision inside AI Opportunity Hunter must serve one purpose:
+
+Finding opportunities before everyone else.
+
+This document defines the permanent principles that guide every future version of this product.
+
+If a future feature conflicts with this Constitution, the Constitution wins.
+
+---
+
+# 2. VISION
+
+## Our Vision
+
+To become the world's most trusted Opportunity Intelligence Platform.
+
+A platform capable of discovering profitable startup ideas before they become obvious.
+
+Instead of helping founders build faster...
+
+We help them build the right thing.
+
+Success is not measured by the amount of collected data.
+
+Success is measured by the number of valuable businesses discovered.
+
+---
+
+# 3. MISSION
+
+Our mission is simple:
+
+Transform overwhelming information into actionable business opportunities.
+
+We analyze signals.
+
+We detect problems.
+
+We validate pain.
+
+We estimate business potential.
+
+We explain every decision.
+
+Our goal is not to answer:
+
+"What is happening?"
+
+Our goal is to answer:
+
+"What should a founder build next?"
+
+---
+
+# 4. CORE VALUES
+
+## Principle 1 — Problems Before Products
+
+Never start with technology.
+
+Always start with pain.
+
+---
+
+## Principle 2 — Evidence Over Assumptions
+
+Every recommendation must be supported by observable evidence.
+
+No guesses.
+
+No hype.
+
+No assumptions.
+
+---
+
+## Principle 3 — Explain Everything
+
+Every score.
+
+Every recommendation.
+
+Every opportunity.
+
+Must be explainable.
+
+A black-box decision is unacceptable.
+
+---
+
+## Principle 4 — Think Like an Investor
+
+Evaluate opportunities as if every decision involved your own capital.
+
+The best opportunities combine:
+
+- High pain
+- Large market
+- Low complexity
+- Strong timing
+- Sustainable advantage
+
+---
+
+## Principle 5 — Build for Founders
+
+Every feature must save founders time.
+
+Every minute saved creates value.
+
+Complexity is a bug.
+
+Clarity is a feature.
