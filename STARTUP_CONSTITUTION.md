@@ -4133,3 +4133,234 @@ her skor sistemi,
 Constitution'a aykırı hiçbir tasarım,
 
 nihai mimarinin parçası olmamalıdır.
+---
+
+# AI OPPORTUNITY HUNTER DOKTRİNİ
+
+## Giriş
+
+AI Opportunity Hunter yalnızca bir yazılım değildir.
+
+Yalnızca bir analiz motoru değildir.
+
+Yalnızca bir startup keşif platformu değildir.
+
+AI Opportunity Hunter;
+
+problemleri anlamaya,
+
+değişimi yorumlamaya,
+
+kanıtları değerlendirmeye,
+
+ve insanların daha bilinçli girişim kararları vermesine yardımcı olmak amacıyla geliştirilmiş bir düşünce sistemidir.
+
+Bu doktrin,
+
+sistemin dünyaya nasıl baktığını tanımlar.
+
+---
+
+# DOKTRİN 1
+
+## Problemler Geçici Değildir
+
+Teknolojiler değişebilir.
+
+Şirketler değişebilir.
+
+Araçlar değişebilir.
+
+Fakat insanların temel problemleri uzun yıllar boyunca benzer kalır.
+
+Bu nedenle sistem,
+
+teknolojiyi değil,
+
+problemi merkeze almalıdır.
+
+---
+
+# DOKTRİN 2
+
+## Değişim Fırsat Üretir
+
+Her büyük fırsat,
+
+öncesinde yaşanan büyük bir değişimin sonucudur.
+
+Motor;
+
+şirketleri değil,
+
+şirketleri doğuran değişimleri takip etmelidir.
+
+---
+
+# DOKTRİN 3
+
+## Kanıt Güçtür
+
+Kanaat değerlidir.
+
+Deneyim değerlidir.
+
+Sezgi değerlidir.
+
+Ancak karar,
+
+kanıta dayanmalıdır.
+
+Motor hiçbir zaman yalnızca popüler görüşlere göre hareket etmemelidir.
+
+---
+
+# DOKTRİN 4
+
+## Belirsizlik Doğaldır
+
+Hiçbir analiz kesin değildir.
+
+Hiçbir skor mutlak doğru değildir.
+
+Sistem;
+
+belirsizliği azaltmaya çalışır.
+
+Belirsizliği tamamen ortadan kaldırmaya çalışmaz.
+
+---
+
+# DOKTRİN 5
+
+## Öğrenme Sonsuzdur
+
+Her analiz,
+
+bilgi tabanını geliştirmelidir.
+
+Her hata,
+
+gelecekteki kararları iyileştirmelidir.
+
+Hiçbir bilgi,
+
+değişmez kabul edilmemelidir.
+
+---
+
+# DOKTRİN 6
+
+## İnsan Merkezlidir
+
+Yapay zekâ öneri sunabilir.
+
+Analiz yapabilir.
+
+Risk hesaplayabilir.
+
+Ancak nihai karar,
+
+her zaman insana aittir.
+
+Sistem,
+
+karar veren değil,
+
+karar vermeyi kolaylaştıran bir yardımcıdır.
+
+---
+
+# DOKTRİN 7
+
+## Şeffaflık Güven Doğurur
+
+Kullanıcı yalnızca sonucu görmemelidir.
+
+Sonuca nasıl ulaşıldığını da anlayabilmelidir.
+
+Açıklanamayan zekâ,
+
+güven oluşturamaz.
+
+---
+
+# DOKTRİN 8
+
+## Basitlik Güçtür
+
+Karmaşıklık,
+
+çoğu zaman eksik düşünmenin sonucudur.
+
+Gerçek ustalık,
+
+karmaşık problemleri,
+
+basit çözümlerle yönetebilmektir.
+
+Motor gereksiz karmaşıklığı teşvik etmemelidir.
+
+---
+
+# DOKTRİN 9
+
+## Süreklilik Başarıyı Oluşturur
+
+Tek bir doğru karar,
+
+başarı garantisi değildir.
+
+Doğru kararların istikrarlı şekilde tekrar edilmesi,
+
+başarılı şirketleri oluşturur.
+
+Motor,
+
+tekrarlanabilir başarı üretmeye odaklanmalıdır.
+
+---
+
+# DOKTRİN 10
+
+## Gelecek Tahmin Edilmez
+
+Gelecek kesin olarak bilinemez.
+
+Ancak doğru sinyaller,
+
+doğru yorumlandığında,
+
+geleceğin olası yönü görülebilir.
+
+AI Opportunity Hunter'ın amacı,
+
+geleceği tahmin etmek değil,
+
+geleceğe dair daha güçlü olasılıkları ortaya koymaktır.
+
+---
+
+# SONUÇ
+
+Bu doktrin,
+
+AI Opportunity Hunter'ın teknik mimarisinden bağımsızdır.
+
+Programlama dili değişebilir.
+
+Altyapı değişebilir.
+
+Veri kaynakları değişebilir.
+
+Algoritmalar gelişebilir.
+
+Ancak bu doktrinin temel ilkeleri,
+
+sistemin karakterini oluşturmaya devam edecektir.
+
+AI Opportunity Hunter'ın gerçek değeri,
+
+yalnızca ürettiği analizlerde değil,
+
+o analizleri mümkün kılan düşünce sisteminde yatmaktadır.
