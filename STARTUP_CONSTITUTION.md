@@ -770,3 +770,274 @@ Recommend it only if customers already demonstrate demand.
 Demand creates businesses.
 
 Technology only accelerates them.
+---
+
+# THE DECISION ENGINE
+
+## Introduction
+
+Discovering an opportunity is only half of the process.
+
+The second half is making the correct decision.
+
+The Decision Engine exists to answer one question:
+
+> "What should the founder do next?"
+
+Every recommendation must be logical.
+
+Every recommendation must be explainable.
+
+Every recommendation must be repeatable.
+
+---
+
+# DECISION HIERARCHY
+
+Every evaluated opportunity must end with exactly one recommendation.
+
+```
+                    Opportunity
+                         │
+                         ▼
+              Confidence Calculation
+                         │
+                         ▼
+               Opportunity Score
+                         │
+                         ▼
+         ┌───────────────┼───────────────┐
+         ▼               ▼               ▼
+      BUILD        INVESTIGATE         WATCH
+                         │
+                         ▼
+                       SKIP
+```
+
+No opportunity may leave the engine without a recommendation.
+
+---
+
+# BUILD
+
+Definition
+
+The engine recommends BUILD only when strong evidence already exists.
+
+Requirements
+
+✓ Clear customer
+
+✓ Proven pain
+
+✓ Existing spending
+
+✓ Large enough market
+
+✓ AI provides leverage
+
+✓ Founder fit is acceptable
+
+✓ Execution complexity is reasonable
+
+The BUILD recommendation means:
+
+"If resources are available, start building immediately."
+
+---
+
+# INVESTIGATE
+
+Definition
+
+The opportunity appears promising.
+
+However,
+
+important information is still missing.
+
+Possible missing information:
+
+- Customer interviews
+
+- Market size
+
+- Competition
+
+- Pricing
+
+- Technical feasibility
+
+- Legal requirements
+
+The recommendation is:
+
+Research before building.
+
+---
+
+# WATCH
+
+Definition
+
+The market is interesting.
+
+The timing is not.
+
+Signals should continue to be monitored.
+
+Possible reasons:
+
+Technology is immature.
+
+Market awareness is low.
+
+Customers are not ready.
+
+Competition dominates.
+
+Demand is uncertain.
+
+Recommendation:
+
+Continue monitoring.
+
+Do not build yet.
+
+---
+
+# SKIP
+
+Definition
+
+The engine rejects the opportunity.
+
+Reasons include:
+
+No customer.
+
+Weak pain.
+
+No revenue.
+
+Tiny market.
+
+Temporary hype.
+
+Pure entertainment.
+
+Impossible execution.
+
+No AI advantage.
+
+Recommendation:
+
+Ignore.
+
+Move resources elsewhere.
+
+---
+
+# DECISION RULES
+
+The engine should never recommend BUILD because:
+
+- AI is popular.
+
+- Social media is excited.
+
+- Investors are talking.
+
+- The technology is impressive.
+
+The engine recommends BUILD only when evidence indicates that a sustainable business can exist.
+
+---
+
+# CONFIDENCE ENGINE
+
+Confidence is independent from Opportunity Score.
+
+A high opportunity score with weak evidence should produce medium confidence.
+
+Confidence is determined by evidence quality.
+
+Example:
+
+Strong evidence
+
+Repeated observations
+
+Multiple independent sources
+
+Historical consistency
+
+Customer validation
+
+Revenue validation
+
+Confidence increases.
+
+Weak evidence
+
+Single observation
+
+Opinion
+
+Speculation
+
+Prediction
+
+Confidence decreases.
+
+---
+
+# EXPLAINABILITY
+
+Every recommendation must answer:
+
+Why?
+
+The engine should never output:
+
+"BUILD"
+
+Instead it should output:
+
+BUILD
+
+Because:
+
+- Customer identified
+
+- Pain confirmed
+
+- Existing spending detected
+
+- Competition manageable
+
+- AI leverage is strong
+
+- Confidence: 91%
+
+Every recommendation must justify itself.
+
+---
+
+# THE FINAL QUESTION
+
+Before returning any recommendation,
+
+the engine asks one final question.
+
+"If I invested my own money,
+
+would I still recommend this opportunity?"
+
+If the answer is no,
+
+the recommendation must become more conservative.
+
+AI Opportunity Hunter should think like an experienced founder.
+
+Not like an enthusiastic AI model.
