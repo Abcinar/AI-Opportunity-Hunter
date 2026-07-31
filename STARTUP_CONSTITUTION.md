@@ -2302,3 +2302,832 @@ tekrar üretilebilir,
 ölçülebilir,
 
 ve açıklanabilir kanıtlarla desteklenmelidir.
+---
+
+# FAILURE PREVENTION FRAMEWORK (BAŞARISIZLIK ÖNLEME ÇERÇEVESİ)
+
+## Giriş
+
+Her startup başarıya ulaşmaz.
+
+Çoğu startup;
+
+kötü fikir nedeniyle değil,
+
+yanlış kararların birikmesi nedeniyle başarısız olur.
+
+AI Opportunity Hunter'ın amacı yalnızca fırsat önermek değildir.
+
+Aynı zamanda başarısızlık ihtimalini mümkün olduğunca erken tespit etmektir.
+
+---
+
+# TEMEL İLKE
+
+Risk,
+
+başarısızlık değildir.
+
+Ancak fark edilmeyen risk,
+
+başarısızlığın en güçlü habercisidir.
+
+Motor;
+
+fırsatları puanladığı kadar,
+
+riskleri de puanlamalıdır.
+
+---
+
+# BAŞARISIZLIK KATEGORİLERİ
+
+Motor aşağıdaki ana risk gruplarını değerlendirmelidir.
+
+• Problem Riski
+
+• Müşteri Riski
+
+• Gelir Riski
+
+• Ürün Riski
+
+• Teknoloji Riski
+
+• Dağıtım Riski
+
+• Rekabet Riski
+
+• Operasyon Riski
+
+• Hukuki Risk
+
+• Kurucu Riski
+
+Hiçbir risk tek başına değerlendirilmemelidir.
+
+Riskler birbirleriyle ilişkilidir.
+
+---
+
+# PROBLEM RİSKİ
+
+Sorulan sorular
+
+Problem gerçekten var mı?
+
+Problem sürekli yaşanıyor mu?
+
+Problem yeterince büyük mü?
+
+Problem ölçülebiliyor mu?
+
+Problem çözülmeye değer mi?
+
+Belirsizlik arttıkça Risk Score yükselmelidir.
+
+---
+
+# MÜŞTERİ RİSKİ
+
+Motor aşağıdaki durumları risk olarak değerlendirmelidir.
+
+Belirsiz hedef kitle
+
+Karar vericinin bilinmemesi
+
+Ödeme isteğinin kanıtlanmamış olması
+
+Düşük müşteri erişilebilirliği
+
+Uzun satış döngüsü
+
+---
+
+# GELİR RİSKİ
+
+Gelir modeli net değilse,
+
+iş modeli de net değildir.
+
+Risk göstergeleri
+
+Tek gelir kaynağı
+
+Belirsiz fiyatlandırma
+
+Düşük kârlılık
+
+Yüksek edinme maliyeti
+
+Uzun geri ödeme süresi
+
+---
+
+# TEKNOLOJİ RİSKİ
+
+Motor aşağıdaki konuları analiz etmelidir.
+
+API bağımlılığı
+
+Tek platform bağımlılığı
+
+Kapalı servis kullanımı
+
+Ölçeklenebilirlik
+
+Altyapı maliyetleri
+
+Bakım yükü
+
+---
+
+# DAĞITIM RİSKİ
+
+Harika ürünler,
+
+yanlış dağıtım nedeniyle başarısız olabilir.
+
+Motor değerlendirmelidir.
+
+Organik büyüme mümkün mü?
+
+SEO avantajı var mı?
+
+Topluluk oluşturulabilir mi?
+
+İçerikle büyüyebilir mi?
+
+Ücretli reklam zorunlu mu?
+
+---
+
+# REKABET RİSKİ
+
+Risk yalnızca rakip sayısı değildir.
+
+Motor ayrıca analiz etmelidir.
+
+Pazar liderleri
+
+Network etkisi
+
+Marka gücü
+
+Patentler
+
+Topluluk sadakati
+
+Platform kilidi
+
+---
+
+# HUKUKİ RİSK
+
+Her fırsat aynı yasal ortamda çalışmaz.
+
+Motor gerektiğinde aşağıdaki riskleri işaretlemelidir.
+
+KVKK
+
+GDPR
+
+Telif hakları
+
+Lisanslama
+
+Finansal düzenlemeler
+
+Sağlık verileri
+
+Çocuk verileri
+
+Uluslararası veri transferi
+
+---
+
+# KURUCU RİSKİ
+
+Kurucunun güçlü yönleri kadar,
+
+zayıf yönleri de değerlendirilmelidir.
+
+Risk göstergeleri
+
+Alan bilgisi eksikliği
+
+Teknik yetersizlik
+
+Satış deneyimi eksikliği
+
+Sermaye yetersizliği
+
+Zaman kısıtı
+
+Operasyon deneyimi eksikliği
+
+---
+
+# RED FLAG SİSTEMİ
+
+Bazı durumlar otomatik uyarı üretmelidir.
+
+Örnekler
+
+Hiç müşteri doğrulaması yok.
+
+Gelir modeli belirsiz.
+
+Problem yalnızca varsayım.
+
+AI gerçek değer üretmiyor.
+
+Pazar küçülüyor.
+
+Rakipler hızla büyüyor.
+
+Platform tamamen dışa bağımlı.
+
+Bu uyarılar raporda açıkça gösterilmelidir.
+
+---
+
+# RİSK DENGESİ
+
+Yüksek Opportunity Score,
+
+düşük Risk Score ile desteklenmelidir.
+
+Yüksek Opportunity Score,
+
+yüksek Risk Score ile birlikteyse,
+
+motor BUILD yerine INVESTIGATE önerisi verebilir.
+
+---
+
+# TASARIM FELSEFESİ
+
+İyi bir analiz motoru,
+
+yalnızca fırsatları göstermez.
+
+Aynı zamanda kullanıcının
+
+hangi hataları yapmaması gerektiğini de gösterir.
+
+AI Opportunity Hunter,
+
+bir öneri motorundan çok,
+
+bir karar destek sistemi olarak tasarlanmalıdır.
+---
+
+# MOMENTUM ANALİZ MOTORU (MOMENTUM ANALYSIS ENGINE)
+
+## Giriş
+
+Her fırsat aynı hızda büyümez.
+
+Bazı fikirler yıllarca yerinde sayarken,
+
+bazıları birkaç ay içinde milyarlarca dolarlık pazarlara dönüşebilir.
+
+AI Opportunity Hunter yalnızca fırsatın büyüklüğünü değil,
+
+büyüme ivmesini de analiz etmelidir.
+
+Bir fırsatın bugünkü değeri kadar,
+
+yarın ne kadar büyüyeceği de önemlidir.
+
+---
+
+# TEMEL FELSEFE
+
+İvme,
+
+mevcut durumun değil,
+
+değişimin ölçüsüdür.
+
+Motor yalnızca "ne var?" sorusunu değil,
+
+"ne değişiyor?" sorusunu da cevaplamalıdır.
+
+---
+
+# MOMENTUM GÖSTERGELERİ
+
+Motor aşağıdaki sinyalleri sürekli analiz etmelidir.
+
+Arama hacmi artışı
+
+Yeni girişim sayısı
+
+Yatırım haberleri
+
+Topluluk büyümesi
+
+GitHub aktivitesi
+
+API yayınları
+
+Yeni entegrasyonlar
+
+İş ilanları
+
+Satın almalar
+
+Teknoloji duyuruları
+
+Açık kaynak proje hareketliliği
+
+Dokümantasyon güncellemeleri
+
+---
+
+# ARAMA MOMENTUMU
+
+Motor aşağıdaki değişimleri izlemelidir.
+
+Haftalık değişim
+
+Aylık değişim
+
+Çeyreklik değişim
+
+Yıllık değişim
+
+Ani yükselişler
+
+Sürekli yükselişler
+
+Ani düşüşler
+
+Geçici popülerlik ile kalıcı büyüme birbirinden ayrılmalıdır.
+
+---
+
+# TOPLULUK MOMENTUMU
+
+Bir topluluk büyüyorsa,
+
+genellikle pazar da büyüyordur.
+
+Analiz edilecek kaynaklar
+
+Reddit
+
+Discord
+
+GitHub
+
+Stack Overflow
+
+Product Hunt
+
+Hacker News
+
+LinkedIn
+
+YouTube
+
+X
+
+Bağımsız forumlar
+
+Topluluk kalitesi,
+
+topluluk büyüklüğünden daha değerlidir.
+
+---
+
+# GELİŞTİRİCİ MOMENTUMU
+
+Geliştiriciler geleceğin erken göstergelerinden biridir.
+
+Motor değerlendirmelidir.
+
+Yeni repository sayısı
+
+Commit sıklığı
+
+Contributor artışı
+
+Fork sayısı
+
+Issue hareketliliği
+
+Release sıklığı
+
+SDK yayınları
+
+API ekosistemi
+
+---
+
+# PAZAR MOMENTUMU
+
+Motor aşağıdaki değişimleri analiz etmelidir.
+
+Yeni SaaS ürünleri
+
+Yeni girişimler
+
+Yeni yatırım turları
+
+Yeni satın almalar
+
+Yeni ortaklıklar
+
+Yeni kullanım senaryoları
+
+Yeni regülasyonlar
+
+Yeni müşteri segmentleri
+
+---
+
+# NEGATİF MOMENTUM
+
+Her büyüme olumlu değildir.
+
+Motor aşağıdaki düşüş sinyallerini de değerlendirmelidir.
+
+Azalan kullanıcı ilgisi
+
+Azalan yatırım
+
+Azalan GitHub aktivitesi
+
+Topluluk küçülmesi
+
+İş ilanlarının azalması
+
+API desteğinin sona ermesi
+
+Rakiplerin pazardan çekilmesi
+
+---
+
+# MOMENTUM TÜRLERİ
+
+## Zayıf Momentum
+
+Değişim yavaştır.
+
+Henüz erken sinyaller vardır.
+
+---
+
+## Güçlenen Momentum
+
+Farklı veri kaynaklarında aynı yönde büyüme görülmektedir.
+
+Bu aşama yakından takip edilmelidir.
+
+---
+
+## Patlayıcı Momentum
+
+Birden fazla bağımsız kaynaktan güçlü büyüme sinyali gelmektedir.
+
+Bu fırsatlar öncelikli olarak analiz edilmelidir.
+
+---
+
+## Yapay Momentum
+
+Sadece sosyal medya konuşmaktadır.
+
+Gerçek müşteri hareketi yoktur.
+
+Gerçek gelir oluşmamıştır.
+
+Motor bu durumlarda dikkatli davranmalıdır.
+
+---
+
+# MOMENTUM SKORU
+
+Momentum tek bir veriden oluşmamalıdır.
+
+Skor;
+
+Arama Eğilimi
+
+Topluluk Hareketi
+
+Yatırım Hareketi
+
+Geliştirici Aktivitesi
+
+Ürün Ekosistemi
+
+Pazar Genişlemesi
+
+Teknolojik Gelişim
+
+gibi bileşenlerden hesaplanmalıdır.
+
+---
+
+# MOMENTUM TUZAKLARI
+
+Motor aşağıdaki durumları risk olarak işaretlemelidir.
+
+Geçici viral etki
+
+Tek platform kaynaklı ilgi
+
+Sponsorlu görünürlük
+
+Manipüle edilmiş sosyal sinyaller
+
+Bot trafiği
+
+Yapay kullanıcı artışı
+
+Sahte değerlendirmeler
+
+Momentum,
+
+kanıtlarla desteklenmediği sürece güvenilir kabul edilmemelidir.
+
+---
+
+# KARAR ETKİSİ
+
+Yüksek Momentum,
+
+yüksek Problem Skoru,
+
+yüksek Evidence Skoru
+
+ile birlikte görülüyorsa,
+
+Opportunity Score güçlendirilmelidir.
+
+Ancak;
+
+yüksek Momentum,
+
+düşük Gerçeklik Skoru ile birlikteyse,
+
+motor otomatik olarak INVESTIGATE önerisi üretmelidir.
+
+---
+
+# TASARIM FELSEFESİ
+
+AI Opportunity Hunter,
+
+trend avcısı değildir.
+
+Trendler geçicidir.
+
+Momentum ise,
+
+gelecekte oluşabilecek kalıcı fırsatların erken göstergesidir.
+
+Bu nedenle motor,
+
+gürültüyü değil,
+
+anlamlı değişimi tespit etmeye odaklanmalıdır.
+---
+
+# KURUCU YASALARI (FOUNDER LAWS)
+
+## Giriş
+
+Teknolojiler değişir.
+
+Programlama dilleri değişir.
+
+Yapay zekâ modelleri değişir.
+
+Pazarlar değişir.
+
+Ancak başarılı girişimlerin temel prensipleri büyük ölçüde aynıdır.
+
+Bu bölüm, AI Opportunity Hunter'ın değişmez kurallarını tanımlar.
+
+Her algoritma, her modül ve her öneri bu yasalara uygun olmalıdır.
+
+---
+
+# 1. PROBLEM YASASI
+
+Problem yoksa,
+
+iş de yoktur.
+
+Çözüm geliştirmeden önce problem doğrulanmalıdır.
+
+Motor hiçbir zaman yalnızca ilginç görünen fikirlere yüksek puan vermemelidir.
+
+---
+
+# 2. KANIT YASASI
+
+Varsayım,
+
+kanıt değildir.
+
+Her önemli karar,
+
+ölçülebilir ve tekrar doğrulanabilir verilerle desteklenmelidir.
+
+Kanıt bulunamayan durumlarda güven puanı düşürülmelidir.
+
+---
+
+# 3. MÜŞTERİ YASASI
+
+Ürün müşteri için vardır.
+
+Kurucunun hoşuna giden fikir,
+
+müşterinin işine yaramıyorsa değer üretmez.
+
+Motor her zaman müşteri bakış açısını önceliklendirmelidir.
+
+---
+
+# 4. ÖDEME YASASI
+
+İlgi,
+
+gelir değildir.
+
+İndirme sayısı,
+
+başarı değildir.
+
+Beğeni,
+
+müşteri değildir.
+
+Gerçek doğrulama,
+
+ödeme ile başlar.
+
+---
+
+# 5. BASİTLİK YASASI
+
+Basit çözümler,
+
+karmaşık çözümlerden daha hızlı öğrenir.
+
+Daha kolay satılır.
+
+Daha kolay geliştirilir.
+
+Motor gereksiz karmaşıklığı ödüllendirmemelidir.
+
+---
+
+# 6. ODAKLANMA YASASI
+
+Herkese hitap eden ürün,
+
+çoğu zaman hiç kimse için vazgeçilmez değildir.
+
+Motor,
+
+dar ama güçlü problemleri önceliklendirmelidir.
+
+---
+
+# 7. MOMENTUM YASASI
+
+Büyüyen pazarlar,
+
+duran pazarlardan daha değerlidir.
+
+Ancak geçici popülerlik,
+
+kalıcı büyüme olarak değerlendirilmemelidir.
+
+---
+
+# 8. KALDIRAÇ YASASI
+
+Yapay zekâ,
+
+otomasyon,
+
+API'ler,
+
+açık kaynak,
+
+ve ağ etkisi,
+
+aynı emeğin daha büyük sonuç üretmesini sağlar.
+
+Motor kaldıraç oluşturan fırsatları ödüllendirmelidir.
+
+---
+
+# 9. GERÇEKLİK YASASI
+
+Hiçbir skor,
+
+gerçek dünyadan daha değerli değildir.
+
+Eğer saha verileri ile algoritma çelişiyorsa,
+
+önce gerçek dünya yeniden analiz edilmelidir.
+
+---
+
+# 10. ÖĞRENME YASASI
+
+Her analiz,
+
+motoru daha akıllı hale getirmelidir.
+
+Tekrarlanan hatalar,
+
+sistemin eksikliğidir.
+
+Tekrarlanan başarılar,
+
+sistemin öğrenmesidir.
+
+---
+
+# 11. ŞEFFAFLIK YASASI
+
+Kullanıcı yalnızca sonucu değil,
+
+sonuca nasıl ulaşıldığını da görebilmelidir.
+
+Açıklanamayan puan,
+
+güven oluşturmaz.
+
+---
+
+# 12. ZAMAN YASASI
+
+Bugün doğru olan,
+
+yarın yanlış olabilir.
+
+Motor,
+
+değişen koşullara uyum sağlayabilecek şekilde tasarlanmalıdır.
+
+Statik bilgi,
+
+dinamik pazarlarda hızla değerini kaybeder.
+
+---
+
+# 13. KARAR YASASI
+
+Motor,
+
+karar vermemelidir.
+
+Motor,
+
+karar vermeyi kolaylaştırmalıdır.
+
+Son sorumluluk her zaman kullanıcıya aittir.
+
+---
+
+# 14. SÜRDÜRÜLEBİLİRLİK YASASI
+
+Kısa vadeli kazanç,
+
+uzun vadeli değerin önüne geçmemelidir.
+
+Kalıcı şirketler,
+
+geçici fırsatlardan daha değerlidir.
+
+---
+
+# 15. ANAYASA YASASI
+
+Bu Constitution,
+
+AI Opportunity Hunter'ın en üst düzey referans dokümanıdır.
+
+Kod,
+
+bu belgeyi takip etmelidir.
+
+Belge,
+
+kodu takip etmemelidir.
+
+Her büyük mimari değişiklik,
+
+önce Constitution üzerinde değerlendirilmelidir.
