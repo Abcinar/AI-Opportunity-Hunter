@@ -5832,3 +5832,98 @@ sürekli gelişen,
 kurumsal hafızasını koruyan,
 
 ve uzun yıllar boyunca evrim geçirebilecek bir platform olarak tasarlanmalıdır.
+---
+
+# KURUCU TAAHHÜDÜ (FOUNDER'S COMMITMENT)
+
+## Amaç
+
+Bu bölüm,
+
+AI Opportunity Hunter'ın teknik hedeflerinden önce,
+
+etik,
+
+mühendislik,
+
+ve uzun vadeli kalite anlayışını ifade eder.
+
+Bu taahhüt,
+
+ürünün gelecekte alacağı her teknik kararın arkasındaki niyeti tanımlar.
+
+---
+
+## TAAHHÜTLER
+
+Bu platform;
+
+moda teknolojilerin peşinden koşmak için değil,
+
+gerçek problemleri çözmek için geliştirilecektir.
+
+Kısa vadeli popülerlik,
+
+uzun vadeli güvenin önüne geçirilmeyecektir.
+
+Hiçbir algoritma,
+
+kanıtın yerine geçmeyecektir.
+
+Hiçbir yapay zekâ modeli,
+
+insan muhakemesinin tamamen yerine konulmayacaktır.
+
+Her önemli karar,
+
+mümkün olduğunca açıklanabilir olacaktır.
+
+Kullanıcı güveni,
+
+ticari kazançtan daha değerli kabul edilecektir.
+
+Platform,
+
+yalnızca daha fazla fırsat üretmeyi değil,
+
+daha doğru fırsatlar üretmeyi hedefleyecektir.
+
+Yeni özellikler,
+
+mevcut kaliteyi düşürmeyecek şekilde geliştirilecektir.
+
+Öğrenme,
+
+eleştiri,
+
+ve sürekli iyileştirme kültürü hiçbir zaman terk edilmeyecektir.
+
+---
+
+## SON SÖZ
+
+AI Opportunity Hunter'ın amacı,
+
+yalnızca başarılı bir yazılım geliştirmek değildir.
+
+Amacı,
+
+fırsat keşfi alanında güvenilir,
+
+şeffaf,
+
+ölçülebilir,
+
+ve uzun yıllar boyunca geliştirilebilecek bir mühendislik yaklaşımı oluşturmaktır.
+
+Bu Constitution,
+
+tamamlanmış bir eser değildir.
+
+Yaşayan bir düşünce sistemidir.
+
+Her yeni sürüm,
+
+aynı ilkeleri koruyarak,
+
+daha yüksek kaliteye ulaşmayı hedeflemelidir.
