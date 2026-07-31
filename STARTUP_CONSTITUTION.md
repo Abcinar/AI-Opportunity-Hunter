@@ -4364,3 +4364,256 @@ AI Opportunity Hunter'ın gerçek değeri,
 yalnızca ürettiği analizlerde değil,
 
 o analizleri mümkün kılan düşünce sisteminde yatmaktadır.
+---
+
+# FIRSAT SORGULAMA PROTOKOLÜ (OPPORTUNITY INTERROGATION PROTOCOL)
+
+## Giriş
+
+Her fırsat,
+
+ilk bakışta olduğundan daha farklıdır.
+
+İlk izlenim,
+
+çoğu zaman eksik bilgiden oluşur.
+
+AI Opportunity Hunter hiçbir fırsatı yalnızca görünen özellikleriyle değerlendirmez.
+
+Motor,
+
+her fırsatı sistematik olarak sorgular.
+
+Bu sorgulama tamamlanmadan hiçbir nihai öneri üretilmez.
+
+---
+
+# TEMEL İLKE
+
+Doğru cevaplardan önce,
+
+doğru sorular gelmelidir.
+
+Kaliteli analiz,
+
+kaliteli sorgulamanın doğal sonucudur.
+
+---
+
+# 1. PROBLEM SORGUSU
+
+Motor aşağıdaki soruların tamamını cevaplamaya çalışmalıdır.
+
+Gerçek problem nedir?
+
+Bu problem kim için problemdir?
+
+Ne sıklıkla yaşanmaktadır?
+
+Bugün nasıl çözülmektedir?
+
+Problemin maliyeti nedir?
+
+Problemin duygusal etkisi nedir?
+
+Problemin operasyonel etkisi nedir?
+
+Problemin finansal etkisi nedir?
+
+---
+
+# 2. MÜŞTERİ SORGUSU
+
+Kim kullanacak?
+
+Kim satın alacak?
+
+Kim karar verecek?
+
+Kim ödeme yapacak?
+
+Kim kullanımı durdurabilir?
+
+Kim ürünü tavsiye edebilir?
+
+Kim üründen zarar görebilir?
+
+Motor müşteri ekosistemini bütün olarak değerlendirmelidir.
+
+---
+
+# 3. PAZAR SORGUSU
+
+Pazar büyüyor mu?
+
+Pazar küçülüyor mu?
+
+Pazar bölünebilir mi?
+
+Yeni nişler oluşuyor mu?
+
+Uluslararası genişleme mümkün mü?
+
+Regülasyon riski var mı?
+
+---
+
+# 4. REKABET SORGUSU
+
+En güçlü rakip kim?
+
+En zayıf rakip kim?
+
+Müşteriler neden onları tercih ediyor?
+
+Neden şikâyet ediyorlar?
+
+Fiyat avantajı mı var?
+
+Marka avantajı mı var?
+
+Teknoloji avantajı mı var?
+
+---
+
+# 5. GELİR SORGUSU
+
+İnsanlar gerçekten ödeme yapıyor mu?
+
+Ne kadar ödüyor?
+
+Ne sıklıkla ödüyor?
+
+Alternatif maliyet nedir?
+
+Gelir tekrar ediyor mu?
+
+Gelir ölçeklenebilir mi?
+
+---
+
+# 6. DAĞITIM SORGUSU
+
+Müşteri ürünü nasıl keşfedecek?
+
+SEO mümkün mü?
+
+Topluluk oluşturulabilir mi?
+
+Referans sistemi kurulabilir mi?
+
+Satış ekibi gerekir mi?
+
+İçerik pazarlaması uygun mu?
+
+---
+
+# 7. YAPAY ZEKÂ SORGUSU
+
+Yapay zekâ gerçekten gerekli mi?
+
+Otomasyon sağlıyor mu?
+
+Karar kalitesini artırıyor mu?
+
+Maliyet avantajı oluşturuyor mu?
+
+İnsan emeğini azaltıyor mu?
+
+Yoksa yalnızca pazarlama etiketi olarak mı kullanılıyor?
+
+---
+
+# 8. RİSK SORGUSU
+
+En büyük teknik risk nedir?
+
+En büyük finansal risk nedir?
+
+En büyük hukuki risk nedir?
+
+En büyük operasyonel risk nedir?
+
+En büyük rekabet riski nedir?
+
+En büyük kurucu riski nedir?
+
+---
+
+# 9. SAVUNMA HATTI SORGUSU
+
+Bu ürün neden kopyalanamayacak?
+
+Kopyalanırsa neden yine tercih edilecek?
+
+Veri avantajı var mı?
+
+Topluluk avantajı var mı?
+
+Marka avantajı var mı?
+
+Operasyon avantajı var mı?
+
+---
+
+# 10. GELECEK SORGUSU
+
+Bu fırsat beş yıl sonra da var olacak mı?
+
+Yapay zekâ bu pazarı değiştirecek mi?
+
+Yeni regülasyonlar etkileyecek mi?
+
+Yeni teknolojiler ortaya çıkacak mı?
+
+Bu fırsat güçlenecek mi?
+
+Zayıflayacak mı?
+
+Yok olacak mı?
+
+---
+
+# SORGULAMA PRENSİBİ
+
+Motor hiçbir zaman tek bir olumlu sinyal nedeniyle BUILD önerisi vermemelidir.
+
+Her BUILD önerisi;
+
+Problem,
+
+Müşteri,
+
+Gelir,
+
+Kanıt,
+
+Risk,
+
+ve Gelecek
+
+başlıklarının birlikte değerlendirilmesi sonucunda oluşmalıdır.
+
+---
+
+# TASARIM FELSEFESİ
+
+Kötü analizler,
+
+yanlış cevaplardan değil,
+
+yanlış sorulardan doğar.
+
+AI Opportunity Hunter'ın temel gücü,
+
+rakiplerinden daha fazla veri toplaması değil,
+
+aynı veriye daha doğru soruları yöneltebilmesidir.
+
+Bu nedenle sistem,
+
+her fırsatı önce sorgular,
+
+sonra değerlendirir,
+
+en son öneride bulunur.
