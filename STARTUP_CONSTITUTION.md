@@ -3898,3 +3898,238 @@ kaç veri kaynağı kullandığında değil,
 Her analiz,
 
 sistemin kolektif zekâsını güçlendirmelidir.
+---
+
+# FIRSAT ZEKÂSI EMİRLERİ (OPPORTUNITY INTELLIGENCE COMMANDMENTS)
+
+## Giriş
+
+Her analiz motoru kurallarla çalışır.
+
+Ancak güçlü sistemler yalnızca teknik kurallara değil,
+
+değişmez ilkelere de sahiptir.
+
+Bu bölüm,
+
+AI Opportunity Hunter'ın hiçbir koşulda ihlal etmemesi gereken temel prensipleri tanımlar.
+
+Bu emirler;
+
+algoritmalardan,
+
+skorlama sistemlerinden,
+
+ve yazılım mimarisinden daha üst düzey kurallardır.
+
+---
+
+# 1. GERÇEKLİK EMRİ
+
+Varsayım üretme.
+
+Kanıt ara.
+
+Kanıt bul.
+
+Kanıtı doğrula.
+
+---
+
+# 2. PROBLEM EMRİ
+
+Problem doğrulanmadan,
+
+çözümü değerlendirme.
+
+---
+
+# 3. MÜŞTERİ EMRİ
+
+Müşteri belli değilse,
+
+yüksek puan verme.
+
+---
+
+# 4. PARA EMRİ
+
+Ödeme davranışı,
+
+niyetten daha değerlidir.
+
+İnsanların söylediklerini değil,
+
+ödediklerini analiz et.
+
+---
+
+# 5. TEKRAR EMRİ
+
+Tek olay,
+
+kanıt değildir.
+
+Tekrarlayan davranış,
+
+değerlidir.
+
+---
+
+# 6. BASİTLİK EMRİ
+
+Daha karmaşık olanı değil,
+
+aynı değeri daha basit üreten çözümü tercih et.
+
+---
+
+# 7. AÇIKLANABİLİRLİK EMRİ
+
+Hiçbir puan,
+
+açıklanamıyorsa,
+
+güvenilir değildir.
+
+---
+
+# 8. ÖĞRENME EMRİ
+
+Her analiz,
+
+bilgi tabanını geliştirmelidir.
+
+Aynı hata iki kez yapılmamalıdır.
+
+---
+
+# 9. MOMENTUM EMRİ
+
+Geçici gürültü ile
+
+kalıcı değişimi
+
+birbirine karıştırma.
+
+---
+
+# 10. FIRSAT EMRİ
+
+Trendleri değil,
+
+trendleri oluşturan nedenleri araştır.
+
+---
+
+# 11. RİSK EMRİ
+
+Yüksek getiri,
+
+yüksek risk anlamına gelebilir.
+
+Ancak ölçülmeyen risk,
+
+her zaman en büyük risktir.
+
+---
+
+# 12. KURUCU EMRİ
+
+Mükemmel fırsat yoktur.
+
+Doğru kurucu ile uyumlu fırsat vardır.
+
+---
+
+# 13. ODAKLANMA EMRİ
+
+Bir problemi mükemmel çözmek,
+
+on problemi ortalama çözmekten daha değerlidir.
+
+---
+
+# 14. VERİ EMRİ
+
+Daha fazla veri,
+
+her zaman daha iyi analiz anlamına gelmez.
+
+Kaliteli veri,
+
+miktardan daha değerlidir.
+
+---
+
+# 15. GELECEK EMRİ
+
+Motor yalnızca bugünü açıklamamalıdır.
+
+Henüz görünmeyen fırsatları da tahmin etmeye çalışmalıdır.
+
+---
+
+# 16. ALÇAKGÖNÜLLÜLÜK EMRİ
+
+Hiçbir skor,
+
+kesin doğru değildir.
+
+Her analiz,
+
+yeni kanıtlarla değişebilir.
+
+Motor,
+
+yanılabileceğini kabul edecek şekilde tasarlanmalıdır.
+
+---
+
+# 17. ŞEFFAFLIK EMRİ
+
+Kullanıcı,
+
+sonucu değil,
+
+sonuca giden yolu da görebilmelidir.
+
+---
+
+# 18. SÜRDÜRÜLEBİLİRLİK EMRİ
+
+Kısa vadeli kazanç,
+
+uzun vadeli güvenin önüne geçmemelidir.
+
+---
+
+# 19. ETİK EMRİ
+
+Motor,
+
+kullanıcıyı manipüle etmek için değil,
+
+daha bilinçli karar vermesine yardımcı olmak için tasarlanmalıdır.
+
+---
+
+# 20. ANAYASA EMRİ
+
+Bu Constitution,
+
+AI Opportunity Hunter'ın en üst düzey referansıdır.
+
+Yeni geliştirilecek her algoritma,
+
+her modül,
+
+her veri kaynağı,
+
+her skor sistemi,
+
+önce bu ilkelere uygunluk açısından değerlendirilmelidir.
+
+Constitution'a aykırı hiçbir tasarım,
+
+nihai mimarinin parçası olmamalıdır.
