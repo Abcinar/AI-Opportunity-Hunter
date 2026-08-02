@@ -185,3 +185,189 @@ No other module should require modification.
 
 "Data sources are replaceable.
 Knowledge is permanent."
+---
+
+# PROVIDER LIFECYCLE
+
+## Overview
+
+Every provider follows exactly the same lifecycle.
+
+No provider may skip any stage.
+
+```
+Initialize
+      │
+      ▼
+Authenticate
+      │
+      ▼
+Check Rate Limits
+      │
+      ▼
+Collect Raw Data
+      │
+      ▼
+Validate Response
+      │
+      ▼
+Normalize Data
+      │
+      ▼
+Attach Metadata
+      │
+      ▼
+Return Opportunities
+      │
+      ▼
+Shutdown
+```
+
+---
+
+## Stage 1 — Initialization
+
+Responsibilities
+
+- Load configuration
+- Validate credentials
+- Prepare HTTP session
+- Initialize logger
+
+Output
+
+Provider is ready.
+
+---
+
+## Stage 2 — Authentication
+
+Supported methods
+
+- API Key
+- OAuth2
+- Client Credentials
+- Anonymous Access
+- RSS
+- Public HTML
+
+Authentication must be isolated inside the provider.
+
+---
+
+## Stage 3 — Rate Limit Protection
+
+Each provider must protect itself against:
+
+- HTTP 429
+- Temporary bans
+- Connection limits
+- Daily quotas
+
+Strategies
+
+- Exponential Backoff
+- Retry Queue
+- Sleep Strategy
+- Circuit Breaker
+
+---
+
+## Stage 4 — Data Collection
+
+Responsibilities
+
+- Download data
+- Handle pagination
+- Handle network failures
+- Retry transient errors
+
+Raw data must never reach the Intelligence Engine.
+
+---
+
+## Stage 5 — Validation
+
+Every record must be validated.
+
+Required fields
+
+- title
+- url
+- source
+
+Optional fields
+
+- engagement
+- summary
+- category
+- language
+- metadata
+
+Invalid records are discarded.
+
+---
+
+## Stage 6 — Normalization
+
+All providers produce identical output.
+
+No provider-specific schema is allowed.
+
+Normalization is mandatory.
+
+---
+
+## Stage 7 — Metadata
+
+Metadata examples
+
+- collected_at
+- provider_version
+- response_time
+- retries
+- source_region
+
+Metadata never affects scoring.
+
+---
+
+## Stage 8 — Return
+
+The provider returns
+
+List[Opportunity]
+
+Nothing else.
+
+---
+
+## Failure Policy
+
+If a provider fails
+
+↓
+
+Log Error
+
+↓
+
+Retry
+
+↓
+
+Return Empty List
+
+↓
+
+Continue Pipeline
+
+System availability is more important than provider availability.
+
+---
+
+## Engineering Rule
+
+A provider may fail.
+
+The platform must never fail.
