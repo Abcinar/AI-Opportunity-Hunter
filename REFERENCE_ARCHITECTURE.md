@@ -1,3 +1,12 @@
+# Phase 2 Principle
+
+We do not write code to make today's feature work.
+
+We design systems that make tomorrow's features easy to build.
+
+Every architectural decision must reduce future complexity.
+
+Temporary speed must never create permanent technical debt.
 "Bu doküman, AI Opportunity Hunter Constitution v1.0'da tanımlanan ilkelerin teknik mimariye dönüştürülmesini tanımlar."
 ---
 
