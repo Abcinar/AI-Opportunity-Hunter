@@ -371,3 +371,439 @@ System availability is more important than provider availability.
 A provider may fail.
 
 The platform must never fail.
+---
+
+# OPPORTUNITY PIPELINE
+
+## Vision
+
+Every opportunity travels through a deterministic processing pipeline.
+
+Raw internet signals never become opportunities directly.
+
+Every signal must pass through a sequence of engineering stages.
+
+---
+
+## Processing Pipeline
+
+```
+Internet
+    │
+    ▼
+Providers
+    │
+    ▼
+Collector
+    │
+    ▼
+Normalizer
+    │
+    ▼
+Deduplicator
+    │
+    ▼
+Signal Analyzer
+    │
+    ▼
+Intelligence Engine
+    │
+    ▼
+Scoring Engine
+    │
+    ▼
+Recommendation Engine
+    │
+    ▼
+Knowledge Base
+    │
+    ▼
+Dashboard
+```
+
+---
+
+## Stage 1 — Providers
+
+Mission
+
+Collect raw information.
+
+Examples
+
+- GitHub
+- Hacker News
+- Google Trends
+- Product Hunt
+- Hugging Face
+
+Output
+
+Raw Signals
+
+---
+
+## Stage 2 — Collector
+
+Mission
+
+Merge all providers into one unified stream.
+
+Responsibilities
+
+- Scheduling
+- Retry Logic
+- Provider Management
+- Source Monitoring
+
+Output
+
+Collected Signals
+
+---
+
+## Stage 3 — Normalizer
+
+Mission
+
+Convert every signal into a unified structure.
+
+Responsibilities
+
+- Rename fields
+- Normalize timestamps
+- Normalize language
+- Normalize engagement metrics
+
+Output
+
+Normalized Opportunities
+
+---
+
+## Stage 4 — Deduplicator
+
+Mission
+
+Remove duplicated opportunities.
+
+Detection methods
+
+- URL similarity
+- Title similarity
+- Semantic similarity
+- Hash comparison
+
+Output
+
+Unique Opportunities
+
+---
+
+## Stage 5 — Signal Analyzer
+
+Mission
+
+Extract intelligence from signals.
+
+Examples
+
+- Market pain
+- Competition
+- Trend strength
+- Technology
+- Founder fit
+
+Output
+
+Enriched Opportunity
+
+---
+
+## Stage 6 — Intelligence Engine
+
+Mission
+
+Think.
+
+The Intelligence Engine never collects data.
+
+It only reasons.
+
+Responsibilities
+
+- Pattern Recognition
+- Opportunity Discovery
+- Risk Detection
+- Market Analysis
+
+Output
+
+Opportunity Intelligence
+
+---
+
+## Stage 7 — Scoring Engine
+
+Mission
+
+Score.
+
+Inputs
+
+- Trend
+- Market
+- Competition
+- Timing
+- Founder Fit
+- Confidence
+
+Output
+
+Score
+
+0 — 100
+
+---
+
+## Stage 8 — Recommendation Engine
+
+Mission
+
+Decide.
+
+Possible decisions
+
+- BUILD
+- WATCH
+- SKIP
+
+No other decisions are allowed.
+
+---
+
+## Stage 9 — Knowledge Base
+
+Mission
+
+Remember.
+
+The platform stores
+
+- Previous Opportunities
+- Previous Scores
+- Historical Trends
+- Learning Signals
+
+The platform must improve over time.
+
+---
+
+## Stage 10 — Dashboard
+
+Mission
+
+Visualize.
+
+The Dashboard never performs business logic.
+
+It only presents intelligence.
+
+---
+
+# Engineering Principle
+
+Each stage performs exactly one responsibility.
+
+No stage may perform the responsibilities of another stage.
+
+This separation guarantees maintainability,
+scalability,
+and replaceability.
+---
+
+# ENGINEERING LAWS
+
+## Law 1 — Single Responsibility
+
+Every module has exactly one responsibility.
+
+Modules that perform multiple responsibilities must be split.
+
+---
+
+## Law 2 — Replaceability
+
+Every component must be replaceable.
+
+Changing one provider must never affect another provider.
+
+---
+
+## Law 3 — No Hidden Logic
+
+Business logic must never exist inside:
+
+- Dashboard
+- Providers
+- Configuration
+- UI
+
+Business logic belongs only to the Intelligence Layer.
+
+---
+
+## Law 4 — Stateless Providers
+
+Providers never remember.
+
+They only collect.
+
+Memory belongs to the Knowledge Base.
+
+---
+
+## Law 5 — Data Before Decisions
+
+No recommendation may be generated without evidence.
+
+Every BUILD recommendation must be explainable.
+
+Every SKIP recommendation must be explainable.
+
+---
+
+## Law 6 — Explainability
+
+Every score must contain:
+
+- Inputs
+- Weights
+- Reasoning
+- Evidence
+
+Black-box decisions are forbidden.
+
+---
+
+## Law 7 — Evidence First
+
+Opinion is never accepted.
+
+Evidence is mandatory.
+
+Evidence sources include:
+
+- GitHub
+- Hacker News
+- Google Trends
+- Product Hunt
+- Future Providers
+
+---
+
+## Law 8 — Provider Isolation
+
+Providers never communicate with each other.
+
+All communication happens through the Collector.
+
+---
+
+## Law 9 — Intelligence Isolation
+
+The Intelligence Engine never knows:
+
+- API Keys
+- HTTP Requests
+- Authentication
+- HTML
+- GraphQL
+- RSS
+
+It receives only normalized opportunities.
+
+---
+
+## Law 10 — Dashboard Purity
+
+The Dashboard never performs calculations.
+
+The Dashboard never makes recommendations.
+
+The Dashboard visualizes only.
+
+---
+
+## Law 11 — Configuration First
+
+Magic numbers are forbidden.
+
+Every threshold must come from configuration.
+
+---
+
+## Law 12 — Fail Gracefully
+
+Failure of one provider shall never stop:
+
+- Collection
+- Scoring
+- Dashboard
+- Recommendations
+
+Partial intelligence is better than system failure.
+
+---
+
+## Law 13 — Observability
+
+Every important action must be logged.
+
+Every failure must be measurable.
+
+Every provider must expose health information.
+
+---
+
+## Law 14 — Scalability
+
+Adding a new provider must require:
+
+- No Intelligence changes
+- No Dashboard changes
+- No Recommendation changes
+
+Only registration.
+
+---
+
+## Law 15 — Testability
+
+Every component must be testable independently.
+
+Unit Tests
+
+↓
+
+Integration Tests
+
+↓
+
+Pipeline Tests
+
+↓
+
+Acceptance Tests
+
+---
+
+# Architecture Doctrine
+
+Code follows Architecture.
+
+Architecture follows Principles.
+
+Principles follow Vision.
+
+Vision never changes.
