@@ -8,7 +8,8 @@ exclusively to the Provider layer.
 from __future__ import annotations
 
 from abc import ABC, abstractmethod
-from typing import Any
+from types import MappingProxyType
+from typing import Any, Sequence
 
 
 class BaseProvider(ABC):
@@ -23,6 +24,17 @@ class BaseProvider(ABC):
     through read-only properties to prevent accidental mutation at runtime.
     """
 
+    __slots__ = (
+        "_id",
+        "_display_name",
+        "_description",
+        "_version",
+        "_category",
+        "_enabled",
+        "_timeout",
+        "_capabilities",
+    )
+
     def __init__(
         self,
         id: str,
@@ -32,7 +44,7 @@ class BaseProvider(ABC):
         category: str,
         enabled: bool,
         timeout: float,
-        capabilities: list[str],
+        capabilities: Sequence[str],
     ) -> None:
         """Initialize provider metadata.
 
@@ -45,15 +57,23 @@ class BaseProvider(ABC):
             enabled: Whether the provider is active.
             timeout: Maximum seconds allowed for a single fetch operation.
             capabilities: List of capability identifiers supported by the provider.
+
+        Raises:
+            ValueError: If id is empty or timeout is not positive.
         """
-        self._id = id
+        if not id or not id.strip():
+            raise ValueError("id must be a non-empty string")
+        if timeout <= 0:
+            raise ValueError("timeout must be greater than 0")
+
+        self._id = id.strip()
         self._display_name = display_name
         self._description = description
         self._version = version
         self._category = category
         self._enabled = enabled
         self._timeout = timeout
-        self._capabilities = list(capabilities)
+        self._capabilities = tuple(capabilities)
 
     @property
     def id(self) -> str:
@@ -91,27 +111,29 @@ class BaseProvider(ABC):
         return self._timeout
 
     @property
-    def capabilities(self) -> list[str]:
+    def capabilities(self) -> Sequence[str]:
         """List of capability identifiers supported by the provider."""
-        return list(self._capabilities)
+        return self._capabilities
 
     @property
-    def metadata(self) -> dict[str, Any]:
-        """Return the complete provider metadata as a dictionary.
+    def metadata(self) -> MappingProxyType[str, Any]:
+        """Return the complete provider metadata as an immutable mapping.
 
         Returns:
-            A dictionary containing all required metadata fields.
+            A read-only mapping containing all required metadata fields.
         """
-        return {
-            "id": self.id,
-            "display_name": self.display_name,
-            "description": self.description,
-            "version": self.version,
-            "category": self.category,
-            "enabled": self.enabled,
-            "timeout": self.timeout,
-            "capabilities": self.capabilities,
-        }
+        return MappingProxyType(
+            {
+                "id": self.id,
+                "display_name": self.display_name,
+                "description": self.description,
+                "version": self.version,
+                "category": self.category,
+                "enabled": self.enabled,
+                "timeout": self.timeout,
+                "capabilities": list(self.capabilities),
+            }
+        )
 
     @abstractmethod
     def fetch(self) -> Any:
@@ -152,3 +174,6 @@ class BaseProvider(ABC):
             Exception: Only for unexpected internal errors that prevent
                 the health check itself from executing.
         """
+
+
+__all__ = ["BaseProvider"]
