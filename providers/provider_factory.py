@@ -9,6 +9,7 @@ from __future__ import annotations
 
 from providers.base_provider import BaseProvider
 from providers.github_provider import GitHubProvider
+from providers.hackernews_provider import HackerNewsProvider
 from providers.provider_config import ProviderConfig
 
 
@@ -54,7 +55,19 @@ class ProviderFactory:
                 order=config.order,
             )
 
-        raise ValueError(f"Unknown provider: '{provider_name}'")
+        elif name == "hackernews":
+            return HackerNewsProvider(
+                token=config.token,
+                enabled=config.enabled,
+                timeout=config.timeout,
+                default_query=config.default_query,
+                per_page=config.per_page,
+                sort=config.sort,
+                order=config.order,
+            )
+
+        else:
+            raise ValueError(f"Unknown provider: '{provider_name}'")
 
 
 __all__ = ["ProviderFactory"]
