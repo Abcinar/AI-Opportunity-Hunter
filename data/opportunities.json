@@ -1,110 +1,5 @@
 [
     {
-        "id": "9c7ab1fa99a092472f8db44441a4b6b2",
-        "title": "TencentCloud/TencentDB-Agent-Memory — TencentDB Agent Memory is a team-level memory hub for AI Agents — turning conversations, docs, and code into four reusable memory assets (Chat Memory, Skill, LLM-Wiki, Code-Graph) that are governed, shared, and equipped across agents and frameworks.",
-        "summary": "",
-        "content": "",
-        "source": "github_trending",
-        "url": "https://github.com/TencentCloud/TencentDB-Agent-Memory",
-        "engagement": 1892,
-        "points": 1892,
-        "upvotes": 1892,
-        "comments": 0,
-        "category": "unknown",
-        "tags": [],
-        "language": "unknown",
-        "collected_at": "2026-08-06T11:50:55.830577",
-        "intelligence": {
-            "evidence": {
-                "has_clear_pain": false,
-                "has_workaround": false,
-                "extracted_pain_points": [],
-                "extracted_solutions": [],
-                "evidence_count": 0
-            },
-            "category": {
-                "primary_category": "AI/ML",
-                "sub_category": "General"
-            },
-            "trend_strength": {
-                "trend_strength": "Strong",
-                "engagement_tier": "Strong"
-            },
-            "market_type": {
-                "market_type": "B2B",
-                "target_customer": "Designers",
-                "market_size": "Medium"
-            },
-            "business_models": {
-                "SaaS": 0.5,
-                "Undetermined": 1.0
-            },
-            "competition_level": {
-                "competition_level": "Medium",
-                "reason": "No strong competition indicators found.",
-                "matched_keywords": []
-            },
-            "problem": "Implicit problem gap.",
-            "opportunity": {
-                "idea": "A Micro SaaS delivered as a Web App that solves the following: Implicit problem gap.",
-                "product_type": "Micro SaaS",
-                "delivery": "Web App",
-                "difficulty": "Medium"
-            },
-            "why_now": {
-                "has_urgency_signal": false,
-                "why_now_strength": "Low"
-            },
-            "founder_fit": {
-                "founder_fit_level": "Medium"
-            },
-            "confidence_score": 0.25,
-            "analysis_metadata": {
-                "analyzed_at": "2026-08-06T11:50:58.142284+00:00",
-                "engine_version": "2.1.0",
-                "rules_version": "1.1.0",
-                "analysis_time_ms": 0.39
-            }
-        },
-        "score": {
-            "overall_score": 40,
-            "confidence": 25.0,
-            "breakdown": {
-                "scores": {
-                    "evidence_score": 0,
-                    "timing_score": 52,
-                    "market_score": 77,
-                    "execution_score": 50,
-                    "competition_score": 50
-                },
-                "raw_data": {
-                    "has_clear_pain": false,
-                    "has_workaround": false,
-                    "evidence_count": 0,
-                    "trend_strength": "Strong",
-                    "market_type": "B2B",
-                    "market_size": "Medium",
-                    "target_customer": "Designers",
-                    "competition_level": "Medium",
-                    "founder_fit_level": "Medium",
-                    "why_now_strength": "Low",
-                    "primary_category": "AI/ML",
-                    "product_type": "Micro SaaS",
-                    "difficulty": "Medium"
-                }
-            },
-            "decision": "SKIP"
-        },
-        "recommendation": {
-            "decision": "SKIP",
-            "overall_score": 40,
-            "confidence": 25.0,
-            "emoji": "❌",
-            "color": "red"
-        },
-        "processed_at": "2026-08-06T11:50:58.151008+00:00"
-    },
-    {
         "id": "f81f273c7ea21798db8bd79ef3aecd3c",
         "title": "mattpocock/skills — Skills for Real Engineers. Straight from my .agents directory.",
         "summary": "",
@@ -118,7 +13,7 @@
         "category": "unknown",
         "tags": [],
         "language": "unknown",
-        "collected_at": "2026-08-06T11:50:55.831351",
+        "collected_at": "2026-08-06T12:24:28.681898",
         "intelligence": {
             "evidence": {
                 "has_clear_pain": false,
@@ -165,10 +60,10 @@
             },
             "confidence_score": 0.25,
             "analysis_metadata": {
-                "analyzed_at": "2026-08-06T11:50:58.142526+00:00",
+                "analyzed_at": "2026-08-06T12:24:30.255366+00:00",
                 "engine_version": "2.1.0",
                 "rules_version": "1.1.0",
-                "analysis_time_ms": 0.14
+                "analysis_time_ms": 0.39
             }
         },
         "score": {
@@ -207,233 +102,23 @@
             "emoji": "❌",
             "color": "red"
         },
-        "processed_at": "2026-08-06T11:50:58.151083+00:00"
+        "processed_at": "2026-08-06T12:24:30.262738+00:00"
     },
     {
-        "id": "0974ffb558e84ec3b7e8a560487ac801",
-        "title": "cloudflare/computer — Give your agent a computer 👾",
+        "id": "9c7ab1fa99a092472f8db44441a4b6b2",
+        "title": "TencentCloud/TencentDB-Agent-Memory — TencentDB Agent Memory is a team-level memory hub for AI Agents — turning conversations, docs, and code into four reusable memory assets (Chat Memory, Skill, LLM-Wiki, Code-Graph) that are governed, shared, and equipped across agents and frameworks.",
         "summary": "",
         "content": "",
         "source": "github_trending",
-        "url": "https://github.com/cloudflare/computer",
-        "engagement": 891,
-        "points": 891,
-        "upvotes": 891,
+        "url": "https://github.com/TencentCloud/TencentDB-Agent-Memory",
+        "engagement": 1053,
+        "points": 1053,
+        "upvotes": 1053,
         "comments": 0,
         "category": "unknown",
         "tags": [],
         "language": "unknown",
-        "collected_at": "2026-08-06T11:50:55.831077",
-        "intelligence": {
-            "evidence": {
-                "has_clear_pain": false,
-                "has_workaround": false,
-                "extracted_pain_points": [],
-                "extracted_solutions": [],
-                "evidence_count": 0
-            },
-            "category": {
-                "primary_category": "Uncategorized",
-                "sub_category": "General"
-            },
-            "trend_strength": {
-                "trend_strength": "Strong",
-                "engagement_tier": "Strong"
-            },
-            "market_type": {
-                "market_type": "Hybrid",
-                "target_customer": "General",
-                "market_size": "Medium"
-            },
-            "business_models": {
-                "SaaS": 0.5,
-                "Undetermined": 1.0
-            },
-            "competition_level": {
-                "competition_level": "Medium",
-                "reason": "No strong competition indicators found.",
-                "matched_keywords": []
-            },
-            "problem": "Implicit problem gap.",
-            "opportunity": {
-                "idea": "A Micro SaaS delivered as a Web App that solves the following: Implicit problem gap.",
-                "product_type": "Micro SaaS",
-                "delivery": "Web App",
-                "difficulty": "Medium"
-            },
-            "why_now": {
-                "has_urgency_signal": false,
-                "why_now_strength": "Low"
-            },
-            "founder_fit": {
-                "founder_fit_level": "Medium"
-            },
-            "confidence_score": 0.0,
-            "analysis_metadata": {
-                "analyzed_at": "2026-08-06T11:50:58.142722+00:00",
-                "engine_version": "2.1.0",
-                "rules_version": "1.1.0",
-                "analysis_time_ms": 0.11
-            }
-        },
-        "score": {
-            "overall_score": 37,
-            "confidence": 0.0,
-            "breakdown": {
-                "scores": {
-                    "evidence_score": 0,
-                    "timing_score": 52,
-                    "market_score": 60,
-                    "execution_score": 50,
-                    "competition_score": 50
-                },
-                "raw_data": {
-                    "has_clear_pain": false,
-                    "has_workaround": false,
-                    "evidence_count": 0,
-                    "trend_strength": "Strong",
-                    "market_type": "Hybrid",
-                    "market_size": "Medium",
-                    "target_customer": "General",
-                    "competition_level": "Medium",
-                    "founder_fit_level": "Medium",
-                    "why_now_strength": "Low",
-                    "primary_category": "Uncategorized",
-                    "product_type": "Micro SaaS",
-                    "difficulty": "Medium"
-                }
-            },
-            "decision": "SKIP"
-        },
-        "recommendation": {
-            "decision": "SKIP",
-            "overall_score": 37,
-            "confidence": 0.0,
-            "emoji": "❌",
-            "color": "red"
-        },
-        "processed_at": "2026-08-06T11:50:58.151138+00:00"
-    },
-    {
-        "id": "e59b56705c9a4fb193558ea5f8f448d9",
-        "title": "Discovery Loop",
-        "summary": "",
-        "content": "",
-        "source": "hacker_news",
-        "url": "https://www.discoveryloop.com/",
-        "engagement": 780,
-        "points": 780,
-        "upvotes": 780,
-        "comments": 487,
-        "category": "unknown",
-        "tags": [],
-        "language": "unknown",
-        "collected_at": "2026-08-06T11:50:56.469496",
-        "intelligence": {
-            "evidence": {
-                "has_clear_pain": false,
-                "has_workaround": false,
-                "extracted_pain_points": [],
-                "extracted_solutions": [],
-                "evidence_count": 0
-            },
-            "category": {
-                "primary_category": "Uncategorized",
-                "sub_category": "General"
-            },
-            "trend_strength": {
-                "trend_strength": "Strong",
-                "engagement_tier": "Strong"
-            },
-            "market_type": {
-                "market_type": "Hybrid",
-                "target_customer": "General",
-                "market_size": "Medium"
-            },
-            "business_models": {
-                "SaaS": 0.5,
-                "Undetermined": 1.0
-            },
-            "competition_level": {
-                "competition_level": "Medium",
-                "reason": "No strong competition indicators found.",
-                "matched_keywords": []
-            },
-            "problem": "Implicit problem gap.",
-            "opportunity": {
-                "idea": "A Micro SaaS delivered as a Web App that solves the following: Implicit problem gap.",
-                "product_type": "Micro SaaS",
-                "delivery": "Web App",
-                "difficulty": "Medium"
-            },
-            "why_now": {
-                "has_urgency_signal": false,
-                "why_now_strength": "Low"
-            },
-            "founder_fit": {
-                "founder_fit_level": "Medium"
-            },
-            "confidence_score": 0.0,
-            "analysis_metadata": {
-                "analyzed_at": "2026-08-06T11:50:58.142911+00:00",
-                "engine_version": "2.1.0",
-                "rules_version": "1.1.0",
-                "analysis_time_ms": 0.08
-            }
-        },
-        "score": {
-            "overall_score": 37,
-            "confidence": 0.0,
-            "breakdown": {
-                "scores": {
-                    "evidence_score": 0,
-                    "timing_score": 52,
-                    "market_score": 60,
-                    "execution_score": 50,
-                    "competition_score": 50
-                },
-                "raw_data": {
-                    "has_clear_pain": false,
-                    "has_workaround": false,
-                    "evidence_count": 0,
-                    "trend_strength": "Strong",
-                    "market_type": "Hybrid",
-                    "market_size": "Medium",
-                    "target_customer": "General",
-                    "competition_level": "Medium",
-                    "founder_fit_level": "Medium",
-                    "why_now_strength": "Low",
-                    "primary_category": "Uncategorized",
-                    "product_type": "Micro SaaS",
-                    "difficulty": "Medium"
-                }
-            },
-            "decision": "SKIP"
-        },
-        "recommendation": {
-            "decision": "SKIP",
-            "overall_score": 37,
-            "confidence": 0.0,
-            "emoji": "❌",
-            "color": "red"
-        },
-        "processed_at": "2026-08-06T11:50:58.151188+00:00"
-    },
-    {
-        "id": "de04a96fdca537535a4927beec11bcb7",
-        "title": "Changes at Google DeepMind: Demis Hassabis from CEO to Chair, Jeff Dean departs",
-        "summary": "",
-        "content": "",
-        "source": "hacker_news",
-        "url": "https://blog.google/company-news/inside-google/message-ceo/next-chapter-ai-momentum/",
-        "engagement": 689,
-        "points": 689,
-        "upvotes": 689,
-        "comments": 738,
-        "category": "unknown",
-        "tags": [],
-        "language": "unknown",
-        "collected_at": "2026-08-06T11:50:56.469568",
+        "collected_at": "2026-08-06T12:24:28.681116",
         "intelligence": {
             "evidence": {
                 "has_clear_pain": false,
@@ -451,8 +136,8 @@
                 "engagement_tier": "Strong"
             },
             "market_type": {
-                "market_type": "Hybrid",
-                "target_customer": "General",
+                "market_type": "B2B",
+                "target_customer": "Designers",
                 "market_size": "Medium"
             },
             "business_models": {
@@ -478,22 +163,22 @@
             "founder_fit": {
                 "founder_fit_level": "Medium"
             },
-            "confidence_score": 0.1,
+            "confidence_score": 0.25,
             "analysis_metadata": {
-                "analyzed_at": "2026-08-06T11:50:58.143091+00:00",
+                "analyzed_at": "2026-08-06T12:24:30.255816+00:00",
                 "engine_version": "2.1.0",
                 "rules_version": "1.1.0",
-                "analysis_time_ms": 0.11
+                "analysis_time_ms": 0.33
             }
         },
         "score": {
-            "overall_score": 37,
-            "confidence": 10.0,
+            "overall_score": 40,
+            "confidence": 25.0,
             "breakdown": {
                 "scores": {
                     "evidence_score": 0,
                     "timing_score": 52,
-                    "market_score": 60,
+                    "market_score": 77,
                     "execution_score": 50,
                     "competition_score": 50
                 },
@@ -502,9 +187,9 @@
                     "has_workaround": false,
                     "evidence_count": 0,
                     "trend_strength": "Strong",
-                    "market_type": "Hybrid",
+                    "market_type": "B2B",
                     "market_size": "Medium",
-                    "target_customer": "General",
+                    "target_customer": "Designers",
                     "competition_level": "Medium",
                     "founder_fit_level": "Medium",
                     "why_now_strength": "Low",
@@ -517,28 +202,28 @@
         },
         "recommendation": {
             "decision": "SKIP",
-            "overall_score": 37,
-            "confidence": 10.0,
+            "overall_score": 40,
+            "confidence": 25.0,
             "emoji": "❌",
             "color": "red"
         },
-        "processed_at": "2026-08-06T11:50:58.151241+00:00"
+        "processed_at": "2026-08-06T12:24:30.262817+00:00"
     },
     {
-        "id": "c3f9838eb4a2528fffa859caf2dd7755",
-        "title": "Show HN: Simple algorithm and color space to generate diverse skin tones",
+        "id": "0974ffb558e84ec3b7e8a560487ac801",
+        "title": "cloudflare/computer — Give your agent a computer 👾",
         "summary": "",
         "content": "",
-        "source": "hacker_news",
-        "url": "https://toneyalexander.github.io/inclusive-color-space/",
-        "engagement": 611,
-        "points": 611,
-        "upvotes": 611,
-        "comments": 99,
+        "source": "github_trending",
+        "url": "https://github.com/cloudflare/computer",
+        "engagement": 891,
+        "points": 891,
+        "upvotes": 891,
+        "comments": 0,
         "category": "unknown",
         "tags": [],
         "language": "unknown",
-        "collected_at": "2026-08-06T11:50:57.360127",
+        "collected_at": "2026-08-06T12:24:28.681612",
         "intelligence": {
             "evidence": {
                 "has_clear_pain": false,
@@ -585,7 +270,7 @@
             },
             "confidence_score": 0.0,
             "analysis_metadata": {
-                "analyzed_at": "2026-08-06T11:50:58.143270+00:00",
+                "analyzed_at": "2026-08-06T12:24:30.256029+00:00",
                 "engine_version": "2.1.0",
                 "rules_version": "1.1.0",
                 "analysis_time_ms": 0.11
@@ -627,112 +312,7 @@
             "emoji": "❌",
             "color": "red"
         },
-        "processed_at": "2026-08-06T11:50:58.151288+00:00"
-    },
-    {
-        "id": "f8355268968f1d925e2d54ecb663b034",
-        "title": "Zed DeltaDB",
-        "summary": "",
-        "content": "",
-        "source": "hacker_news",
-        "url": "https://zed.dev/deltadb",
-        "engagement": 454,
-        "points": 454,
-        "upvotes": 454,
-        "comments": 240,
-        "category": "unknown",
-        "tags": [],
-        "language": "unknown",
-        "collected_at": "2026-08-06T11:50:56.469636",
-        "intelligence": {
-            "evidence": {
-                "has_clear_pain": false,
-                "has_workaround": false,
-                "extracted_pain_points": [],
-                "extracted_solutions": [],
-                "evidence_count": 0
-            },
-            "category": {
-                "primary_category": "Uncategorized",
-                "sub_category": "General"
-            },
-            "trend_strength": {
-                "trend_strength": "Strong",
-                "engagement_tier": "Strong"
-            },
-            "market_type": {
-                "market_type": "Hybrid",
-                "target_customer": "General",
-                "market_size": "Medium"
-            },
-            "business_models": {
-                "SaaS": 0.5,
-                "Undetermined": 1.0
-            },
-            "competition_level": {
-                "competition_level": "Medium",
-                "reason": "No strong competition indicators found.",
-                "matched_keywords": []
-            },
-            "problem": "Implicit problem gap.",
-            "opportunity": {
-                "idea": "A Micro SaaS delivered as a Web App that solves the following: Implicit problem gap.",
-                "product_type": "Micro SaaS",
-                "delivery": "Web App",
-                "difficulty": "Medium"
-            },
-            "why_now": {
-                "has_urgency_signal": false,
-                "why_now_strength": "Low"
-            },
-            "founder_fit": {
-                "founder_fit_level": "Medium"
-            },
-            "confidence_score": 0.0,
-            "analysis_metadata": {
-                "analyzed_at": "2026-08-06T11:50:58.143441+00:00",
-                "engine_version": "2.1.0",
-                "rules_version": "1.1.0",
-                "analysis_time_ms": 0.09
-            }
-        },
-        "score": {
-            "overall_score": 37,
-            "confidence": 0.0,
-            "breakdown": {
-                "scores": {
-                    "evidence_score": 0,
-                    "timing_score": 52,
-                    "market_score": 60,
-                    "execution_score": 50,
-                    "competition_score": 50
-                },
-                "raw_data": {
-                    "has_clear_pain": false,
-                    "has_workaround": false,
-                    "evidence_count": 0,
-                    "trend_strength": "Strong",
-                    "market_type": "Hybrid",
-                    "market_size": "Medium",
-                    "target_customer": "General",
-                    "competition_level": "Medium",
-                    "founder_fit_level": "Medium",
-                    "why_now_strength": "Low",
-                    "primary_category": "Uncategorized",
-                    "product_type": "Micro SaaS",
-                    "difficulty": "Medium"
-                }
-            },
-            "decision": "SKIP"
-        },
-        "recommendation": {
-            "decision": "SKIP",
-            "overall_score": 37,
-            "confidence": 0.0,
-            "emoji": "❌",
-            "color": "red"
-        },
-        "processed_at": "2026-08-06T11:50:58.151336+00:00"
+        "processed_at": "2026-08-06T12:24:30.262865+00:00"
     },
     {
         "id": "2f226df7c4adb9de8725d7f52bcf5981",
@@ -741,14 +321,14 @@
         "content": "",
         "source": "github_trending",
         "url": "https://github.com/huangruiteng/loopx",
-        "engagement": 326,
-        "points": 326,
-        "upvotes": 326,
+        "engagement": 854,
+        "points": 854,
+        "upvotes": 854,
         "comments": 0,
         "category": "unknown",
         "tags": [],
         "language": "unknown",
-        "collected_at": "2026-08-06T11:50:55.831859",
+        "collected_at": "2026-08-06T12:24:28.682404",
         "intelligence": {
             "evidence": {
                 "has_clear_pain": false,
@@ -795,10 +375,10 @@
             },
             "confidence_score": 0.25,
             "analysis_metadata": {
-                "analyzed_at": "2026-08-06T11:50:58.143796+00:00",
+                "analyzed_at": "2026-08-06T12:24:30.256282+00:00",
                 "engine_version": "2.1.0",
                 "rules_version": "1.1.0",
-                "analysis_time_ms": 0.27
+                "analysis_time_ms": 0.17
             }
         },
         "score": {
@@ -837,23 +417,23 @@
             "emoji": "❌",
             "color": "red"
         },
-        "processed_at": "2026-08-06T11:50:58.151379+00:00"
+        "processed_at": "2026-08-06T12:24:30.262900+00:00"
     },
     {
-        "id": "14ba6f58fbfe22e423c6af36df313a20",
-        "title": "The title cards in Blade Runner are amazing",
+        "id": "e59b56705c9a4fb193558ea5f8f448d9",
+        "title": "Discovery Loop",
         "summary": "",
         "content": "",
         "source": "hacker_news",
-        "url": "https://randsinrepose.com/archives/blade-runner-title-cards/",
-        "engagement": 296,
-        "points": 296,
-        "upvotes": 296,
-        "comments": 143,
+        "url": "https://www.discoveryloop.com/",
+        "engagement": 785,
+        "points": 785,
+        "upvotes": 785,
+        "comments": 489,
         "category": "unknown",
         "tags": [],
         "language": "unknown",
-        "collected_at": "2026-08-06T11:50:56.469790",
+        "collected_at": "2026-08-06T12:24:29.176249",
         "intelligence": {
             "evidence": {
                 "has_clear_pain": false,
@@ -900,10 +480,10 @@
             },
             "confidence_score": 0.0,
             "analysis_metadata": {
-                "analyzed_at": "2026-08-06T11:50:58.144040+00:00",
+                "analyzed_at": "2026-08-06T12:24:30.256439+00:00",
                 "engine_version": "2.1.0",
                 "rules_version": "1.1.0",
-                "analysis_time_ms": 0.13
+                "analysis_time_ms": 0.08
             }
         },
         "score": {
@@ -942,23 +522,128 @@
             "emoji": "❌",
             "color": "red"
         },
-        "processed_at": "2026-08-06T11:50:58.151423+00:00"
+        "processed_at": "2026-08-06T12:24:30.262936+00:00"
     },
     {
-        "id": "b6f00185e58b58e077ace8a339d53d6c",
-        "title": "Crime Pays but Botany Doesn't",
+        "id": "de04a96fdca537535a4927beec11bcb7",
+        "title": "Changes at Google DeepMind: Demis Hassabis from CEO to Chair, Jeff Dean departs",
         "summary": "",
         "content": "",
         "source": "hacker_news",
-        "url": "https://www.crimepaysbutbotanydoesnt.com/reading-list",
-        "engagement": 282,
-        "points": 282,
-        "upvotes": 282,
-        "comments": 105,
+        "url": "https://blog.google/company-news/inside-google/message-ceo/next-chapter-ai-momentum/",
+        "engagement": 700,
+        "points": 700,
+        "upvotes": 700,
+        "comments": 746,
         "category": "unknown",
         "tags": [],
         "language": "unknown",
-        "collected_at": "2026-08-06T11:50:56.469269",
+        "collected_at": "2026-08-06T12:24:29.176323",
+        "intelligence": {
+            "evidence": {
+                "has_clear_pain": false,
+                "has_workaround": false,
+                "extracted_pain_points": [],
+                "extracted_solutions": [],
+                "evidence_count": 0
+            },
+            "category": {
+                "primary_category": "AI/ML",
+                "sub_category": "General"
+            },
+            "trend_strength": {
+                "trend_strength": "Strong",
+                "engagement_tier": "Strong"
+            },
+            "market_type": {
+                "market_type": "Hybrid",
+                "target_customer": "General",
+                "market_size": "Medium"
+            },
+            "business_models": {
+                "SaaS": 0.5,
+                "Undetermined": 1.0
+            },
+            "competition_level": {
+                "competition_level": "Medium",
+                "reason": "No strong competition indicators found.",
+                "matched_keywords": []
+            },
+            "problem": "Implicit problem gap.",
+            "opportunity": {
+                "idea": "A Micro SaaS delivered as a Web App that solves the following: Implicit problem gap.",
+                "product_type": "Micro SaaS",
+                "delivery": "Web App",
+                "difficulty": "Medium"
+            },
+            "why_now": {
+                "has_urgency_signal": false,
+                "why_now_strength": "Low"
+            },
+            "founder_fit": {
+                "founder_fit_level": "Medium"
+            },
+            "confidence_score": 0.1,
+            "analysis_metadata": {
+                "analyzed_at": "2026-08-06T12:24:30.256606+00:00",
+                "engine_version": "2.1.0",
+                "rules_version": "1.1.0",
+                "analysis_time_ms": 0.09
+            }
+        },
+        "score": {
+            "overall_score": 37,
+            "confidence": 10.0,
+            "breakdown": {
+                "scores": {
+                    "evidence_score": 0,
+                    "timing_score": 52,
+                    "market_score": 60,
+                    "execution_score": 50,
+                    "competition_score": 50
+                },
+                "raw_data": {
+                    "has_clear_pain": false,
+                    "has_workaround": false,
+                    "evidence_count": 0,
+                    "trend_strength": "Strong",
+                    "market_type": "Hybrid",
+                    "market_size": "Medium",
+                    "target_customer": "General",
+                    "competition_level": "Medium",
+                    "founder_fit_level": "Medium",
+                    "why_now_strength": "Low",
+                    "primary_category": "AI/ML",
+                    "product_type": "Micro SaaS",
+                    "difficulty": "Medium"
+                }
+            },
+            "decision": "SKIP"
+        },
+        "recommendation": {
+            "decision": "SKIP",
+            "overall_score": 37,
+            "confidence": 10.0,
+            "emoji": "❌",
+            "color": "red"
+        },
+        "processed_at": "2026-08-06T12:24:30.262984+00:00"
+    },
+    {
+        "id": "c3f9838eb4a2528fffa859caf2dd7755",
+        "title": "Show HN: Simple algorithm and color space to generate diverse skin tones",
+        "summary": "",
+        "content": "",
+        "source": "hacker_news",
+        "url": "https://toneyalexander.github.io/inclusive-color-space/",
+        "engagement": 611,
+        "points": 611,
+        "upvotes": 611,
+        "comments": 99,
+        "category": "unknown",
+        "tags": [],
+        "language": "unknown",
+        "collected_at": "2026-08-06T12:24:29.664868",
         "intelligence": {
             "evidence": {
                 "has_clear_pain": false,
@@ -1005,10 +690,10 @@
             },
             "confidence_score": 0.0,
             "analysis_metadata": {
-                "analyzed_at": "2026-08-06T11:50:58.144233+00:00",
+                "analyzed_at": "2026-08-06T12:24:30.256766+00:00",
                 "engine_version": "2.1.0",
                 "rules_version": "1.1.0",
-                "analysis_time_ms": 0.1
+                "analysis_time_ms": 0.09
             }
         },
         "score": {
@@ -1047,112 +732,7 @@
             "emoji": "❌",
             "color": "red"
         },
-        "processed_at": "2026-08-06T11:50:58.151467+00:00"
-    },
-    {
-        "id": "a3be355d224ae9f340082ee2ba7800a7",
-        "title": "tirth8205/code-review-graph — Local-first code intelligence graph for MCP and CLI. Builds a persistent map of your codebase so AI coding tools read only what matters, with benchmarked context reductions on reviews and large-repo workflows.",
-        "summary": "",
-        "content": "",
-        "source": "github_trending",
-        "url": "https://github.com/tirth8205/code-review-graph",
-        "engagement": 232,
-        "points": 232,
-        "upvotes": 232,
-        "comments": 0,
-        "category": "unknown",
-        "tags": [],
-        "language": "unknown",
-        "collected_at": "2026-08-06T11:50:55.832790",
-        "intelligence": {
-            "evidence": {
-                "has_clear_pain": false,
-                "has_workaround": false,
-                "extracted_pain_points": [],
-                "extracted_solutions": [],
-                "evidence_count": 0
-            },
-            "category": {
-                "primary_category": "DevTools",
-                "sub_category": "General"
-            },
-            "trend_strength": {
-                "trend_strength": "Strong",
-                "engagement_tier": "Strong"
-            },
-            "market_type": {
-                "market_type": "Hybrid",
-                "target_customer": "Designers",
-                "market_size": "Medium"
-            },
-            "business_models": {
-                "SaaS": 0.5,
-                "Undetermined": 1.0
-            },
-            "competition_level": {
-                "competition_level": "Medium",
-                "reason": "No strong competition indicators found.",
-                "matched_keywords": []
-            },
-            "problem": "Implicit problem gap.",
-            "opportunity": {
-                "idea": "A Micro SaaS delivered as a CLI Tool that solves the following: Implicit problem gap.",
-                "product_type": "Micro SaaS",
-                "delivery": "CLI Tool",
-                "difficulty": "Medium"
-            },
-            "why_now": {
-                "has_urgency_signal": false,
-                "why_now_strength": "Low"
-            },
-            "founder_fit": {
-                "founder_fit_level": "Medium"
-            },
-            "confidence_score": 0.25,
-            "analysis_metadata": {
-                "analyzed_at": "2026-08-06T11:50:58.144493+00:00",
-                "engine_version": "2.1.0",
-                "rules_version": "1.1.0",
-                "analysis_time_ms": 0.17
-            }
-        },
-        "score": {
-            "overall_score": 37,
-            "confidence": 25.0,
-            "breakdown": {
-                "scores": {
-                    "evidence_score": 0,
-                    "timing_score": 52,
-                    "market_score": 60,
-                    "execution_score": 50,
-                    "competition_score": 50
-                },
-                "raw_data": {
-                    "has_clear_pain": false,
-                    "has_workaround": false,
-                    "evidence_count": 0,
-                    "trend_strength": "Strong",
-                    "market_type": "Hybrid",
-                    "market_size": "Medium",
-                    "target_customer": "Designers",
-                    "competition_level": "Medium",
-                    "founder_fit_level": "Medium",
-                    "why_now_strength": "Low",
-                    "primary_category": "DevTools",
-                    "product_type": "Micro SaaS",
-                    "difficulty": "Medium"
-                }
-            },
-            "decision": "SKIP"
-        },
-        "recommendation": {
-            "decision": "SKIP",
-            "overall_score": 37,
-            "confidence": 25.0,
-            "emoji": "❌",
-            "color": "red"
-        },
-        "processed_at": "2026-08-06T11:50:58.151511+00:00"
+        "processed_at": "2026-08-06T12:24:30.263023+00:00"
     },
     {
         "id": "e8476b07b917fe48462996678794d796",
@@ -1161,14 +741,14 @@
         "content": "",
         "source": "github_trending",
         "url": "https://github.com/addyosmani/agent-skills",
-        "engagement": 226,
-        "points": 226,
-        "upvotes": 226,
+        "engagement": 588,
+        "points": 588,
+        "upvotes": 588,
         "comments": 0,
         "category": "unknown",
         "tags": [],
         "language": "unknown",
-        "collected_at": "2026-08-06T11:50:55.830853",
+        "collected_at": "2026-08-06T12:24:28.681380",
         "intelligence": {
             "evidence": {
                 "has_clear_pain": false,
@@ -1215,10 +795,10 @@
             },
             "confidence_score": 0.25,
             "analysis_metadata": {
-                "analyzed_at": "2026-08-06T11:50:58.144693+00:00",
+                "analyzed_at": "2026-08-06T12:24:30.256956+00:00",
                 "engine_version": "2.1.0",
                 "rules_version": "1.1.0",
-                "analysis_time_ms": 0.13
+                "analysis_time_ms": 0.11
             }
         },
         "score": {
@@ -1257,23 +837,23 @@
             "emoji": "❌",
             "color": "red"
         },
-        "processed_at": "2026-08-06T11:50:58.151560+00:00"
+        "processed_at": "2026-08-06T12:24:30.263062+00:00"
     },
     {
-        "id": "331fa766ddbbef086990957a44af660b",
-        "title": "Ask HN: Who is hiring? (August 2026)",
+        "id": "f8355268968f1d925e2d54ecb663b034",
+        "title": "Zed DeltaDB",
         "summary": "",
         "content": "",
         "source": "hacker_news",
-        "url": "https://news.ycombinator.com/item?id=49156683",
-        "engagement": 224,
-        "points": 224,
-        "upvotes": 224,
-        "comments": 270,
+        "url": "https://zed.dev/deltadb",
+        "engagement": 458,
+        "points": 458,
+        "upvotes": 458,
+        "comments": 243,
         "category": "unknown",
         "tags": [],
         "language": "unknown",
-        "collected_at": "2026-08-06T11:50:58.085905",
+        "collected_at": "2026-08-06T12:24:29.176460",
         "intelligence": {
             "evidence": {
                 "has_clear_pain": false,
@@ -1320,10 +900,10 @@
             },
             "confidence_score": 0.0,
             "analysis_metadata": {
-                "analyzed_at": "2026-08-06T11:50:58.144872+00:00",
+                "analyzed_at": "2026-08-06T12:24:30.257095+00:00",
                 "engine_version": "2.1.0",
                 "rules_version": "1.1.0",
-                "analysis_time_ms": 0.11
+                "analysis_time_ms": 0.07
             }
         },
         "score": {
@@ -1362,23 +942,23 @@
             "emoji": "❌",
             "color": "red"
         },
-        "processed_at": "2026-08-06T11:50:58.151696+00:00"
+        "processed_at": "2026-08-06T12:24:30.263104+00:00"
     },
     {
-        "id": "6a278edbb617b4ff0d9a6186808d2eab",
-        "title": "Branchless Rust: Making a Filter 4x Faster by Removing an If",
+        "id": "b6f00185e58b58e077ace8a339d53d6c",
+        "title": "Crime Pays but Botany Doesn't",
         "summary": "",
         "content": "",
         "source": "hacker_news",
-        "url": "https://www.greyblake.com/blog/branchless-rust/",
-        "engagement": 203,
-        "points": 203,
-        "upvotes": 203,
-        "comments": 54,
+        "url": "https://www.crimepaysbutbotanydoesnt.com/reading-list",
+        "engagement": 307,
+        "points": 307,
+        "upvotes": 307,
+        "comments": 109,
         "category": "unknown",
         "tags": [],
         "language": "unknown",
-        "collected_at": "2026-08-06T11:50:56.469858",
+        "collected_at": "2026-08-06T12:24:29.176092",
         "intelligence": {
             "evidence": {
                 "has_clear_pain": false,
@@ -1425,112 +1005,7 @@
             },
             "confidence_score": 0.0,
             "analysis_metadata": {
-                "analyzed_at": "2026-08-06T11:50:58.145044+00:00",
-                "engine_version": "2.1.0",
-                "rules_version": "1.1.0",
-                "analysis_time_ms": 0.09
-            }
-        },
-        "score": {
-            "overall_score": 37,
-            "confidence": 0.0,
-            "breakdown": {
-                "scores": {
-                    "evidence_score": 0,
-                    "timing_score": 52,
-                    "market_score": 60,
-                    "execution_score": 50,
-                    "competition_score": 50
-                },
-                "raw_data": {
-                    "has_clear_pain": false,
-                    "has_workaround": false,
-                    "evidence_count": 0,
-                    "trend_strength": "Strong",
-                    "market_type": "Hybrid",
-                    "market_size": "Medium",
-                    "target_customer": "General",
-                    "competition_level": "Medium",
-                    "founder_fit_level": "Medium",
-                    "why_now_strength": "Low",
-                    "primary_category": "Uncategorized",
-                    "product_type": "Micro SaaS",
-                    "difficulty": "Medium"
-                }
-            },
-            "decision": "SKIP"
-        },
-        "recommendation": {
-            "decision": "SKIP",
-            "overall_score": 37,
-            "confidence": 0.0,
-            "emoji": "❌",
-            "color": "red"
-        },
-        "processed_at": "2026-08-06T11:50:58.151746+00:00"
-    },
-    {
-        "id": "451805758a7cde21fa4d0d3fc7da7de7",
-        "title": "How to Make a Nintendo 64 Game in 2026",
-        "summary": "",
-        "content": "",
-        "source": "hacker_news",
-        "url": "https://phoboslab.org/log/2026/08/xibalba64-making-of",
-        "engagement": 159,
-        "points": 159,
-        "upvotes": 159,
-        "comments": 37,
-        "category": "unknown",
-        "tags": [],
-        "language": "unknown",
-        "collected_at": "2026-08-06T11:50:56.469161",
-        "intelligence": {
-            "evidence": {
-                "has_clear_pain": false,
-                "has_workaround": false,
-                "extracted_pain_points": [],
-                "extracted_solutions": [],
-                "evidence_count": 0
-            },
-            "category": {
-                "primary_category": "Uncategorized",
-                "sub_category": "General"
-            },
-            "trend_strength": {
-                "trend_strength": "Strong",
-                "engagement_tier": "Strong"
-            },
-            "market_type": {
-                "market_type": "Hybrid",
-                "target_customer": "General",
-                "market_size": "Medium"
-            },
-            "business_models": {
-                "SaaS": 0.5,
-                "Undetermined": 1.0
-            },
-            "competition_level": {
-                "competition_level": "Medium",
-                "reason": "No strong competition indicators found.",
-                "matched_keywords": []
-            },
-            "problem": "Implicit problem gap.",
-            "opportunity": {
-                "idea": "A Micro SaaS delivered as a Web App that solves the following: Implicit problem gap.",
-                "product_type": "Micro SaaS",
-                "delivery": "Web App",
-                "difficulty": "Medium"
-            },
-            "why_now": {
-                "has_urgency_signal": false,
-                "why_now_strength": "Low"
-            },
-            "founder_fit": {
-                "founder_fit_level": "Medium"
-            },
-            "confidence_score": 0.0,
-            "analysis_metadata": {
-                "analyzed_at": "2026-08-06T11:50:58.145199+00:00",
+                "analyzed_at": "2026-08-06T12:24:30.257247+00:00",
                 "engine_version": "2.1.0",
                 "rules_version": "1.1.0",
                 "analysis_time_ms": 0.08
@@ -1572,23 +1047,23 @@
             "emoji": "❌",
             "color": "red"
         },
-        "processed_at": "2026-08-06T11:50:58.151798+00:00"
+        "processed_at": "2026-08-06T12:24:30.263146+00:00"
     },
     {
-        "id": "82f5e768353325daec702f0eae3d75e4",
-        "title": "TapXWorld/ChinaTextbook — 所有小初高、大学PDF教材。",
+        "id": "14ba6f58fbfe22e423c6af36df313a20",
+        "title": "The title cards in Blade Runner are amazing",
         "summary": "",
         "content": "",
-        "source": "github_trending",
-        "url": "https://github.com/TapXWorld/ChinaTextbook",
-        "engagement": 157,
-        "points": 157,
-        "upvotes": 157,
-        "comments": 0,
+        "source": "hacker_news",
+        "url": "https://randsinrepose.com/archives/blade-runner-title-cards/",
+        "engagement": 305,
+        "points": 305,
+        "upvotes": 305,
+        "comments": 147,
         "category": "unknown",
         "tags": [],
         "language": "unknown",
-        "collected_at": "2026-08-06T11:50:55.832292",
+        "collected_at": "2026-08-06T12:24:29.176597",
         "intelligence": {
             "evidence": {
                 "has_clear_pain": false,
@@ -1635,7 +1110,217 @@
             },
             "confidence_score": 0.0,
             "analysis_metadata": {
-                "analyzed_at": "2026-08-06T11:50:58.145375+00:00",
+                "analyzed_at": "2026-08-06T12:24:30.257406+00:00",
+                "engine_version": "2.1.0",
+                "rules_version": "1.1.0",
+                "analysis_time_ms": 0.08
+            }
+        },
+        "score": {
+            "overall_score": 37,
+            "confidence": 0.0,
+            "breakdown": {
+                "scores": {
+                    "evidence_score": 0,
+                    "timing_score": 52,
+                    "market_score": 60,
+                    "execution_score": 50,
+                    "competition_score": 50
+                },
+                "raw_data": {
+                    "has_clear_pain": false,
+                    "has_workaround": false,
+                    "evidence_count": 0,
+                    "trend_strength": "Strong",
+                    "market_type": "Hybrid",
+                    "market_size": "Medium",
+                    "target_customer": "General",
+                    "competition_level": "Medium",
+                    "founder_fit_level": "Medium",
+                    "why_now_strength": "Low",
+                    "primary_category": "Uncategorized",
+                    "product_type": "Micro SaaS",
+                    "difficulty": "Medium"
+                }
+            },
+            "decision": "SKIP"
+        },
+        "recommendation": {
+            "decision": "SKIP",
+            "overall_score": 37,
+            "confidence": 0.0,
+            "emoji": "❌",
+            "color": "red"
+        },
+        "processed_at": "2026-08-06T12:24:30.263183+00:00"
+    },
+    {
+        "id": "a3be355d224ae9f340082ee2ba7800a7",
+        "title": "tirth8205/code-review-graph — Local-first code intelligence graph for MCP and CLI. Builds a persistent map of your codebase so AI coding tools read only what matters, with benchmarked context reductions on reviews and large-repo workflows.",
+        "summary": "",
+        "content": "",
+        "source": "github_trending",
+        "url": "https://github.com/tirth8205/code-review-graph",
+        "engagement": 232,
+        "points": 232,
+        "upvotes": 232,
+        "comments": 0,
+        "category": "unknown",
+        "tags": [],
+        "language": "unknown",
+        "collected_at": "2026-08-06T12:24:28.683360",
+        "intelligence": {
+            "evidence": {
+                "has_clear_pain": false,
+                "has_workaround": false,
+                "extracted_pain_points": [],
+                "extracted_solutions": [],
+                "evidence_count": 0
+            },
+            "category": {
+                "primary_category": "DevTools",
+                "sub_category": "General"
+            },
+            "trend_strength": {
+                "trend_strength": "Strong",
+                "engagement_tier": "Strong"
+            },
+            "market_type": {
+                "market_type": "Hybrid",
+                "target_customer": "Designers",
+                "market_size": "Medium"
+            },
+            "business_models": {
+                "SaaS": 0.5,
+                "Undetermined": 1.0
+            },
+            "competition_level": {
+                "competition_level": "Medium",
+                "reason": "No strong competition indicators found.",
+                "matched_keywords": []
+            },
+            "problem": "Implicit problem gap.",
+            "opportunity": {
+                "idea": "A Micro SaaS delivered as a CLI Tool that solves the following: Implicit problem gap.",
+                "product_type": "Micro SaaS",
+                "delivery": "CLI Tool",
+                "difficulty": "Medium"
+            },
+            "why_now": {
+                "has_urgency_signal": false,
+                "why_now_strength": "Low"
+            },
+            "founder_fit": {
+                "founder_fit_level": "Medium"
+            },
+            "confidence_score": 0.25,
+            "analysis_metadata": {
+                "analyzed_at": "2026-08-06T12:24:30.257636+00:00",
+                "engine_version": "2.1.0",
+                "rules_version": "1.1.0",
+                "analysis_time_ms": 0.16
+            }
+        },
+        "score": {
+            "overall_score": 37,
+            "confidence": 25.0,
+            "breakdown": {
+                "scores": {
+                    "evidence_score": 0,
+                    "timing_score": 52,
+                    "market_score": 60,
+                    "execution_score": 50,
+                    "competition_score": 50
+                },
+                "raw_data": {
+                    "has_clear_pain": false,
+                    "has_workaround": false,
+                    "evidence_count": 0,
+                    "trend_strength": "Strong",
+                    "market_type": "Hybrid",
+                    "market_size": "Medium",
+                    "target_customer": "Designers",
+                    "competition_level": "Medium",
+                    "founder_fit_level": "Medium",
+                    "why_now_strength": "Low",
+                    "primary_category": "DevTools",
+                    "product_type": "Micro SaaS",
+                    "difficulty": "Medium"
+                }
+            },
+            "decision": "SKIP"
+        },
+        "recommendation": {
+            "decision": "SKIP",
+            "overall_score": 37,
+            "confidence": 25.0,
+            "emoji": "❌",
+            "color": "red"
+        },
+        "processed_at": "2026-08-06T12:24:30.263219+00:00"
+    },
+    {
+        "id": "331fa766ddbbef086990957a44af660b",
+        "title": "Ask HN: Who is hiring? (August 2026)",
+        "summary": "",
+        "content": "",
+        "source": "hacker_news",
+        "url": "https://news.ycombinator.com/item?id=49156683",
+        "engagement": 225,
+        "points": 225,
+        "upvotes": 225,
+        "comments": 270,
+        "category": "unknown",
+        "tags": [],
+        "language": "unknown",
+        "collected_at": "2026-08-06T12:24:30.157849",
+        "intelligence": {
+            "evidence": {
+                "has_clear_pain": false,
+                "has_workaround": false,
+                "extracted_pain_points": [],
+                "extracted_solutions": [],
+                "evidence_count": 0
+            },
+            "category": {
+                "primary_category": "Uncategorized",
+                "sub_category": "General"
+            },
+            "trend_strength": {
+                "trend_strength": "Strong",
+                "engagement_tier": "Strong"
+            },
+            "market_type": {
+                "market_type": "Hybrid",
+                "target_customer": "General",
+                "market_size": "Medium"
+            },
+            "business_models": {
+                "SaaS": 0.5,
+                "Undetermined": 1.0
+            },
+            "competition_level": {
+                "competition_level": "Medium",
+                "reason": "No strong competition indicators found.",
+                "matched_keywords": []
+            },
+            "problem": "Implicit problem gap.",
+            "opportunity": {
+                "idea": "A Micro SaaS delivered as a Web App that solves the following: Implicit problem gap.",
+                "product_type": "Micro SaaS",
+                "delivery": "Web App",
+                "difficulty": "Medium"
+            },
+            "why_now": {
+                "has_urgency_signal": false,
+                "why_now_strength": "Low"
+            },
+            "founder_fit": {
+                "founder_fit_level": "Medium"
+            },
+            "confidence_score": 0.0,
+            "analysis_metadata": {
+                "analyzed_at": "2026-08-06T12:24:30.257812+00:00",
                 "engine_version": "2.1.0",
                 "rules_version": "1.1.0",
                 "analysis_time_ms": 0.1
@@ -1677,23 +1362,23 @@
             "emoji": "❌",
             "color": "red"
         },
-        "processed_at": "2026-08-06T11:50:58.151839+00:00"
+        "processed_at": "2026-08-06T12:24:30.263255+00:00"
     },
     {
-        "id": "210adb0ab03beee9f3b0cc1e342a661a",
-        "title": "Ask HN: Who wants to be hired? (August 2026)",
+        "id": "6a278edbb617b4ff0d9a6186808d2eab",
+        "title": "Branchless Rust: Making a Filter 4x Faster by Removing an If",
         "summary": "",
         "content": "",
         "source": "hacker_news",
-        "url": "https://news.ycombinator.com/item?id=49156682",
-        "engagement": 154,
-        "points": 154,
-        "upvotes": 154,
-        "comments": 455,
+        "url": "https://www.greyblake.com/blog/branchless-rust/",
+        "engagement": 211,
+        "points": 211,
+        "upvotes": 211,
+        "comments": 60,
         "category": "unknown",
         "tags": [],
         "language": "unknown",
-        "collected_at": "2026-08-06T11:50:58.085834",
+        "collected_at": "2026-08-06T12:24:29.176664",
         "intelligence": {
             "evidence": {
                 "has_clear_pain": false,
@@ -1740,7 +1425,217 @@
             },
             "confidence_score": 0.0,
             "analysis_metadata": {
-                "analyzed_at": "2026-08-06T11:50:58.145534+00:00",
+                "analyzed_at": "2026-08-06T12:24:30.257961+00:00",
+                "engine_version": "2.1.0",
+                "rules_version": "1.1.0",
+                "analysis_time_ms": 0.08
+            }
+        },
+        "score": {
+            "overall_score": 37,
+            "confidence": 0.0,
+            "breakdown": {
+                "scores": {
+                    "evidence_score": 0,
+                    "timing_score": 52,
+                    "market_score": 60,
+                    "execution_score": 50,
+                    "competition_score": 50
+                },
+                "raw_data": {
+                    "has_clear_pain": false,
+                    "has_workaround": false,
+                    "evidence_count": 0,
+                    "trend_strength": "Strong",
+                    "market_type": "Hybrid",
+                    "market_size": "Medium",
+                    "target_customer": "General",
+                    "competition_level": "Medium",
+                    "founder_fit_level": "Medium",
+                    "why_now_strength": "Low",
+                    "primary_category": "Uncategorized",
+                    "product_type": "Micro SaaS",
+                    "difficulty": "Medium"
+                }
+            },
+            "decision": "SKIP"
+        },
+        "recommendation": {
+            "decision": "SKIP",
+            "overall_score": 37,
+            "confidence": 0.0,
+            "emoji": "❌",
+            "color": "red"
+        },
+        "processed_at": "2026-08-06T12:24:30.263289+00:00"
+    },
+    {
+        "id": "451805758a7cde21fa4d0d3fc7da7de7",
+        "title": "How to Make a Nintendo 64 Game in 2026",
+        "summary": "",
+        "content": "",
+        "source": "hacker_news",
+        "url": "https://phoboslab.org/log/2026/08/xibalba64-making-of",
+        "engagement": 186,
+        "points": 186,
+        "upvotes": 186,
+        "comments": 57,
+        "category": "unknown",
+        "tags": [],
+        "language": "unknown",
+        "collected_at": "2026-08-06T12:24:29.175988",
+        "intelligence": {
+            "evidence": {
+                "has_clear_pain": false,
+                "has_workaround": false,
+                "extracted_pain_points": [],
+                "extracted_solutions": [],
+                "evidence_count": 0
+            },
+            "category": {
+                "primary_category": "Uncategorized",
+                "sub_category": "General"
+            },
+            "trend_strength": {
+                "trend_strength": "Strong",
+                "engagement_tier": "Strong"
+            },
+            "market_type": {
+                "market_type": "Hybrid",
+                "target_customer": "General",
+                "market_size": "Medium"
+            },
+            "business_models": {
+                "SaaS": 0.5,
+                "Undetermined": 1.0
+            },
+            "competition_level": {
+                "competition_level": "Medium",
+                "reason": "No strong competition indicators found.",
+                "matched_keywords": []
+            },
+            "problem": "Implicit problem gap.",
+            "opportunity": {
+                "idea": "A Micro SaaS delivered as a Web App that solves the following: Implicit problem gap.",
+                "product_type": "Micro SaaS",
+                "delivery": "Web App",
+                "difficulty": "Medium"
+            },
+            "why_now": {
+                "has_urgency_signal": false,
+                "why_now_strength": "Low"
+            },
+            "founder_fit": {
+                "founder_fit_level": "Medium"
+            },
+            "confidence_score": 0.0,
+            "analysis_metadata": {
+                "analyzed_at": "2026-08-06T12:24:30.258106+00:00",
+                "engine_version": "2.1.0",
+                "rules_version": "1.1.0",
+                "analysis_time_ms": 0.07
+            }
+        },
+        "score": {
+            "overall_score": 37,
+            "confidence": 0.0,
+            "breakdown": {
+                "scores": {
+                    "evidence_score": 0,
+                    "timing_score": 52,
+                    "market_score": 60,
+                    "execution_score": 50,
+                    "competition_score": 50
+                },
+                "raw_data": {
+                    "has_clear_pain": false,
+                    "has_workaround": false,
+                    "evidence_count": 0,
+                    "trend_strength": "Strong",
+                    "market_type": "Hybrid",
+                    "market_size": "Medium",
+                    "target_customer": "General",
+                    "competition_level": "Medium",
+                    "founder_fit_level": "Medium",
+                    "why_now_strength": "Low",
+                    "primary_category": "Uncategorized",
+                    "product_type": "Micro SaaS",
+                    "difficulty": "Medium"
+                }
+            },
+            "decision": "SKIP"
+        },
+        "recommendation": {
+            "decision": "SKIP",
+            "overall_score": 37,
+            "confidence": 0.0,
+            "emoji": "❌",
+            "color": "red"
+        },
+        "processed_at": "2026-08-06T12:24:30.263329+00:00"
+    },
+    {
+        "id": "82f5e768353325daec702f0eae3d75e4",
+        "title": "TapXWorld/ChinaTextbook — 所有小初高、大学PDF教材。",
+        "summary": "",
+        "content": "",
+        "source": "github_trending",
+        "url": "https://github.com/TapXWorld/ChinaTextbook",
+        "engagement": 157,
+        "points": 157,
+        "upvotes": 157,
+        "comments": 0,
+        "category": "unknown",
+        "tags": [],
+        "language": "unknown",
+        "collected_at": "2026-08-06T12:24:28.682860",
+        "intelligence": {
+            "evidence": {
+                "has_clear_pain": false,
+                "has_workaround": false,
+                "extracted_pain_points": [],
+                "extracted_solutions": [],
+                "evidence_count": 0
+            },
+            "category": {
+                "primary_category": "Uncategorized",
+                "sub_category": "General"
+            },
+            "trend_strength": {
+                "trend_strength": "Strong",
+                "engagement_tier": "Strong"
+            },
+            "market_type": {
+                "market_type": "Hybrid",
+                "target_customer": "General",
+                "market_size": "Medium"
+            },
+            "business_models": {
+                "SaaS": 0.5,
+                "Undetermined": 1.0
+            },
+            "competition_level": {
+                "competition_level": "Medium",
+                "reason": "No strong competition indicators found.",
+                "matched_keywords": []
+            },
+            "problem": "Implicit problem gap.",
+            "opportunity": {
+                "idea": "A Micro SaaS delivered as a Web App that solves the following: Implicit problem gap.",
+                "product_type": "Micro SaaS",
+                "delivery": "Web App",
+                "difficulty": "Medium"
+            },
+            "why_now": {
+                "has_urgency_signal": false,
+                "why_now_strength": "Low"
+            },
+            "founder_fit": {
+                "founder_fit_level": "Medium"
+            },
+            "confidence_score": 0.0,
+            "analysis_metadata": {
+                "analyzed_at": "2026-08-06T12:24:30.258264+00:00",
                 "engine_version": "2.1.0",
                 "rules_version": "1.1.0",
                 "analysis_time_ms": 0.09
@@ -1782,23 +1677,23 @@
             "emoji": "❌",
             "color": "red"
         },
-        "processed_at": "2026-08-06T11:50:58.151879+00:00"
+        "processed_at": "2026-08-06T12:24:30.263369+00:00"
     },
     {
-        "id": "ffcfb8d45eb997edc0ffc151cdafe733",
-        "title": "goauthentik/authentik — The authentication glue you need.",
+        "id": "210adb0ab03beee9f3b0cc1e342a661a",
+        "title": "Ask HN: Who wants to be hired? (August 2026)",
         "summary": "",
         "content": "",
-        "source": "github_trending",
-        "url": "https://github.com/goauthentik/authentik",
-        "engagement": 123,
-        "points": 123,
-        "upvotes": 123,
-        "comments": 0,
+        "source": "hacker_news",
+        "url": "https://news.ycombinator.com/item?id=49156682",
+        "engagement": 154,
+        "points": 154,
+        "upvotes": 154,
+        "comments": 456,
         "category": "unknown",
         "tags": [],
         "language": "unknown",
-        "collected_at": "2026-08-06T11:50:55.831629",
+        "collected_at": "2026-08-06T12:24:30.157666",
         "intelligence": {
             "evidence": {
                 "has_clear_pain": false,
@@ -1845,7 +1740,112 @@
             },
             "confidence_score": 0.0,
             "analysis_metadata": {
-                "analyzed_at": "2026-08-06T11:50:58.145705+00:00",
+                "analyzed_at": "2026-08-06T12:24:30.258414+00:00",
+                "engine_version": "2.1.0",
+                "rules_version": "1.1.0",
+                "analysis_time_ms": 0.07
+            }
+        },
+        "score": {
+            "overall_score": 37,
+            "confidence": 0.0,
+            "breakdown": {
+                "scores": {
+                    "evidence_score": 0,
+                    "timing_score": 52,
+                    "market_score": 60,
+                    "execution_score": 50,
+                    "competition_score": 50
+                },
+                "raw_data": {
+                    "has_clear_pain": false,
+                    "has_workaround": false,
+                    "evidence_count": 0,
+                    "trend_strength": "Strong",
+                    "market_type": "Hybrid",
+                    "market_size": "Medium",
+                    "target_customer": "General",
+                    "competition_level": "Medium",
+                    "founder_fit_level": "Medium",
+                    "why_now_strength": "Low",
+                    "primary_category": "Uncategorized",
+                    "product_type": "Micro SaaS",
+                    "difficulty": "Medium"
+                }
+            },
+            "decision": "SKIP"
+        },
+        "recommendation": {
+            "decision": "SKIP",
+            "overall_score": 37,
+            "confidence": 0.0,
+            "emoji": "❌",
+            "color": "red"
+        },
+        "processed_at": "2026-08-06T12:24:30.263412+00:00"
+    },
+    {
+        "id": "ffcfb8d45eb997edc0ffc151cdafe733",
+        "title": "goauthentik/authentik — The authentication glue you need.",
+        "summary": "",
+        "content": "",
+        "source": "github_trending",
+        "url": "https://github.com/goauthentik/authentik",
+        "engagement": 123,
+        "points": 123,
+        "upvotes": 123,
+        "comments": 0,
+        "category": "unknown",
+        "tags": [],
+        "language": "unknown",
+        "collected_at": "2026-08-06T12:24:28.682184",
+        "intelligence": {
+            "evidence": {
+                "has_clear_pain": false,
+                "has_workaround": false,
+                "extracted_pain_points": [],
+                "extracted_solutions": [],
+                "evidence_count": 0
+            },
+            "category": {
+                "primary_category": "Uncategorized",
+                "sub_category": "General"
+            },
+            "trend_strength": {
+                "trend_strength": "Strong",
+                "engagement_tier": "Strong"
+            },
+            "market_type": {
+                "market_type": "Hybrid",
+                "target_customer": "General",
+                "market_size": "Medium"
+            },
+            "business_models": {
+                "SaaS": 0.5,
+                "Undetermined": 1.0
+            },
+            "competition_level": {
+                "competition_level": "Medium",
+                "reason": "No strong competition indicators found.",
+                "matched_keywords": []
+            },
+            "problem": "Implicit problem gap.",
+            "opportunity": {
+                "idea": "A Micro SaaS delivered as a Web App that solves the following: Implicit problem gap.",
+                "product_type": "Micro SaaS",
+                "delivery": "Web App",
+                "difficulty": "Medium"
+            },
+            "why_now": {
+                "has_urgency_signal": false,
+                "why_now_strength": "Low"
+            },
+            "founder_fit": {
+                "founder_fit_level": "Medium"
+            },
+            "confidence_score": 0.0,
+            "analysis_metadata": {
+                "analyzed_at": "2026-08-06T12:24:30.258591+00:00",
                 "engine_version": "2.1.0",
                 "rules_version": "1.1.0",
                 "analysis_time_ms": 0.1
@@ -1887,7 +1887,7 @@
             "emoji": "❌",
             "color": "red"
         },
-        "processed_at": "2026-08-06T11:50:58.151918+00:00"
+        "processed_at": "2026-08-06T12:24:30.263455+00:00"
     },
     {
         "id": "97476bc03ae8b31a3a3b87907053cb70",
@@ -1896,14 +1896,14 @@
         "content": "",
         "source": "hacker_news",
         "url": "https://blog.gingerbeardman.com/2026/08/06/lets-all-meet-up-in-the-y2k/",
-        "engagement": 75,
-        "points": 75,
-        "upvotes": 75,
-        "comments": 34,
+        "engagement": 82,
+        "points": 82,
+        "upvotes": 82,
+        "comments": 42,
         "category": "unknown",
         "tags": [],
         "language": "unknown",
-        "collected_at": "2026-08-06T11:50:56.469426",
+        "collected_at": "2026-08-06T12:24:29.176392",
         "intelligence": {
             "evidence": {
                 "has_clear_pain": false,
@@ -1950,10 +1950,10 @@
             },
             "confidence_score": 0.0,
             "analysis_metadata": {
-                "analyzed_at": "2026-08-06T11:50:58.145907+00:00",
+                "analyzed_at": "2026-08-06T12:24:30.258733+00:00",
                 "engine_version": "2.1.0",
                 "rules_version": "1.1.0",
-                "analysis_time_ms": 0.12
+                "analysis_time_ms": 0.07
             }
         },
         "score": {
@@ -1992,7 +1992,112 @@
             "emoji": "❌",
             "color": "red"
         },
-        "processed_at": "2026-08-06T11:50:58.151955+00:00"
+        "processed_at": "2026-08-06T12:24:30.263498+00:00"
+    },
+    {
+        "id": "dbf8e1f2e3d7fffdc304b0d15aefecf0",
+        "title": "On non-rooted Android 17, ADB uninstall of system apps fails",
+        "summary": "",
+        "content": "",
+        "source": "hacker_news",
+        "url": "https://github.com/Universal-Debloater-Alliance/universal-android-debloater-next-generation/issues/1426",
+        "engagement": 72,
+        "points": 72,
+        "upvotes": 72,
+        "comments": 23,
+        "category": "unknown",
+        "tags": [],
+        "language": "unknown",
+        "collected_at": "2026-08-06T12:24:29.176529",
+        "intelligence": {
+            "evidence": {
+                "has_clear_pain": false,
+                "has_workaround": false,
+                "extracted_pain_points": [],
+                "extracted_solutions": [],
+                "evidence_count": 0
+            },
+            "category": {
+                "primary_category": "AI/ML",
+                "sub_category": "General"
+            },
+            "trend_strength": {
+                "trend_strength": "Strong",
+                "engagement_tier": "Strong"
+            },
+            "market_type": {
+                "market_type": "Hybrid",
+                "target_customer": "General",
+                "market_size": "Medium"
+            },
+            "business_models": {
+                "SaaS": 0.5,
+                "Undetermined": 1.0
+            },
+            "competition_level": {
+                "competition_level": "Medium",
+                "reason": "No strong competition indicators found.",
+                "matched_keywords": []
+            },
+            "problem": "Implicit problem gap.",
+            "opportunity": {
+                "idea": "A Micro SaaS delivered as a Web App that solves the following: Implicit problem gap.",
+                "product_type": "Micro SaaS",
+                "delivery": "Web App",
+                "difficulty": "Medium"
+            },
+            "why_now": {
+                "has_urgency_signal": false,
+                "why_now_strength": "Low"
+            },
+            "founder_fit": {
+                "founder_fit_level": "Medium"
+            },
+            "confidence_score": 0.1,
+            "analysis_metadata": {
+                "analyzed_at": "2026-08-06T12:24:30.258924+00:00",
+                "engine_version": "2.1.0",
+                "rules_version": "1.1.0",
+                "analysis_time_ms": 0.1
+            }
+        },
+        "score": {
+            "overall_score": 37,
+            "confidence": 10.0,
+            "breakdown": {
+                "scores": {
+                    "evidence_score": 0,
+                    "timing_score": 52,
+                    "market_score": 60,
+                    "execution_score": 50,
+                    "competition_score": 50
+                },
+                "raw_data": {
+                    "has_clear_pain": false,
+                    "has_workaround": false,
+                    "evidence_count": 0,
+                    "trend_strength": "Strong",
+                    "market_type": "Hybrid",
+                    "market_size": "Medium",
+                    "target_customer": "General",
+                    "competition_level": "Medium",
+                    "founder_fit_level": "Medium",
+                    "why_now_strength": "Low",
+                    "primary_category": "AI/ML",
+                    "product_type": "Micro SaaS",
+                    "difficulty": "Medium"
+                }
+            },
+            "decision": "SKIP"
+        },
+        "recommendation": {
+            "decision": "SKIP",
+            "overall_score": 37,
+            "confidence": 10.0,
+            "emoji": "❌",
+            "color": "red"
+        },
+        "processed_at": "2026-08-06T12:24:30.263541+00:00"
     },
     {
         "id": "5a74fed6cd47410eb8667578917cf76a",
@@ -2008,7 +2113,7 @@
         "category": "unknown",
         "tags": [],
         "language": "unknown",
-        "collected_at": "2026-08-06T11:50:58.086039",
+        "collected_at": "2026-08-06T12:24:30.157983",
         "intelligence": {
             "evidence": {
                 "has_clear_pain": false,
@@ -2054,7 +2159,7 @@
             },
             "confidence_score": 0.0,
             "analysis_metadata": {
-                "analyzed_at": "2026-08-06T11:50:58.146115+00:00",
+                "analyzed_at": "2026-08-06T12:24:30.259112+00:00",
                 "engine_version": "2.1.0",
                 "rules_version": "1.1.0",
                 "analysis_time_ms": 0.12
@@ -2096,7 +2201,7 @@
             "emoji": "❌",
             "color": "red"
         },
-        "processed_at": "2026-08-06T11:50:58.151999+00:00"
+        "processed_at": "2026-08-06T12:24:30.263584+00:00"
     },
     {
         "id": "08fe16cad4cc23cba40f3789a7e934fd",
@@ -2105,14 +2210,14 @@
         "content": "",
         "source": "hacker_news",
         "url": "https://en.wikipedia.org/wiki/Pareto_front",
-        "engagement": 32,
-        "points": 32,
-        "upvotes": 32,
-        "comments": 13,
+        "engagement": 44,
+        "points": 44,
+        "upvotes": 44,
+        "comments": 19,
         "category": "unknown",
         "tags": [],
         "language": "unknown",
-        "collected_at": "2026-08-06T11:50:56.469351",
+        "collected_at": "2026-08-06T12:24:29.176169",
         "intelligence": {
             "evidence": {
                 "has_clear_pain": false,
@@ -2159,7 +2264,7 @@
             },
             "confidence_score": 0.0,
             "analysis_metadata": {
-                "analyzed_at": "2026-08-06T11:50:58.146279+00:00",
+                "analyzed_at": "2026-08-06T12:24:30.259286+00:00",
                 "engine_version": "2.1.0",
                 "rules_version": "1.1.0",
                 "analysis_time_ms": 0.09
@@ -2201,7 +2306,7 @@
             "emoji": "❌",
             "color": "red"
         },
-        "processed_at": "2026-08-06T11:50:58.152042+00:00"
+        "processed_at": "2026-08-06T12:24:30.263628+00:00"
     },
     {
         "id": "bcc7fb59732c48e7ed65832060f4233d",
@@ -2217,7 +2322,7 @@
         "category": "unknown",
         "tags": [],
         "language": "unknown",
-        "collected_at": "2026-08-06T11:50:55.832511",
+        "collected_at": "2026-08-06T12:24:28.683082",
         "intelligence": {
             "evidence": {
                 "has_clear_pain": false,
@@ -2264,10 +2369,10 @@
             },
             "confidence_score": 0.25,
             "analysis_metadata": {
-                "analyzed_at": "2026-08-06T11:50:58.146575+00:00",
+                "analyzed_at": "2026-08-06T12:24:30.259576+00:00",
                 "engine_version": "2.1.0",
                 "rules_version": "1.1.0",
-                "analysis_time_ms": 0.23
+                "analysis_time_ms": 0.2
             }
         },
         "score": {
@@ -2306,7 +2411,7 @@
             "emoji": "❌",
             "color": "red"
         },
-        "processed_at": "2026-08-06T11:50:58.152088+00:00"
+        "processed_at": "2026-08-06T12:24:30.263671+00:00"
     },
     {
         "id": "3bf501d411b835cf61ad2b06a98e3c38",
@@ -2322,7 +2427,7 @@
         "category": "unknown",
         "tags": [],
         "language": "unknown",
-        "collected_at": "2026-08-06T11:50:57.357622",
+        "collected_at": "2026-08-06T12:24:29.664622",
         "intelligence": {
             "evidence": {
                 "has_clear_pain": false,
@@ -2369,7 +2474,7 @@
             },
             "confidence_score": 0.0,
             "analysis_metadata": {
-                "analyzed_at": "2026-08-06T11:50:58.146828+00:00",
+                "analyzed_at": "2026-08-06T12:24:30.259822+00:00",
                 "engine_version": "2.1.0",
                 "rules_version": "1.1.0",
                 "analysis_time_ms": 0.17
@@ -2411,7 +2516,7 @@
             "emoji": "❌",
             "color": "red"
         },
-        "processed_at": "2026-08-06T11:50:58.152132+00:00"
+        "processed_at": "2026-08-06T12:24:30.263715+00:00"
     },
     {
         "id": "30aaed766d63aa3d883bbdcf97bbff55",
@@ -2427,7 +2532,7 @@
         "category": "unknown",
         "tags": [],
         "language": "unknown",
-        "collected_at": "2026-08-06T11:50:57.360419",
+        "collected_at": "2026-08-06T12:24:29.665086",
         "intelligence": {
             "evidence": {
                 "has_clear_pain": false,
@@ -2474,10 +2579,10 @@
             },
             "confidence_score": 0.15,
             "analysis_metadata": {
-                "analyzed_at": "2026-08-06T11:50:58.147024+00:00",
+                "analyzed_at": "2026-08-06T12:24:30.260047+00:00",
                 "engine_version": "2.1.0",
                 "rules_version": "1.1.0",
-                "analysis_time_ms": 0.11
+                "analysis_time_ms": 0.12
             }
         },
         "score": {
@@ -2516,7 +2621,7 @@
             "emoji": "❌",
             "color": "red"
         },
-        "processed_at": "2026-08-06T11:50:58.152176+00:00"
+        "processed_at": "2026-08-06T12:24:30.263759+00:00"
     },
     {
         "id": "ae0fda9bb4e6f3d9789b47f74df5f3c6",
@@ -2532,7 +2637,7 @@
         "category": "unknown",
         "tags": [],
         "language": "unknown",
-        "collected_at": "2026-08-06T11:50:58.085974",
+        "collected_at": "2026-08-06T12:24:30.157918",
         "intelligence": {
             "evidence": {
                 "has_clear_pain": false,
@@ -2579,7 +2684,7 @@
             },
             "confidence_score": 0.1,
             "analysis_metadata": {
-                "analyzed_at": "2026-08-06T11:50:58.147212+00:00",
+                "analyzed_at": "2026-08-06T12:24:30.260257+00:00",
                 "engine_version": "2.1.0",
                 "rules_version": "1.1.0",
                 "analysis_time_ms": 0.11
@@ -2621,112 +2726,7 @@
             "emoji": "❌",
             "color": "red"
         },
-        "processed_at": "2026-08-06T11:50:58.152217+00:00"
-    },
-    {
-        "id": "67c4da780077f0afa83e5a438c9fb289",
-        "title": "Show HN: ClickBench Playground – a playground for 110 database systems",
-        "summary": "",
-        "content": "",
-        "source": "hacker_news",
-        "url": "https://benchmark.clickhouse.com/playground/",
-        "engagement": 21,
-        "points": 21,
-        "upvotes": 21,
-        "comments": 5,
-        "category": "unknown",
-        "tags": [],
-        "language": "unknown",
-        "collected_at": "2026-08-06T11:50:57.360551",
-        "intelligence": {
-            "evidence": {
-                "has_clear_pain": false,
-                "has_workaround": false,
-                "extracted_pain_points": [],
-                "extracted_solutions": [],
-                "evidence_count": 0
-            },
-            "category": {
-                "primary_category": "DevTools",
-                "sub_category": "General"
-            },
-            "trend_strength": {
-                "trend_strength": "Moderate",
-                "engagement_tier": "Moderate"
-            },
-            "market_type": {
-                "market_type": "Hybrid",
-                "target_customer": "General",
-                "market_size": "Medium"
-            },
-            "business_models": {
-                "SaaS": 0.5,
-                "Undetermined": 1.0
-            },
-            "competition_level": {
-                "competition_level": "Medium",
-                "reason": "No strong competition indicators found.",
-                "matched_keywords": []
-            },
-            "problem": "Implicit problem gap.",
-            "opportunity": {
-                "idea": "A Micro SaaS delivered as a CLI Tool that solves the following: Implicit problem gap.",
-                "product_type": "Micro SaaS",
-                "delivery": "CLI Tool",
-                "difficulty": "Medium"
-            },
-            "why_now": {
-                "has_urgency_signal": false,
-                "why_now_strength": "Low"
-            },
-            "founder_fit": {
-                "founder_fit_level": "Medium"
-            },
-            "confidence_score": 0.1,
-            "analysis_metadata": {
-                "analyzed_at": "2026-08-06T11:50:58.147445+00:00",
-                "engine_version": "2.1.0",
-                "rules_version": "1.1.0",
-                "analysis_time_ms": 0.15
-            }
-        },
-        "score": {
-            "overall_score": 34,
-            "confidence": 10.0,
-            "breakdown": {
-                "scores": {
-                    "evidence_score": 0,
-                    "timing_score": 35,
-                    "market_score": 60,
-                    "execution_score": 50,
-                    "competition_score": 50
-                },
-                "raw_data": {
-                    "has_clear_pain": false,
-                    "has_workaround": false,
-                    "evidence_count": 0,
-                    "trend_strength": "Moderate",
-                    "market_type": "Hybrid",
-                    "market_size": "Medium",
-                    "target_customer": "General",
-                    "competition_level": "Medium",
-                    "founder_fit_level": "Medium",
-                    "why_now_strength": "Low",
-                    "primary_category": "DevTools",
-                    "product_type": "Micro SaaS",
-                    "difficulty": "Medium"
-                }
-            },
-            "decision": "SKIP"
-        },
-        "recommendation": {
-            "decision": "SKIP",
-            "overall_score": 34,
-            "confidence": 10.0,
-            "emoji": "❌",
-            "color": "red"
-        },
-        "processed_at": "2026-08-06T11:50:58.152258+00:00"
+        "processed_at": "2026-08-06T12:24:30.263819+00:00"
     },
     {
         "id": "5181c9a3d971c3e64c9ffa6cfe708c13",
@@ -2742,7 +2742,7 @@
         "category": "unknown",
         "tags": [],
         "language": "unknown",
-        "collected_at": "2026-08-06T11:50:57.360281",
+        "collected_at": "2026-08-06T12:24:29.664978",
         "intelligence": {
             "evidence": {
                 "has_clear_pain": false,
@@ -2789,7 +2789,7 @@
             },
             "confidence_score": 0.0,
             "analysis_metadata": {
-                "analyzed_at": "2026-08-06T11:50:58.147633+00:00",
+                "analyzed_at": "2026-08-06T12:24:30.260451+00:00",
                 "engine_version": "2.1.0",
                 "rules_version": "1.1.0",
                 "analysis_time_ms": 0.11
@@ -2831,112 +2831,7 @@
             "emoji": "❌",
             "color": "red"
         },
-        "processed_at": "2026-08-06T11:50:58.152308+00:00"
-    },
-    {
-        "id": "bc199dc73c944bdae1c128f160113382",
-        "title": "How Americans View Capitalism, Socialism and Free Enterprise",
-        "summary": "",
-        "content": "",
-        "source": "hacker_news",
-        "url": "https://news.gallup.com/poll/713144/americans-view-capitalism-socialism-free-enterprise.aspx",
-        "engagement": 14,
-        "points": 14,
-        "upvotes": 14,
-        "comments": 4,
-        "category": "unknown",
-        "tags": [],
-        "language": "unknown",
-        "collected_at": "2026-08-06T11:50:56.469709",
-        "intelligence": {
-            "evidence": {
-                "has_clear_pain": false,
-                "has_workaround": false,
-                "extracted_pain_points": [],
-                "extracted_solutions": [],
-                "evidence_count": 0
-            },
-            "category": {
-                "primary_category": "DevTools",
-                "sub_category": "General"
-            },
-            "trend_strength": {
-                "trend_strength": "Moderate",
-                "engagement_tier": "Moderate"
-            },
-            "market_type": {
-                "market_type": "B2B",
-                "target_customer": "General",
-                "market_size": "Large"
-            },
-            "business_models": {
-                "API": 0.6,
-                "Enterprise": 0.6
-            },
-            "competition_level": {
-                "competition_level": "Medium",
-                "reason": "No strong competition indicators found.",
-                "matched_keywords": []
-            },
-            "problem": "Implicit problem gap.",
-            "opportunity": {
-                "idea": "A API Service delivered as a Web App that solves the following: Implicit problem gap.",
-                "product_type": "API Service",
-                "delivery": "Web App",
-                "difficulty": "Medium"
-            },
-            "why_now": {
-                "has_urgency_signal": false,
-                "why_now_strength": "Low"
-            },
-            "founder_fit": {
-                "founder_fit_level": "Medium"
-            },
-            "confidence_score": 0.25,
-            "analysis_metadata": {
-                "analyzed_at": "2026-08-06T11:50:58.148242+00:00",
-                "engine_version": "2.1.0",
-                "rules_version": "1.1.0",
-                "analysis_time_ms": 0.54
-            }
-        },
-        "score": {
-            "overall_score": 41,
-            "confidence": 25.0,
-            "breakdown": {
-                "scores": {
-                    "evidence_score": 0,
-                    "timing_score": 35,
-                    "market_score": 95,
-                    "execution_score": 50,
-                    "competition_score": 50
-                },
-                "raw_data": {
-                    "has_clear_pain": false,
-                    "has_workaround": false,
-                    "evidence_count": 0,
-                    "trend_strength": "Moderate",
-                    "market_type": "B2B",
-                    "market_size": "Large",
-                    "target_customer": "General",
-                    "competition_level": "Medium",
-                    "founder_fit_level": "Medium",
-                    "why_now_strength": "Low",
-                    "primary_category": "DevTools",
-                    "product_type": "API Service",
-                    "difficulty": "Medium"
-                }
-            },
-            "decision": "SKIP"
-        },
-        "recommendation": {
-            "decision": "SKIP",
-            "overall_score": 41,
-            "confidence": 25.0,
-            "emoji": "❌",
-            "color": "red"
-        },
-        "processed_at": "2026-08-06T11:50:58.152353+00:00"
+        "processed_at": "2026-08-06T12:24:30.263860+00:00"
     },
     {
         "id": "aa547bdc9e948a21ee05800cf43d5e61",
@@ -2952,7 +2847,7 @@
         "category": "unknown",
         "tags": [],
         "language": "unknown",
-        "collected_at": "2026-08-06T11:50:58.086173",
+        "collected_at": "2026-08-06T12:24:30.158115",
         "intelligence": {
             "evidence": {
                 "has_clear_pain": false,
@@ -2999,10 +2894,10 @@
             },
             "confidence_score": 0.0,
             "analysis_metadata": {
-                "analyzed_at": "2026-08-06T11:50:58.148498+00:00",
+                "analyzed_at": "2026-08-06T12:24:30.260637+00:00",
                 "engine_version": "2.1.0",
                 "rules_version": "1.1.0",
-                "analysis_time_ms": 0.12
+                "analysis_time_ms": 0.11
             }
         },
         "score": {
@@ -3041,7 +2936,7 @@
             "emoji": "❌",
             "color": "red"
         },
-        "processed_at": "2026-08-06T11:50:58.152398+00:00"
+        "processed_at": "2026-08-06T12:24:30.263898+00:00"
     },
     {
         "id": "228ff6f9db7dad5a807ebec491c3b090",
@@ -3057,7 +2952,7 @@
         "category": "unknown",
         "tags": [],
         "language": "unknown",
-        "collected_at": "2026-08-06T11:50:55.832082",
+        "collected_at": "2026-08-06T12:24:28.682634",
         "intelligence": {
             "evidence": {
                 "has_clear_pain": false,
@@ -3104,10 +2999,10 @@
             },
             "confidence_score": 0.0,
             "analysis_metadata": {
-                "analyzed_at": "2026-08-06T11:50:58.148742+00:00",
+                "analyzed_at": "2026-08-06T12:24:30.261065+00:00",
                 "engine_version": "2.1.0",
                 "rules_version": "1.1.0",
-                "analysis_time_ms": 0.15
+                "analysis_time_ms": 0.35
             }
         },
         "score": {
@@ -3146,7 +3041,7 @@
             "emoji": "❌",
             "color": "red"
         },
-        "processed_at": "2026-08-06T11:50:58.152440+00:00"
+        "processed_at": "2026-08-06T12:24:30.263935+00:00"
     },
     {
         "id": "a74af4cae1207763765714cbef9966ee",
@@ -3158,11 +3053,11 @@
         "engagement": 8,
         "points": 8,
         "upvotes": 8,
-        "comments": 7,
+        "comments": 8,
         "category": "unknown",
         "tags": [],
         "language": "unknown",
-        "collected_at": "2026-08-06T11:50:58.085735",
+        "collected_at": "2026-08-06T12:24:30.157749",
         "intelligence": {
             "evidence": {
                 "has_clear_pain": false,
@@ -3208,10 +3103,10 @@
             },
             "confidence_score": 0.1,
             "analysis_metadata": {
-                "analyzed_at": "2026-08-06T11:50:58.148954+00:00",
+                "analyzed_at": "2026-08-06T12:24:30.261256+00:00",
                 "engine_version": "2.1.0",
                 "rules_version": "1.1.0",
-                "analysis_time_ms": 0.11
+                "analysis_time_ms": 0.1
             }
         },
         "score": {
@@ -3250,7 +3145,7 @@
             "emoji": "❌",
             "color": "red"
         },
-        "processed_at": "2026-08-06T11:50:58.152485+00:00"
+        "processed_at": "2026-08-06T12:24:30.263984+00:00"
     },
     {
         "id": "49bd3e7f36b3c4dffc9e2c8a45170f04",
@@ -3266,7 +3161,7 @@
         "category": "unknown",
         "tags": [],
         "language": "unknown",
-        "collected_at": "2026-08-06T11:50:58.086106",
+        "collected_at": "2026-08-06T12:24:30.158049",
         "intelligence": {
             "evidence": {
                 "has_clear_pain": false,
@@ -3313,10 +3208,10 @@
             },
             "confidence_score": 0.1,
             "analysis_metadata": {
-                "analyzed_at": "2026-08-06T11:50:58.149186+00:00",
+                "analyzed_at": "2026-08-06T12:24:30.261441+00:00",
                 "engine_version": "2.1.0",
                 "rules_version": "1.1.0",
-                "analysis_time_ms": 0.14
+                "analysis_time_ms": 0.11
             }
         },
         "score": {
@@ -3355,7 +3250,7 @@
             "emoji": "❌",
             "color": "red"
         },
-        "processed_at": "2026-08-06T11:50:58.152531+00:00"
+        "processed_at": "2026-08-06T12:24:30.264028+00:00"
     },
     {
         "id": "0a086f4e57312af1dde1f0b2d17b444c",
@@ -3371,7 +3266,7 @@
         "category": "unknown",
         "tags": [],
         "language": "unknown",
-        "collected_at": "2026-08-06T11:50:57.357732",
+        "collected_at": "2026-08-06T12:24:29.664734",
         "intelligence": {
             "evidence": {
                 "has_clear_pain": false,
@@ -3418,10 +3313,10 @@
             },
             "confidence_score": 0.25,
             "analysis_metadata": {
-                "analyzed_at": "2026-08-06T11:50:58.149684+00:00",
+                "analyzed_at": "2026-08-06T12:24:30.261636+00:00",
                 "engine_version": "2.1.0",
                 "rules_version": "1.1.0",
-                "analysis_time_ms": 0.16
+                "analysis_time_ms": 0.12
             }
         },
         "score": {
@@ -3460,23 +3355,23 @@
             "emoji": "❌",
             "color": "red"
         },
-        "processed_at": "2026-08-06T11:50:58.152575+00:00"
+        "processed_at": "2026-08-06T12:24:30.264068+00:00"
     },
     {
-        "id": "eed144323e9b9294fd1d475afb867797",
-        "title": "Show HN: Sift – MCP aggregator that exposes 2 tools instead of hundreds",
+        "id": "04f7b9467416055c124f49fa40fcd299",
+        "title": "Show HN: demake – one source project compiles to any retro game console ROM",
         "summary": "",
         "content": "",
         "source": "hacker_news",
-        "url": "https://github.com/Narasimha1997/sift",
-        "engagement": 4,
-        "points": 4,
-        "upvotes": 4,
+        "url": "https://geosona.com/demake/",
+        "engagement": 3,
+        "points": 3,
+        "upvotes": 3,
         "comments": 0,
         "category": "unknown",
         "tags": [],
         "language": "unknown",
-        "collected_at": "2026-08-06T11:50:57.360679",
+        "collected_at": "2026-08-06T12:24:29.664386",
         "intelligence": {
             "evidence": {
                 "has_clear_pain": false,
@@ -3523,10 +3418,10 @@
             },
             "confidence_score": 0.0,
             "analysis_metadata": {
-                "analyzed_at": "2026-08-06T11:50:58.149973+00:00",
+                "analyzed_at": "2026-08-06T12:24:30.261866+00:00",
                 "engine_version": "2.1.0",
                 "rules_version": "1.1.0",
-                "analysis_time_ms": 0.16
+                "analysis_time_ms": 0.15
             }
         },
         "score": {
@@ -3565,7 +3460,7 @@
             "emoji": "❌",
             "color": "red"
         },
-        "processed_at": "2026-08-06T11:50:58.152618+00:00"
+        "processed_at": "2026-08-06T12:24:30.264108+00:00"
     },
     {
         "id": "f54d1d81bd125d7c854068181451c1c0",
@@ -3581,7 +3476,7 @@
         "category": "unknown",
         "tags": [],
         "language": "unknown",
-        "collected_at": "2026-08-06T11:50:58.086238",
+        "collected_at": "2026-08-06T12:24:30.158179",
         "intelligence": {
             "evidence": {
                 "has_clear_pain": false,
@@ -3628,10 +3523,10 @@
             },
             "confidence_score": 0.0,
             "analysis_metadata": {
-                "analyzed_at": "2026-08-06T11:50:58.150219+00:00",
+                "analyzed_at": "2026-08-06T12:24:30.262058+00:00",
                 "engine_version": "2.1.0",
                 "rules_version": "1.1.0",
-                "analysis_time_ms": 0.14
+                "analysis_time_ms": 0.1
             }
         },
         "score": {
@@ -3670,23 +3565,128 @@
             "emoji": "❌",
             "color": "red"
         },
-        "processed_at": "2026-08-06T11:50:58.152659+00:00"
+        "processed_at": "2026-08-06T12:24:30.264149+00:00"
     },
     {
-        "id": "78bc7e80c3927b1c904c7669e98f5e9e",
-        "title": "Show HN: Demake – one source project compiles to any retro game console ROM",
+        "id": "4d7350bb3341960f6308eeca9007b7a5",
+        "title": "Show HN: Skyline Co-op is like SimTower, but built around democratic socialism",
         "summary": "",
         "content": "",
         "source": "hacker_news",
-        "url": "https://geosona.com/demake/",
+        "url": "https://intergalacticrobots.app/skyline-coop/",
         "engagement": 2,
         "points": 2,
         "upvotes": 2,
-        "comments": 0,
+        "comments": 3,
         "category": "unknown",
         "tags": [],
         "language": "unknown",
-        "collected_at": "2026-08-06T11:50:57.357489",
+        "collected_at": "2026-08-06T12:24:29.664232",
+        "intelligence": {
+            "evidence": {
+                "has_clear_pain": false,
+                "has_workaround": false,
+                "extracted_pain_points": [],
+                "extracted_solutions": [],
+                "evidence_count": 0
+            },
+            "category": {
+                "primary_category": "Uncategorized",
+                "sub_category": "General"
+            },
+            "trend_strength": {
+                "trend_strength": "Weak",
+                "engagement_tier": "Weak"
+            },
+            "market_type": {
+                "market_type": "Hybrid",
+                "target_customer": "Designers",
+                "market_size": "Medium"
+            },
+            "business_models": {
+                "SaaS": 0.5,
+                "Undetermined": 1.0
+            },
+            "competition_level": {
+                "competition_level": "Medium",
+                "reason": "No strong competition indicators found.",
+                "matched_keywords": []
+            },
+            "problem": "Implicit problem gap.",
+            "opportunity": {
+                "idea": "A Micro SaaS delivered as a Web App that solves the following: Implicit problem gap.",
+                "product_type": "Micro SaaS",
+                "delivery": "Web App",
+                "difficulty": "Medium"
+            },
+            "why_now": {
+                "has_urgency_signal": false,
+                "why_now_strength": "Low"
+            },
+            "founder_fit": {
+                "founder_fit_level": "Medium"
+            },
+            "confidence_score": 0.15,
+            "analysis_metadata": {
+                "analyzed_at": "2026-08-06T12:24:30.262257+00:00",
+                "engine_version": "2.1.0",
+                "rules_version": "1.1.0",
+                "analysis_time_ms": 0.11
+            }
+        },
+        "score": {
+            "overall_score": 31,
+            "confidence": 15.0,
+            "breakdown": {
+                "scores": {
+                    "evidence_score": 0,
+                    "timing_score": 20,
+                    "market_score": 60,
+                    "execution_score": 50,
+                    "competition_score": 50
+                },
+                "raw_data": {
+                    "has_clear_pain": false,
+                    "has_workaround": false,
+                    "evidence_count": 0,
+                    "trend_strength": "Weak",
+                    "market_type": "Hybrid",
+                    "market_size": "Medium",
+                    "target_customer": "Designers",
+                    "competition_level": "Medium",
+                    "founder_fit_level": "Medium",
+                    "why_now_strength": "Low",
+                    "primary_category": "Uncategorized",
+                    "product_type": "Micro SaaS",
+                    "difficulty": "Medium"
+                }
+            },
+            "decision": "SKIP"
+        },
+        "recommendation": {
+            "decision": "SKIP",
+            "overall_score": 31,
+            "confidence": 15.0,
+            "emoji": "❌",
+            "color": "red"
+        },
+        "processed_at": "2026-08-06T12:24:30.264194+00:00"
+    },
+    {
+        "id": "8f231b0c0bed6cc1eb02525239606f81",
+        "title": "Show HN: A terminal glued to the macOS dock",
+        "summary": "",
+        "content": "",
+        "source": "hacker_news",
+        "url": "https://github.com/palamim/starboard",
+        "engagement": 2,
+        "points": 2,
+        "upvotes": 2,
+        "comments": 1,
+        "category": "unknown",
+        "tags": [],
+        "language": "unknown",
+        "collected_at": "2026-08-06T12:24:29.664509",
         "intelligence": {
             "evidence": {
                 "has_clear_pain": false,
@@ -3719,9 +3719,9 @@
             },
             "problem": "Implicit problem gap.",
             "opportunity": {
-                "idea": "A Micro SaaS delivered as a Web App that solves the following: Implicit problem gap.",
+                "idea": "A Micro SaaS delivered as a CLI Tool that solves the following: Implicit problem gap.",
                 "product_type": "Micro SaaS",
-                "delivery": "Web App",
+                "delivery": "CLI Tool",
                 "difficulty": "Medium"
             },
             "why_now": {
@@ -3733,10 +3733,10 @@
             },
             "confidence_score": 0.0,
             "analysis_metadata": {
-                "analyzed_at": "2026-08-06T11:50:58.150488+00:00",
+                "analyzed_at": "2026-08-06T12:24:30.262428+00:00",
                 "engine_version": "2.1.0",
                 "rules_version": "1.1.0",
-                "analysis_time_ms": 0.17
+                "analysis_time_ms": 0.08
             }
         },
         "score": {
@@ -3775,6 +3775,6 @@
             "emoji": "❌",
             "color": "red"
         },
-        "processed_at": "2026-08-06T11:50:58.152702+00:00"
+        "processed_at": "2026-08-06T12:24:30.264240+00:00"
     }
 ]
