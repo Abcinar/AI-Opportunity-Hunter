@@ -1653,23 +1653,19 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
         return 1
 
     config_dir = Path(args.config_dir).resolve()
+    save_default_config(config_dir)
+    config = load_config(config_dir)
 
-config = load_config(config_dir)
-
-if args.root:
-    config.root_dir = args.root
-
-if args.dry_run:
-    config.dry_run = True
-
-if args.no_backup:
-    config.create_backup = False
-
-if args.backup:
-    config.create_backup = True
-
-if args.no_color:
-    config.colored_output = False
+    if args.root:
+        config.root_dir = args.root
+    if args.dry_run:
+        config.dry_run = True
+    if args.no_backup:
+        config.create_backup = False
+    if args.backup:
+        config.create_backup = True
+    if args.no_color:
+        config.colored_output = False
 
     logger = setup_logging(config.log_dir, config.log_file, verbose=args.verbose)
     logger.info("Starting rename_project v%s", VERSION)
