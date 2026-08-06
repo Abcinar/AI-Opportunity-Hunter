@@ -1,5 +1,5 @@
 """
-AI Opportunity Hunter - Opportunity Score Engine
+Opportunity Intelligence Platform - Opportunity Score Engine
 """
 
 from typing import Dict, Any
@@ -165,7 +165,7 @@ if __name__ == "__main__":
     )
     result = calculate_opportunity_score(example_signals)
     print("=" * 50)
-    print("AI Opportunity Hunter - Score Engine")
+    print("Opportunity Intelligence Platform - Score Engine")
     print("=" * 50)
     print(f"\nToplam Skor      : {result.total_score}/100")
     print(f"Etiket           : {result.label}")

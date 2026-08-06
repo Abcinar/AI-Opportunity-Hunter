@@ -7,14 +7,14 @@ We design systems that make tomorrow's features easy to build.
 Every architectural decision must reduce future complexity.
 
 Temporary speed must never create permanent technical debt.
-"Bu doküman, AI Opportunity Hunter Constitution v1.0'da tanımlanan ilkelerin teknik mimariye dönüştürülmesini tanımlar."
+"Bu doküman, Opportunity Intelligence Platform Constitution v1.0'da tanımlanan ilkelerin teknik mimariye dönüştürülmesini tanımlar."
 ---
 
 # SOURCE PROVIDER ABSTRACTION
 
 ## Vision
 
-AI Opportunity Hunter shall never depend on a single data provider.
+Opportunity Intelligence Platform shall never depend on a single data provider.
 
 Every external platform is considered only a **Source Provider**.
 

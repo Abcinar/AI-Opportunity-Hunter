@@ -1,5 +1,5 @@
 """
-AI Opportunity Hunter - Data Models & Enums
+Opportunity Intelligence Platform - Data Models & Enums
 """
 from dataclasses import dataclass
 from enum import Enum

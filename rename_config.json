@@ -1,0 +1,68 @@
+{
+  "root_dir": ".",
+  "ignore_dirs": [
+    "__pycache__",
+    "logs",
+    ".cache",
+    ".git",
+    "venv",
+    ".idea",
+    ".vscode",
+    "build",
+    ".venv",
+    "dist",
+    ".github",
+    "backup",
+    "node_modules"
+  ],
+  "supported_extensions": [
+    ".py",
+    ".md",
+    ".txt",
+    ".json",
+    ".toml",
+    ".yaml",
+    ".yml",
+    ".ini",
+    ".cfg",
+    ".html",
+    ".css",
+    ".js",
+    ".ts",
+    ".xml"
+  ],
+  "mappings": [
+    {
+      "old": "AI Opportunity Hunter",
+      "new": "Opportunity Intelligence Platform"
+    },
+    {
+      "old": "AI-Opportunity-Hunter",
+      "new": "Opportunity-Intelligence-Platform"
+    },
+    {
+      "old": "AI_Opportunity_Hunter",
+      "new": "Opportunity_Intelligence_Platform"
+    },
+    {
+      "old": "ai_opportunity_hunter",
+      "new": "opportunity_intelligence_platform"
+    },
+    {
+      "old": "AIOpportunityHunter",
+      "new": "OpportunityIntelligencePlatform"
+    },
+    {
+      "old": "AIOPPORTUNITYHUNTER",
+      "new": "OPPORTUNITYINTELLIGENCEPLATFORM"
+    }
+  ],
+  "backup_dir": "backup",
+  "log_dir": "logs",
+  "log_file": "rename_project.log",
+  "report_file": "report.json",
+  "create_backup": true,
+  "dry_run": false,
+  "colored_output": true,
+  "max_file_size_bytes": 26214400
+}

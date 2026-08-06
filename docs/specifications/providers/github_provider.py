@@ -1,4 +1,4 @@
-"""GitHub Provider V2 for AI Opportunity Hunter.
+"""GitHub Provider V2 for Opportunity Intelligence Platform.
 
 Concrete implementation of BaseProvider that retrieves raw opportunity
 signals from the official GitHub REST API. Returns unprocessed JSON only.
@@ -89,7 +89,7 @@ class GitHubProvider(BaseProvider):
             "Accept": self._ACCEPT_HEADER,
             "Authorization": f"Bearer {self._token}",
             "X-GitHub-Api-Version": self._API_VERSION,
-            "User-Agent": "AI-Opportunity-Hunter/2.0",
+            "User-Agent": "Opportunity-Intelligence-Platform/2.0",
         }
 
     def _request(self, path: str, params: dict[str, str] | None = None) -> Any:

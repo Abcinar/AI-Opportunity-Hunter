@@ -12,7 +12,7 @@ from typing import List, Dict
 def fetch_github_trending(limit: int = 10, since: str = "daily") -> List[Dict]:
     posts = []
     try:
-        headers = {"User-Agent": "AIOpportunityHunter/1.0"}
+        headers = {"User-Agent": "OpportunityIntelligencePlatform/1.0"}
         url = f"https://github.com/trending?since={since}"
         response = requests.get(url, headers=headers, timeout=15)
         response.raise_for_status()

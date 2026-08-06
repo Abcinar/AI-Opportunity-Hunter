@@ -1,7 +1,7 @@
 """
 Opportunity Intelligence Engine V3 (Production Ready)
 -----------------------------------------------------
-AI Opportunity Hunter projesinin analiz katmanı.
+Opportunity Intelligence Platform projesinin analiz katmanı.
 Sinyalleri alır, anlamlandırır ve yapılandırılmış zeka (intelligence) üretir.
 Tamamen Rule-Based V1 mimarisiyle çalışır.
 

@@ -12,7 +12,7 @@
 
 # Context
 
-AI Opportunity Hunter collects opportunity signals from multiple external sources.
+Opportunity Intelligence Platform collects opportunity signals from multiple external sources.
 
 Examples include:
 

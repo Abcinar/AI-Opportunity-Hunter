@@ -34,7 +34,7 @@ def fetch_hacker_news(limit: int = 20) -> List[Dict]:
 def _parse_hn_page(url: str, limit: int = 15) -> List[Dict]:
     posts = []
     try:
-        headers = {"User-Agent": "AIOpportunityHunter/1.0"}
+        headers = {"User-Agent": "OpportunityIntelligencePlatform/1.0"}
         response = requests.get(url, headers=headers, timeout=15)
         response.raise_for_status()
         soup = BeautifulSoup(response.text, "html.parser")

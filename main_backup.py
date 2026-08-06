@@ -16,7 +16,7 @@ def main():
     )
 
     print("================================================================")
-    print("  AI Opportunity Hunter - Startup Decision Engine V1")
+    print("  Opportunity Intelligence Platform - Startup Decision Engine V1")
     print("================================================================\n")
 
     try:

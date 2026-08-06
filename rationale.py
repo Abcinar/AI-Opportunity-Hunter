@@ -1,5 +1,5 @@
 """
-AI Opportunity Hunter - LLM Rationale Generator
+Opportunity Intelligence Platform - LLM Rationale Generator
 Groq (Llama 3) ile Türkçe/İngilizce gerekçe üretir.
 """
 

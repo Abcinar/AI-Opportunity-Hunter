@@ -1,5 +1,5 @@
 """
-AI Opportunity Hunter - Opportunity Monitor
+Opportunity Intelligence Platform - Opportunity Monitor
 -------------------------------------------
 Kullanıcının takip ettiği fırsatları izler,
 momentum değişimi ve yeni sinyalleri takip eder.

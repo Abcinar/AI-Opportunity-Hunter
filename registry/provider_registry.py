@@ -1,4 +1,4 @@
-"""Provider Registry for AI Opportunity Hunter.
+"""Provider Registry for Opportunity Intelligence Platform.
 
 This module provides a central registry that stores and manages validated
 BaseProvider instances. The registry supports registration, lookup, and

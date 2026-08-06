@@ -1,4 +1,4 @@
-"""Base Provider Contract for AI Opportunity Hunter (V2).
+"""Base Provider Contract for Opportunity Intelligence Platform (V2).
 
 This module defines the abstract base class that every concrete provider
 must inherit from. It establishes the provider contract and belongs

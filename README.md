@@ -1,4 +1,4 @@
-# AI Opportunity Hunter
+# Opportunity Intelligence Platform
 
 Solo founder'lar ve indie hacker'lar için **günlük fırsat karar motoru**.
 
@@ -19,8 +19,8 @@ Her sabah 5–7 yüksek potansiyelli startup fırsatını **şeffaf Opportunity 
 ## Kurulum
 
 ```bash
-git clone https://github.com/KULLANICI_ADIN/AI-Opportunity-Hunter.git
-cd AI-Opportunity-Hunter
+git clone https://github.com/KULLANICI_ADIN/Opportunity-Intelligence-Platform.git
+cd Opportunity-Intelligence-Platform
 
 python -m venv venv
 

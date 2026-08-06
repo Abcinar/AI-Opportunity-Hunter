@@ -1,4 +1,4 @@
-"""Provider Configuration for AI Opportunity Hunter.
+"""Provider Configuration for Opportunity Intelligence Platform.
 
 Immutable configuration object injected into every concrete Provider.
 Contains only data; no I/O, logging, or provider logic.

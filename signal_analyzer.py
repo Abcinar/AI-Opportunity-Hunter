@@ -1,5 +1,5 @@
 """
-AI Opportunity Hunter - Signal Analyzer
+Opportunity Intelligence Platform - Signal Analyzer
 GitHub Trending için özel skor mantığı dahil.
 """
 

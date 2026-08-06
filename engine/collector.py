@@ -1,5 +1,5 @@
 """
-AI Opportunity Hunter
+Opportunity Intelligence Platform
 Collector Engine
 
 Görevi:

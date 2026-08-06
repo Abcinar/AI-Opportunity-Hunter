@@ -1,4 +1,4 @@
-"""Hacker News Provider V2 for AI Opportunity Hunter.
+"""Hacker News Provider V2 for Opportunity Intelligence Platform.
 
 Concrete implementation of BaseProvider that retrieves raw opportunity
 signals from the official Hacker News Firebase API. Returns unprocessed JSON only.
@@ -82,7 +82,7 @@ class HackerNewsProvider(BaseProvider):
         """Build the standard request headers."""
         return {
             "Accept": "application/json",
-            "User-Agent": "AI-Opportunity-Hunter/2.0",
+            "User-Agent": "Opportunity-Intelligence-Platform/2.0",
         }
 
     def _request(self, path: str, params: dict[str, str] | None = None) -> Any:

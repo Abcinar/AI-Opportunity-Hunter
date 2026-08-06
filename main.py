@@ -1,5 +1,5 @@
 """
-AI Opportunity Hunter - Main Orchestration Layer
+Opportunity Intelligence Platform - Main Orchestration Layer
 ================================================
 Production-ready entry point that wires the existing engine modules
 into a single deterministic pipeline.
@@ -43,7 +43,7 @@ logging.basicConfig(
     datefmt="%Y-%m-%d %H:%M:%S",
     handlers=[logging.StreamHandler(sys.stdout)],
 )
-logger = logging.getLogger("ai_opportunity_hunter")
+logger = logging.getLogger("opportunity_intelligence_platform")
 
 
 # ---------------------------------------------------------------------------
@@ -212,7 +212,7 @@ def main() -> int:
     Returns process exit code (0 = success, 1 = failure).
     """
     pipeline_start = time.perf_counter()
-    logger.info("AI Opportunity Hunter started")
+    logger.info("Opportunity Intelligence Platform started")
 
     try:
         # 1. Collect

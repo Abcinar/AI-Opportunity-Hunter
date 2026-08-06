@@ -1,4 +1,4 @@
-"""Provider Factory for AI Opportunity Hunter.
+"""Provider Factory for Opportunity Intelligence Platform.
 
 Responsible solely for constructing concrete Provider instances from a
 provider name and a ProviderConfig. Contains no registry, networking,

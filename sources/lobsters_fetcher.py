@@ -12,7 +12,7 @@ from typing import List, Dict
 def fetch_lobsters(limit: int = 10) -> List[Dict]:
     posts = []
     try:
-        headers = {"User-Agent": "AIOpportunityHunter/1.0"}
+        headers = {"User-Agent": "OpportunityIntelligencePlatform/1.0"}
         response = requests.get("https://lobste.rs/", headers=headers, timeout=15)
         response.raise_for_status()
         soup = BeautifulSoup(response.text, "html.parser")

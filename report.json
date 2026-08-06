@@ -1,0 +1,322 @@
+{
+  "timestamp": "2026-08-06 10:05:14",
+  "version": "1.1.0",
+  "files_scanned": 68,
+  "files_modified": 28,
+  "total_replacements": 89,
+  "average_replacements_per_file": 3.179,
+  "largest_modified_file": "STARTUP_CONSTITUTION.md",
+  "largest_modified_file_size_bytes": 81427,
+  "errors": [],
+  "ignored_files_count": 1,
+  "ignored_files": [
+    ".gitignore"
+  ],
+  "skipped_binary_files_count": 0,
+  "skipped_binary_files": [],
+  "skipped_large_files_count": 0,
+  "skipped_large_files": [],
+  "skipped_symlinks_count": 0,
+  "skipped_symlinks": [],
+  "skipped_protected_count": 0,
+  "skipped_protected": [],
+  "modified_directories": [],
+  "modified_filenames": [],
+  "modified_file_contents": [
+    "main_backup.py",
+    "main.py",
+    "signal_analyzer.py",
+    "REFERENCE_ARCHITECTURE.md",
+    "rationale.py",
+    "config.py",
+    "README.md",
+    "monitor.py",
+    "scoring.py",
+    "STARTUP_CONSTITUTION.md",
+    "engine/collector.py",
+    "engine/exporter.py",
+    "engine/intelligence.py",
+    "engine/models.py",
+    "registry/provider_registry.py",
+    "docs/decisions/ADR-0002-provider-contract.md",
+    "docs/specifications/registry/provider_registry.spec.md",
+    "docs/specifications/providers/github_provider.py",
+    "docs/specifications/providers/base_provider_v2.spec.md",
+    "docs/specifications/providers/base_provider.spec.md",
+    "sources/hn_fetcher.py",
+    "sources/lobsters_fetcher.py",
+    "sources/github_fetcher.py",
+    "providers/provider_config.py",
+    "providers/github_provider.py",
+    "providers/base_provider.py",
+    "providers/provider_factory.py",
+    "providers/hackernews_provider.py"
+  ],
+  "execution_time_seconds": 0.137,
+  "dry_run": false,
+  "backup_path": "/workspaces/AI-Opportunity-Hunter/backup/20260806_100514",
+  "path_renames": [],
+  "file_results": [
+    {
+      "path": "main_backup.py",
+      "replacements": 1,
+      "modified": true,
+      "error": null,
+      "size_bytes": 5910,
+      "skipped_reason": null,
+      "previews": []
+    },
+    {
+      "path": "main.py",
+      "replacements": 3,
+      "modified": true,
+      "error": null,
+      "size_bytes": 8633,
+      "skipped_reason": null,
+      "previews": []
+    },
+    {
+      "path": "signal_analyzer.py",
+      "replacements": 1,
+      "modified": true,
+      "error": null,
+      "size_bytes": 8988,
+      "skipped_reason": null,
+      "previews": []
+    },
+    {
+      "path": ".gitignore",
+      "replacements": 0,
+      "modified": false,
+      "error": null,
+      "size_bytes": 254,
+      "skipped_reason": "unsupported_extension",
+      "previews": []
+    },
+    {
+      "path": "REFERENCE_ARCHITECTURE.md",
+      "replacements": 2,
+      "modified": true,
+      "error": null,
+      "size_bytes": 11235,
+      "skipped_reason": null,
+      "previews": []
+    },
+    {
+      "path": "rationale.py",
+      "replacements": 1,
+      "modified": true,
+      "error": null,
+      "size_bytes": 2291,
+      "skipped_reason": null,
+      "previews": []
+    },
+    {
+      "path": "config.py",
+      "replacements": 1,
+      "modified": true,
+      "error": null,
+      "size_bytes": 1129,
+      "skipped_reason": null,
+      "previews": []
+    },
+    {
+      "path": "README.md",
+      "replacements": 3,
+      "modified": true,
+      "error": null,
+      "size_bytes": 844,
+      "skipped_reason": null,
+      "previews": []
+    },
+    {
+      "path": "monitor.py",
+      "replacements": 1,
+      "modified": true,
+      "error": null,
+      "size_bytes": 6738,
+      "skipped_reason": null,
+      "previews": []
+    },
+    {
+      "path": "scoring.py",
+      "replacements": 2,
+      "modified": true,
+      "error": null,
+      "size_bytes": 5104,
+      "skipped_reason": null,
+      "previews": []
+    },
+    {
+      "path": "STARTUP_CONSTITUTION.md",
+      "replacements": 53,
+      "modified": true,
+      "error": null,
+      "size_bytes": 81427,
+      "skipped_reason": null,
+      "previews": []
+    },
+    {
+      "path": "engine/collector.py",
+      "replacements": 1,
+      "modified": true,
+      "error": null,
+      "size_bytes": 2032,
+      "skipped_reason": null,
+      "previews": []
+    },
+    {
+      "path": "engine/exporter.py",
+      "replacements": 1,
+      "modified": true,
+      "error": null,
+      "size_bytes": 2939,
+      "skipped_reason": null,
+      "previews": []
+    },
+    {
+      "path": "engine/intelligence.py",
+      "replacements": 1,
+      "modified": true,
+      "error": null,
+      "size_bytes": 16485,
+      "skipped_reason": null,
+      "previews": []
+    },
+    {
+      "path": "engine/models.py",
+      "replacements": 1,
+      "modified": true,
+      "error": null,
+      "size_bytes": 1030,
+      "skipped_reason": null,
+      "previews": []
+    },
+    {
+      "path": "registry/provider_registry.py",
+      "replacements": 1,
+      "modified": true,
+      "error": null,
+      "size_bytes": 5066,
+      "skipped_reason": null,
+      "previews": []
+    },
+    {
+      "path": "docs/decisions/ADR-0002-provider-contract.md",
+      "replacements": 1,
+      "modified": true,
+      "error": null,
+      "size_bytes": 3494,
+      "skipped_reason": null,
+      "previews": []
+    },
+    {
+      "path": "docs/specifications/registry/provider_registry.spec.md",
+      "replacements": 1,
+      "modified": true,
+      "error": null,
+      "size_bytes": 3135,
+      "skipped_reason": null,
+      "previews": []
+    },
+    {
+      "path": "docs/specifications/providers/github_provider.py",
+      "replacements": 2,
+      "modified": true,
+      "error": null,
+      "size_bytes": 7626,
+      "skipped_reason": null,
+      "previews": []
+    },
+    {
+      "path": "docs/specifications/providers/base_provider_v2.spec.md",
+      "replacements": 1,
+      "modified": true,
+      "error": null,
+      "size_bytes": 3519,
+      "skipped_reason": null,
+      "previews": []
+    },
+    {
+      "path": "docs/specifications/providers/base_provider.spec.md",
+      "replacements": 1,
+      "modified": true,
+      "error": null,
+      "size_bytes": 4992,
+      "skipped_reason": null,
+      "previews": []
+    },
+    {
+      "path": "sources/hn_fetcher.py",
+      "replacements": 1,
+      "modified": true,
+      "error": null,
+      "size_bytes": 3596,
+      "skipped_reason": null,
+      "previews": []
+    },
+    {
+      "path": "sources/lobsters_fetcher.py",
+      "replacements": 1,
+      "modified": true,
+      "error": null,
+      "size_bytes": 1897,
+      "skipped_reason": null,
+      "previews": []
+    },
+    {
+      "path": "sources/github_fetcher.py",
+      "replacements": 1,
+      "modified": true,
+      "error": null,
+      "size_bytes": 2042,
+      "skipped_reason": null,
+      "previews": []
+    },
+    {
+      "path": "providers/provider_config.py",
+      "replacements": 1,
+      "modified": true,
+      "error": null,
+      "size_bytes": 2381,
+      "skipped_reason": null,
+      "previews": []
+    },
+    {
+      "path": "providers/github_provider.py",
+      "replacements": 2,
+      "modified": true,
+      "error": null,
+      "size_bytes": 8382,
+      "skipped_reason": null,
+      "previews": []
+    },
+    {
+      "path": "providers/base_provider.py",
+      "replacements": 1,
+      "modified": true,
+      "error": null,
+      "size_bytes": 5831,
+      "skipped_reason": null,
+      "previews": []
+    },
+    {
+      "path": "providers/provider_factory.py",
+      "replacements": 1,
+      "modified": true,
+      "error": null,
+      "size_bytes": 2406,
+      "skipped_reason": null,
+      "previews": []
+    },
+    {
+      "path": "providers/hackernews_provider.py",
+      "replacements": 2,
+      "modified": true,
+      "error": null,
+      "size_bytes": 6746,
+      "skipped_reason": null,
+      "previews": []
+    }
+  ]
+}

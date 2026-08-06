@@ -10,7 +10,7 @@ Last Updated: 2026-08-03
 
 # 1. Purpose
 
-The Provider Registry is responsible for managing all provider implementations within the AI Opportunity Hunter platform.
+The Provider Registry is responsible for managing all provider implementations within the Opportunity Intelligence Platform platform.
 
 It serves as the single source of truth for provider discovery, registration, retrieval and lifecycle management.
 

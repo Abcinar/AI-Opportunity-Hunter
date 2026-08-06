@@ -1,6 +1,6 @@
 # STARTUP_CONSTITUTION.md
 
-> **AI Opportunity Hunter**
+> **Opportunity Intelligence Platform**
 > Startup Constitution
 > Version 3.0
 >
@@ -48,7 +48,7 @@
 
 Most startups fail because they build products before understanding problems.
 
-AI Opportunity Hunter exists to reverse that process.
+Opportunity Intelligence Platform exists to reverse that process.
 
 Our mission is not to collect news, trends, or viral content.
 
@@ -64,7 +64,7 @@ Artificial Intelligence is not the product.
 
 AI is only a tool used to understand reality faster and better.
 
-Every design decision inside AI Opportunity Hunter must serve one purpose:
+Every design decision inside Opportunity Intelligence Platform must serve one purpose:
 
 Finding opportunities before everyone else.
 
@@ -177,7 +177,7 @@ Every minute saved creates value.
 Complexity is a bug.
 
 Clarity is a feature.
-# AI Opportunity Hunter
+# Opportunity Intelligence Platform
 
 # STARTUP CONSTITUTION
 
@@ -185,7 +185,7 @@ Clarity is a feature.
 >
 > **Status:** Living Document
 >
-> **Project:** AI Opportunity Hunter
+> **Project:** Opportunity Intelligence Platform
 >
 > **Motto**
 >
@@ -195,7 +195,7 @@ Clarity is a feature.
 
 # THE CONSTITUTION
 
-This document defines the permanent principles that govern AI Opportunity Hunter.
+This document defines the permanent principles that govern Opportunity Intelligence Platform.
 
 Technology will evolve.
 
@@ -215,7 +215,7 @@ Whenever code and this document disagree,
 
 # OUR PURPOSE
 
-AI Opportunity Hunter exists for one reason.
+Opportunity Intelligence Platform exists for one reason.
 
 To help founders discover valuable business opportunities before everyone else.
 
@@ -265,7 +265,7 @@ When founders ask,
 
 > "What should I build next?"
 
-AI Opportunity Hunter should provide the answer with evidence.
+Opportunity Intelligence Platform should provide the answer with evidence.
 
 Not guesses.
 
@@ -287,7 +287,7 @@ Everything else is secondary.
 
 # PRODUCT IDENTITY
 
-AI Opportunity Hunter is NOT:
+Opportunity Intelligence Platform is NOT:
 
 - A news reader
 - A trend collector
@@ -296,7 +296,7 @@ AI Opportunity Hunter is NOT:
 - A dashboard
 - A chatbot
 
-AI Opportunity Hunter IS:
+Opportunity Intelligence Platform IS:
 
 - An Opportunity Intelligence Engine
 - A Startup Discovery Platform
@@ -334,7 +334,7 @@ This is how the product will judge itself.
 
 ## Build from Reality
 
-AI Opportunity Hunter is built using First Principles Thinking.
+Opportunity Intelligence Platform is built using First Principles Thinking.
 
 We never ask:
 
@@ -418,7 +418,7 @@ Collect second.
 
 # OPPORTUNITY MANIFESTO
 
-AI Opportunity Hunter exists to discover businesses.
+Opportunity Intelligence Platform exists to discover businesses.
 
 Not trends.
 
@@ -516,7 +516,7 @@ The engine must evaluate every component independently.
 
 # OUR PROMISE
 
-AI Opportunity Hunter will never recommend building something simply because it is popular.
+Opportunity Intelligence Platform will never recommend building something simply because it is popular.
 
 It will recommend building something because evidence suggests it can become a valuable business.
 
@@ -1038,7 +1038,7 @@ If the answer is no,
 
 the recommendation must become more conservative.
 
-AI Opportunity Hunter should think like an experienced founder.
+Opportunity Intelligence Platform should think like an experienced founder.
 
 Not like an enthusiastic AI model.
 ---
@@ -1051,7 +1051,7 @@ Every successful business shares a common genetic structure.
 
 This structure is independent of industry, technology, country, or time.
 
-AI Opportunity Hunter calls this structure:
+Opportunity Intelligence Platform calls this structure:
 
 **Opportunity DNA**
 
@@ -1471,7 +1471,7 @@ Doğru uygulama
 
 bir araya geldiğinde ortaya çıkar.
 
-AI Opportunity Hunter yalnızca fırsatları analiz etmez.
+Opportunity Intelligence Platform yalnızca fırsatları analiz etmez.
 
 Kurucunun bu fırsatı başarıya ulaştırma olasılığını da değerlendirir.
 
@@ -1597,7 +1597,7 @@ Ortalama bir fikir,
 
 doğru kurucu için milyon dolarlık şirkete dönüşebilir.
 
-AI Opportunity Hunter bunu ayırt edebilmelidir.
+Opportunity Intelligence Platform bunu ayırt edebilmelidir.
 
 ---
 
@@ -1745,7 +1745,7 @@ Bu modüller birbirinden bağımsız geliştirilmelidir.
 
 # GELECEK VİZYONU
 
-Uzun vadede AI Opportunity Hunter,
+Uzun vadede Opportunity Intelligence Platform,
 
 yalnızca fırsat bulan bir sistem olmayacaktır.
 
@@ -1774,7 +1774,7 @@ Doygunluğa ulaşır.
 
 Ve sonunda değerini kaybeder.
 
-AI Opportunity Hunter yalnızca fırsatın bugününü değil,
+Opportunity Intelligence Platform yalnızca fırsatın bugününü değil,
 
 hangi yaşam evresinde olduğunu da analiz etmelidir.
 
@@ -2071,7 +2071,7 @@ geleceği bugünden okuyabilme becerisidir.
 
 Bir fikrin iyi görünmesi, onun iyi bir iş fırsatı olduğu anlamına gelmez.
 
-AI Opportunity Hunter hiçbir fırsatı yalnızca popüler olduğu için önermez.
+Opportunity Intelligence Platform hiçbir fırsatı yalnızca popüler olduğu için önermez.
 
 Her fırsat, sistematik bir doğrulama sürecinden geçirilmelidir.
 
@@ -2289,7 +2289,7 @@ Bu uyarılar nihai öneriyi doğrudan etkilemelidir.
 
 Doğrulama yapılmamış hiçbir fikir yatırım tavsiyesi değildir.
 
-AI Opportunity Hunter,
+Opportunity Intelligence Platform,
 
 varsayımları değil,
 
@@ -2316,7 +2316,7 @@ kötü fikir nedeniyle değil,
 
 yanlış kararların birikmesi nedeniyle başarısız olur.
 
-AI Opportunity Hunter'ın amacı yalnızca fırsat önermek değildir.
+Opportunity Intelligence Platform'ın amacı yalnızca fırsat önermek değildir.
 
 Aynı zamanda başarısızlık ihtimalini mümkün olduğunca erken tespit etmektir.
 
@@ -2576,7 +2576,7 @@ Aynı zamanda kullanıcının
 
 hangi hataları yapmaması gerektiğini de gösterir.
 
-AI Opportunity Hunter,
+Opportunity Intelligence Platform,
 
 bir öneri motorundan çok,
 
@@ -2593,7 +2593,7 @@ Bazı fikirler yıllarca yerinde sayarken,
 
 bazıları birkaç ay içinde milyarlarca dolarlık pazarlara dönüşebilir.
 
-AI Opportunity Hunter yalnızca fırsatın büyüklüğünü değil,
+Opportunity Intelligence Platform yalnızca fırsatın büyüklüğünü değil,
 
 büyüme ivmesini de analiz etmelidir.
 
@@ -2881,7 +2881,7 @@ motor otomatik olarak INVESTIGATE önerisi üretmelidir.
 
 # TASARIM FELSEFESİ
 
-AI Opportunity Hunter,
+Opportunity Intelligence Platform,
 
 trend avcısı değildir.
 
@@ -2912,7 +2912,7 @@ Pazarlar değişir.
 
 Ancak başarılı girişimlerin temel prensipleri büyük ölçüde aynıdır.
 
-Bu bölüm, AI Opportunity Hunter'ın değişmez kurallarını tanımlar.
+Bu bölüm, Opportunity Intelligence Platform'ın değişmez kurallarını tanımlar.
 
 Her algoritma, her modül ve her öneri bu yasalara uygun olmalıdır.
 
@@ -3118,7 +3118,7 @@ geçici fırsatlardan daha değerlidir.
 
 Bu Constitution,
 
-AI Opportunity Hunter'ın en üst düzey referans dokümanıdır.
+Opportunity Intelligence Platform'ın en üst düzey referans dokümanıdır.
 
 Kod,
 
@@ -3143,7 +3143,7 @@ Her fırsat,
 
 bir değişimin sonucudur.
 
-AI Opportunity Hunter'ın temel görevi yalnızca mevcut fırsatları bulmak değildir.
+Opportunity Intelligence Platform'ın temel görevi yalnızca mevcut fırsatları bulmak değildir.
 
 Henüz görünmeyen fırsatların oluşum sürecini anlamaktır.
 
@@ -3411,7 +3411,7 @@ Savunma Hattı
 
 şirketleri analiz eder.
 
-AI Opportunity Hunter,
+Opportunity Intelligence Platform,
 
 şirketlerden önce gelen değişimleri analiz eder.
 
@@ -3444,7 +3444,7 @@ Her başarılı girişim hızlı büyümez.
 
 Her hızlı büyüyen girişim de uzun ömürlü olmaz.
 
-AI Opportunity Hunter'ın amacı yalnızca yüksek büyüme potansiyeline sahip fırsatları belirlemek değildir.
+Opportunity Intelligence Platform'ın amacı yalnızca yüksek büyüme potansiyeline sahip fırsatları belirlemek değildir.
 
 Asıl amaç;
 
@@ -3680,7 +3680,7 @@ yalnızca bugünün problemlerini çözmez.
 
 Yarın da çözmeye devam eder.
 
-AI Opportunity Hunter,
+Opportunity Intelligence Platform,
 
 geçici fırsatların peşinden koşan bir sistem değil,
 
@@ -3695,7 +3695,7 @@ Her analiz tamamlandıktan sonra sistem yalnızca sonuç üretmemelidir.
 
 Aynı zamanda öğrenmelidir.
 
-AI Opportunity Hunter'ın en büyük avantajı;
+Opportunity Intelligence Platform'ın en büyük avantajı;
 
 her yeni analizle daha zengin bir bilgi tabanı oluşturmasıdır.
 
@@ -3889,7 +3889,7 @@ Bu yapı zamanla bir Opportunity Knowledge Graph oluşturacaktır.
 
 # TASARIM FELSEFESİ
 
-AI Opportunity Hunter'ın gerçek gücü,
+Opportunity Intelligence Platform'ın gerçek gücü,
 
 kaç veri kaynağı kullandığında değil,
 
@@ -3912,7 +3912,7 @@ değişmez ilkelere de sahiptir.
 
 Bu bölüm,
 
-AI Opportunity Hunter'ın hiçbir koşulda ihlal etmemesi gereken temel prensipleri tanımlar.
+Opportunity Intelligence Platform'ın hiçbir koşulda ihlal etmemesi gereken temel prensipleri tanımlar.
 
 Bu emirler;
 
@@ -4118,7 +4118,7 @@ daha bilinçli karar vermesine yardımcı olmak için tasarlanmalıdır.
 
 Bu Constitution,
 
-AI Opportunity Hunter'ın en üst düzey referansıdır.
+Opportunity Intelligence Platform'ın en üst düzey referansıdır.
 
 Yeni geliştirilecek her algoritma,
 
@@ -4139,13 +4139,13 @@ nihai mimarinin parçası olmamalıdır.
 
 ## Giriş
 
-AI Opportunity Hunter yalnızca bir yazılım değildir.
+Opportunity Intelligence Platform yalnızca bir yazılım değildir.
 
 Yalnızca bir analiz motoru değildir.
 
 Yalnızca bir startup keşif platformu değildir.
 
-AI Opportunity Hunter;
+Opportunity Intelligence Platform;
 
 problemleri anlamaya,
 
@@ -4333,7 +4333,7 @@ doğru yorumlandığında,
 
 geleceğin olası yönü görülebilir.
 
-AI Opportunity Hunter'ın amacı,
+Opportunity Intelligence Platform'ın amacı,
 
 geleceği tahmin etmek değil,
 
@@ -4345,7 +4345,7 @@ geleceğe dair daha güçlü olasılıkları ortaya koymaktır.
 
 Bu doktrin,
 
-AI Opportunity Hunter'ın teknik mimarisinden bağımsızdır.
+Opportunity Intelligence Platform'ın teknik mimarisinden bağımsızdır.
 
 Programlama dili değişebilir.
 
@@ -4359,7 +4359,7 @@ Ancak bu doktrinin temel ilkeleri,
 
 sistemin karakterini oluşturmaya devam edecektir.
 
-AI Opportunity Hunter'ın gerçek değeri,
+Opportunity Intelligence Platform'ın gerçek değeri,
 
 yalnızca ürettiği analizlerde değil,
 
@@ -4378,7 +4378,7 @@ ilk bakışta olduğundan daha farklıdır.
 
 çoğu zaman eksik bilgiden oluşur.
 
-AI Opportunity Hunter hiçbir fırsatı yalnızca görünen özellikleriyle değerlendirmez.
+Opportunity Intelligence Platform hiçbir fırsatı yalnızca görünen özellikleriyle değerlendirmez.
 
 Motor,
 
@@ -4604,7 +4604,7 @@ yanlış cevaplardan değil,
 
 yanlış sorulardan doğar.
 
-AI Opportunity Hunter'ın temel gücü,
+Opportunity Intelligence Platform'ın temel gücü,
 
 rakiplerinden daha fazla veri toplaması değil,
 
@@ -4629,7 +4629,7 @@ En güçlü yazılımlar,
 
 zamanla daha iyi karar vermeyi öğrenen sistemlerdir.
 
-AI Opportunity Hunter,
+Opportunity Intelligence Platform,
 
 sabit kurallarla çalışan bir analiz motoru olarak başlamalıdır.
 
@@ -4815,7 +4815,7 @@ eski doğruluğu bozmamalıdır.
 
 # TASARIM FELSEFESİ
 
-AI Opportunity Hunter'ın en büyük avantajı,
+Opportunity Intelligence Platform'ın en büyük avantajı,
 
 daha fazla veri toplaması değildir.
 
@@ -4854,7 +4854,7 @@ değerlendirilmesi
 
 ve önceliklendirilmesidir.
 
-AI Opportunity Hunter,
+Opportunity Intelligence Platform,
 
 bu boşluğu doldurmak amacıyla geliştirilmiştir.
 
@@ -5086,7 +5086,7 @@ Belirsizliği azaltır.
 
 # SONUÇ
 
-AI Opportunity Hunter,
+Opportunity Intelligence Platform,
 
 yalnızca bir yazılım geliştirme projesi değildir.
 
@@ -5205,7 +5205,7 @@ ve uzun yıllar boyunca geçerliliğini koruyabilmesi ile ölçülür.
 
 ## Amaç
 
-Bu bölüm, AI Opportunity Hunter'ın yazılım geliştirme kültürünü tanımlar.
+Bu bölüm, Opportunity Intelligence Platform'ın yazılım geliştirme kültürünü tanımlar.
 
 Kod yalnızca çalışan komutlardan oluşmaz.
 
@@ -5324,7 +5324,7 @@ uzun ömürlü sistemlere dönüştürme disiplinidir.
 
 ## Amaç
 
-AI Opportunity Hunter yalnızca tek bir uygulama değildir.
+Opportunity Intelligence Platform yalnızca tek bir uygulama değildir.
 
 Farklı veri kaynaklarını,
 
@@ -5468,7 +5468,7 @@ kaç yıl boyunca geliştirilebilir kaldığıyla ölçülür.
 
 ## Amaç
 
-Bu bölüm, AI Opportunity Hunter'ın teknik kararlarının nasıl alınacağını, değerlendirileceğini ve uzun vadede nasıl korunacağını tanımlar.
+Bu bölüm, Opportunity Intelligence Platform'ın teknik kararlarının nasıl alınacağını, değerlendirileceğini ve uzun vadede nasıl korunacağını tanımlar.
 
 İyi mühendislik yalnızca doğru kod yazmak değildir.
 
@@ -5641,7 +5641,7 @@ kaç yıl boyunca güvenle geliştirilebildiğiyle ölçülür.
 
 ## Amaç
 
-AI Opportunity Hunter uzun ömürlü bir platform olarak tasarlanmaktadır.
+Opportunity Intelligence Platform uzun ömürlü bir platform olarak tasarlanmaktadır.
 
 Uzun ömürlü platformlar yalnızca iyi kod sayesinde değil,
 
@@ -5821,7 +5821,7 @@ her zaman öncelikli olmalıdır.
 
 # SONUÇ
 
-AI Opportunity Hunter,
+Opportunity Intelligence Platform,
 
 yalnızca geliştirilen bir yazılım değildir.
 
@@ -5840,7 +5840,7 @@ ve uzun yıllar boyunca evrim geçirebilecek bir platform olarak tasarlanmalıd�
 
 Bu bölüm,
 
-AI Opportunity Hunter'ın teknik hedeflerinden önce,
+Opportunity Intelligence Platform'ın teknik hedeflerinden önce,
 
 etik,
 
@@ -5902,7 +5902,7 @@ ve sürekli iyileştirme kültürü hiçbir zaman terk edilmeyecektir.
 
 ## SON SÖZ
 
-AI Opportunity Hunter'ın amacı,
+Opportunity Intelligence Platform'ın amacı,
 
 yalnızca başarılı bir yazılım geliştirmek değildir.
 

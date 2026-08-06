@@ -1,5 +1,5 @@
 """
-AI Opportunity Hunter - Configuration
+Opportunity Intelligence Platform - Configuration
 """
 import os
 

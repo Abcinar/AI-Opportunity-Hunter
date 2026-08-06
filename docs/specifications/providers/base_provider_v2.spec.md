@@ -10,7 +10,7 @@ Last Updated: 2026-08-03
 
 # 1. Purpose
 
-BaseProvider defines the mandatory contract that every provider implementation within AI Opportunity Hunter must follow.
+BaseProvider defines the mandatory contract that every provider implementation within Opportunity Intelligence Platform must follow.
 
 It provides a stable abstraction between the Collector and external data sources.
 

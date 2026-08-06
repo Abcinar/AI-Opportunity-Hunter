@@ -1,5 +1,5 @@
 """
-AI Opportunity Hunter - Exporter Engine
+Opportunity Intelligence Platform - Exporter Engine
 ---------------------------------------
 Verileri yapılandırılmış JSON dosyalarına kaydetmekten sorumludur.
 Single Source of Truth (opportunities.json) kuralına uyar.
