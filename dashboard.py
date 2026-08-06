@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""Opportunity Intelligence Platform (OIP) – Production Dashboard V1.1.
+"""Opportunity Intelligence Platform (OIP) – Production Dashboard V1.1.1.
 
 Pure presentation layer. Loads pipeline outputs, normalises field names for
 display, filters, visualises and exports. Contains zero business logic,
@@ -33,7 +33,7 @@ import streamlit as st
 # Constants
 # ---------------------------------------------------------------------------
 
-VERSION: str = "1.1.0"
+VERSION: str = "1.1.1"
 APP_TITLE: str = "Opportunity Intelligence Platform"
 APP_SHORT: str = "OIP"
 PAGE_ICON: str = "🎯"
@@ -147,7 +147,8 @@ def _safe_str(value: Any, default: str = "") -> str:
         return default
     if isinstance(value, (list, dict)):
         return default
-    return str(value).strip() or default
+    text = str(value).strip()
+    return text if text else default
 
 
 def _safe_float(value: Any) -> Optional[float]:
@@ -200,6 +201,9 @@ def normalize_record(rec: Dict[str, Any]) -> Dict[str, Any]:
     It never calculates Opportunity Score, Confidence, recommendations,
     trends or categories. Missing Score/Confidence remain None.
 
+    display_score is a visual-only proxy used when the pipeline has not
+    produced a real Score. It is NEVER presented as Opportunity Score.
+
     Args:
         rec: Raw dictionary from pipeline output.
 
@@ -213,13 +217,19 @@ def normalize_record(rec: Dict[str, Any]) -> Dict[str, Any]:
     score = _safe_float(rec.get("score"))
     confidence = _safe_float(rec.get("confidence"))
 
-    # Display-only fallback for visualisation when pipeline has not produced Score
-    # NEVER presented as real Opportunity Score.
-    engagement = _safe_float(rec.get("engagement") or rec.get("points") or rec.get("upvotes"))
-    display_score: Optional[float] = score
-    if display_score is None and engagement is not None and engagement > 0:
-        # Transparent, non-AI visual proxy only
-        display_score_proxy = round(min(100.0, max(0.0, (engagement ** 0.5) * 2.5)), 1)
+    engagement = _safe_float(
+        rec.get("engagement") or rec.get("points") or rec.get("upvotes")
+    )
+
+    # display_score: real score if present, else engagement proxy, else 0.0
+    # NEVER treated as Opportunity Score from the Intelligence Engine.
+    display_score: float
+    if score is not None:
+        display_score = score
+    elif engagement is not None and engagement > 0:
+        display_score = round(min(100.0, max(0.0, (engagement ** 0.5) * 2.5)), 1)
+    else:
+        display_score = 0.0
 
     category = (
         _safe_str(rec.get("category"))
@@ -254,9 +264,9 @@ def normalize_record(rec: Dict[str, Any]) -> Dict[str, Any]:
         "description": _safe_str(
             rec.get("summary") or rec.get("content") or rec.get("description")
         )[:600],
-        "score": score,  # real pipeline Score (None if absent)
-        "display_score": display_score,  # visual proxy only
-        "confidence": confidence,  # real pipeline Confidence (None if absent)
+        "score": score,
+        "display_score": display_score,
+        "confidence": confidence,
         "provider": _extract_provider(rec),
         "category": category,
         "reason": " | ".join(reason_parts),
@@ -278,7 +288,12 @@ def load_all_data() -> Tuple[pd.DataFrame, List[str], Dict[str, int]]:
     """
     warnings: List[str] = []
     records: List[Dict[str, Any]] = []
-    stats = {"files_loaded": 0, "records_raw": 0, "missing_score": 0, "missing_confidence": 0}
+    stats = {
+        "files_loaded": 0,
+        "records_raw": 0,
+        "missing_score": 0,
+        "missing_confidence": 0,
+    }
 
     for path in PRIMARY_PATHS + FALLBACK_PATHS:
         raw, err = load_json_safely(path)
@@ -294,13 +309,14 @@ def load_all_data() -> Tuple[pd.DataFrame, List[str], Dict[str, int]]:
 
     stats["records_raw"] = len(records)
 
+    empty_cols = [
+        "id", "title", "description", "score", "display_score", "confidence",
+        "provider", "category", "reason", "url", "status", "timestamp",
+        "engagement", "has_real_score", "has_real_confidence",
+    ]
+
     if not records:
-        cols = [
-            "id", "title", "description", "score", "display_score", "confidence",
-            "provider", "category", "reason", "url", "status", "timestamp",
-            "engagement", "has_real_score", "has_real_confidence",
-        ]
-        return pd.DataFrame(columns=cols), warnings, stats
+        return pd.DataFrame(columns=empty_cols), warnings, stats
 
     normalised = [normalize_record(r) for r in records]
     df = pd.DataFrame(normalised)
@@ -315,7 +331,10 @@ def load_all_data() -> Tuple[pd.DataFrame, List[str], Dict[str, int]]:
             .reset_index(drop=True)
         )
     else:
-        df = df.drop_duplicates(subset=["title", "provider"], keep="first").reset_index(drop=True)
+        df = (
+            df.drop_duplicates(subset=["title", "provider"], keep="first")
+            .reset_index(drop=True)
+        )
 
     return df, warnings, stats
 
@@ -346,11 +365,12 @@ def apply_filters(
         return df.copy()
 
     out = df.copy()
-    # Filter on display_score (visual column); real score may be absent
-    out = out[out["display_score"].fillna(-1) >= min_display_score]
+
+    # fillna(0) so that min_score=0 keeps every row (including pure 0.0)
+    out = out[out["display_score"].fillna(0.0) >= min_display_score]
 
     if providers:
-        out = out[out["provider"].isin(providers)]
+        out = out[out["provider"].isin(list(providers))]
 
     term = search.strip().lower()
     if term:
@@ -396,7 +416,7 @@ def inject_css() -> None:
 
 
 def render_hero(last_refresh: str, record_count: int) -> None:
-    """Render header."""
+    """Render page header."""
     status = "Operational" if record_count > 0 else "No data"
     colour = "#3fb950" if record_count > 0 else "#d29922"
     st.markdown(
@@ -421,21 +441,23 @@ def render_hero(last_refresh: str, record_count: int) -> None:
 
 
 def render_kpis(df: pd.DataFrame) -> None:
-    """Render KPI cards using display_score for averages when real Score is absent."""
+    """Render KPI metric cards."""
     total = len(df)
-    # Prefer real score average when available, else display_score
-    real_scores = df.loc[df["has_real_score"], "score"]
+    real_scores = df.loc[df["has_real_score"], "score"] if total else pd.Series(dtype=float)
     if len(real_scores) > 0:
         avg = float(real_scores.mean())
         avg_label = "Avg Score"
     else:
         avg = float(df["display_score"].mean()) if total else 0.0
         avg_label = "Avg Display Score"
+
     providers = int(df["provider"].nunique()) if total else 0
-    high = (
-        int((df.loc[df["has_real_confidence"], "confidence"] >= HIGH_CONFIDENCE_THRESHOLD).sum())
-        if total else 0
-    )
+    high = 0
+    if total and df["has_real_confidence"].any():
+        high = int(
+            (df.loc[df["has_real_confidence"], "confidence"] >= HIGH_CONFIDENCE_THRESHOLD).sum()
+        )
+
     c1, c2, c3, c4 = st.columns(4)
     c1.metric("Total Opportunities", f"{total:,}")
     c2.metric(avg_label, f"{avg:.1f}")
@@ -444,12 +466,14 @@ def render_kpis(df: pd.DataFrame) -> None:
 
 
 def render_charts(df: pd.DataFrame) -> None:
-    """Render four charts. Uses display_score for distribution when needed."""
+    """Render distribution and timeline charts."""
     col1, col2 = st.columns(2)
+
     with col1:
         st.subheader("Score Distribution")
-        plot_col = "score" if df["has_real_score"].any() else "display_score"
-        label = "Score" if plot_col == "score" else "Display Score (proxy)"
+        use_real = df["has_real_score"].any() if not df.empty else False
+        plot_col = "score" if use_real else "display_score"
+        label = "Score" if use_real else "Display Score (proxy)"
         if df.empty or df[plot_col].isna().all():
             st.info("Skor dağılımı için veri yok.")
         else:
@@ -468,8 +492,11 @@ def render_charts(df: pd.DataFrame) -> None:
                 margin=dict(t=30, b=20, l=10, r=10),
             )
             st.plotly_chart(fig, use_container_width=True)
-            if plot_col == "display_score":
-                st.caption("⚠ Display Score is a visual proxy only — not Opportunity Score from the Intelligence Engine.")
+            if not use_real:
+                st.caption(
+                    "⚠ Display Score is a visual proxy only — "
+                    "not Opportunity Score from the Intelligence Engine."
+                )
 
     with col2:
         st.subheader("Provider Distribution")
@@ -479,7 +506,10 @@ def render_charts(df: pd.DataFrame) -> None:
             counts = df["provider"].value_counts().reset_index()
             counts.columns = ["Provider", "Count"]
             fig = px.bar(
-                counts, x="Provider", y="Count", color="Count",
+                counts,
+                x="Provider",
+                y="Count",
+                color="Count",
                 color_continuous_scale="Blues",
             )
             fig.update_layout(
@@ -493,6 +523,7 @@ def render_charts(df: pd.DataFrame) -> None:
             st.plotly_chart(fig, use_container_width=True)
 
     col3, col4 = st.columns(2)
+
     with col3:
         st.subheader("Confidence Distribution")
         if df.empty or not df["has_real_confidence"].any():
@@ -526,7 +557,9 @@ def render_charts(df: pd.DataFrame) -> None:
                 .reset_index(name="count")
                 .sort_values("date")
             )
-            fig = px.area(tl, x="date", y="count", color_discrete_sequence=["#a371f7"])
+            fig = px.area(
+                tl, x="date", y="count", color_discrete_sequence=["#a371f7"]
+            )
             fig.update_layout(
                 template="plotly_dark",
                 paper_bgcolor="rgba(0,0,0,0)",
@@ -538,15 +571,17 @@ def render_charts(df: pd.DataFrame) -> None:
 
 
 def render_tables(df: pd.DataFrame) -> None:
-    """Render top and full tables."""
+    """Render top-N and full opportunity tables plus CSV export."""
     st.subheader("Top Opportunities")
     if df.empty:
         st.info("Henüz opportunity yok.")
     else:
         sort_col = "score" if df["has_real_score"].any() else "display_score"
         top = df.nlargest(10, sort_col)[
-            ["title", "score", "display_score", "confidence", "provider",
-             "category", "engagement", "url", "reason"]
+            [
+                "title", "score", "display_score", "confidence", "provider",
+                "category", "engagement", "url", "reason",
+            ]
         ].copy()
         st.dataframe(
             top,
@@ -562,8 +597,8 @@ def render_tables(df: pd.DataFrame) -> None:
         )
         if not df["has_real_score"].any():
             st.caption(
-                "⚠ Score (pipeline) is empty. Display Score is a visual proxy derived from "
-                "engagement for charting only — it is NOT Opportunity Score."
+                "⚠ Score (pipeline) is empty. Display Score is a visual proxy "
+                "derived from engagement for charting only — it is NOT Opportunity Score."
             )
 
     st.divider()
@@ -573,8 +608,10 @@ def render_tables(df: pd.DataFrame) -> None:
         return
 
     display = df[
-        ["title", "score", "display_score", "confidence", "provider", "category",
-         "status", "engagement", "timestamp", "url", "reason"]
+        [
+            "title", "score", "display_score", "confidence", "provider",
+            "category", "status", "engagement", "timestamp", "url", "reason",
+        ]
     ].copy()
     display["timestamp"] = display["timestamp"].apply(
         lambda x: x.strftime("%Y-%m-%d %H:%M") if pd.notna(x) else "—"
@@ -609,7 +646,7 @@ def render_tables(df: pd.DataFrame) -> None:
 
 
 def main() -> None:
-    """Dashboard entry point. Load → Normalise → Filter → Visualise → Export."""
+    """Dashboard entry point: Load → Normalise → Filter → Visualise → Export."""
     st.set_page_config(
         page_title=f"{APP_SHORT} – {APP_TITLE}",
         page_icon=PAGE_ICON,
@@ -630,13 +667,17 @@ def main() -> None:
             max_value=100.0,
             value=0.0,
             step=1.0,
-            help="Filters on Display Score (visual proxy). Real Opportunity Score is produced by the Intelligence Engine.",
+            help=(
+                "Filters on Display Score (visual proxy). "
+                "Real Opportunity Score is produced by the Intelligence Engine."
+            ),
         )
 
         df_raw, load_warnings, stats = load_all_data()
         all_providers = (
             sorted(df_raw["provider"].dropna().unique().tolist())
-            if not df_raw.empty else []
+            if not df_raw.empty
+            else []
         )
         selected_providers = st.multiselect(
             "Provider Filter",
@@ -655,9 +696,9 @@ def main() -> None:
         st.caption(f"Missing Confidence: {stats['missing_confidence']}")
         st.caption(f"Version: {VERSION}")
 
-    # Warnings — never invent data
     for msg in load_warnings:
         st.warning(msg)
+
     if stats["records_raw"] > 0 and stats["missing_score"] == stats["records_raw"]:
         st.warning(
             "Pipeline henüz Opportunity Score üretmemiş. "
