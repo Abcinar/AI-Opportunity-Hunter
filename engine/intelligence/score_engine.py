@@ -16,16 +16,17 @@ are intentionally excluded until the upstream pipeline produces them.
 """
 
 from __future__ import annotations
-# Future metrics will be introduced in later pipeline stages:
-# - SOURCE_WEIGHT
-# - CATEGORY_WEIGHT
-# - FOUNDER_FIT_WEIGHT
+
 from typing import Any
 
 from .base_engine import BaseEngine
+from .helpers import clamp, read_float, set_field
 from .weights import (
     ENGAGEMENT_WEIGHT,
     MOMENTUM_WEIGHT,
+    # TODO: SOURCE_WEIGHT,
+    # TODO: CATEGORY_WEIGHT,
+    # TODO: FOUNDER_FIT_WEIGHT,
 )
 
 
@@ -41,12 +42,12 @@ class ScoreEngine(BaseEngine):
 
         Supports both attribute-style objects and plain dictionaries.
         """
-        engagement = self._read_metric(opportunity, "engagement")
-        momentum = self._read_metric(opportunity, "momentum")
+        engagement = read_float(opportunity, "engagement")
+        momentum = read_float(opportunity, "momentum")
 
-        # TODO: source_quality = self._read_metric(opportunity, "source_quality")
-        # TODO: category_value = self._read_metric(opportunity, "category_value")
-        # TODO: founder_fit_modifier = self._read_metric(opportunity, "founder_fit_modifier")
+        # TODO: source_quality = read_float(opportunity, "source_quality")
+        # TODO: category_value = read_float(opportunity, "category_value")
+        # TODO: founder_fit_modifier = read_float(opportunity, "founder_fit_modifier")
 
         raw_score = (
             engagement * ENGAGEMENT_WEIGHT
@@ -56,42 +57,7 @@ class ScoreEngine(BaseEngine):
             # TODO: + founder_fit_modifier * FOUNDER_FIT_WEIGHT
         )
 
-        score = self._clamp(raw_score)
-        self._set_field(opportunity, "opportunity_score", score)
+        score = clamp(raw_score)
+        set_field(opportunity, "opportunity_score", score)
 
         return opportunity
-
-    # ------------------------------------------------------------------
-    # Helpers
-    # ------------------------------------------------------------------
-
-    def _read_metric(self, opportunity: Any, name: str) -> float:
-        """
-        Safely read a numeric metric.
-
-        Missing or non-numeric values default to 0.0.
-        """
-        value = self._get_field(opportunity, name)
-        if value is None:
-            return 0.0
-        try:
-            return float(value)
-        except (TypeError, ValueError):
-            return 0.0
-
-    def _clamp(self, value: float) -> float:
-        """Clamp a score into the closed interval [0, 100]."""
-        return max(0.0, min(100.0, value))
-
-    def _get_field(self, opportunity: Any, name: str) -> Any:
-        """Retrieve a field from either an object or a dict."""
-        if isinstance(opportunity, dict):
-            return opportunity.get(name)
-        return getattr(opportunity, name, None)
-
-    def _set_field(self, opportunity: Any, name: str, value: Any) -> None:
-        """Set a field on either an object or a dict."""
-        if isinstance(opportunity, dict):
-            opportunity[name] = value
-        else:
-            setattr(opportunity, name, value)
