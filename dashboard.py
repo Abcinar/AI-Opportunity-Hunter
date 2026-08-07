@@ -214,8 +214,15 @@ def normalize_record(rec: Dict[str, Any]) -> Dict[str, Any]:
     cat_block = intel.get("category") if isinstance(intel.get("category"), dict) else {}
 
     # Real Score / Confidence from pipeline (may be absent)
-    score = _safe_float(rec.get("score"))
-    confidence = _safe_float(rec.get("confidence"))
+    score_block = rec.get("score") if isinstance(rec.get("score"), dict) else {}
+
+    score = _safe_float(
+        score_block.get("overall_score")
+    )
+
+    confidence = _safe_float(
+        score_block.get("confidence")
+    )
 
     engagement = _safe_float(
         rec.get("engagement") or rec.get("points") or rec.get("upvotes")
