@@ -2,7 +2,9 @@
 
 # 🚀 Opportunity Intelligence Platform
 
-<img src="docs/images/banner.png" alt="Opportunity Intelligence Platform Banner" width="100%">
+<p align="center">
+  <img src="docs/images/banner.png" alt="Opportunity Intelligence Platform" />
+</p>
 
 ### **Find Startup Opportunities Before Everyone Else.**
 
