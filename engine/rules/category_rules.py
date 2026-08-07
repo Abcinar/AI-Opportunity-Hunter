@@ -26,10 +26,14 @@ CATEGORY_RULES: dict[str, dict[str, list[str]]] = {
             "multi-agent",
         ],
         "Generative AI": [
+            "anthropic",
+            "chatgpt",
             "claude",
             "gemini",
             "gpt",
+            "llama",
             "llm",
+            "mistral",
             "openai",
             "stable diffusion",
         ],
@@ -65,6 +69,8 @@ CATEGORY_RULES: dict[str, dict[str, list[str]]] = {
     "Developer Tools": {
         "API Tools": [
             "api",
+            "fastapi",
+            "flask",
             "graphql",
             "openapi",
             "rest",
@@ -104,6 +110,7 @@ CATEGORY_RULES: dict[str, dict[str, list[str]]] = {
             "shopify",
             "shopify app",
             "shopify plus",
+            "woocommerce",
         ],
     },
     "Marketing": {
@@ -155,7 +162,9 @@ CATEGORY_RULES: dict[str, dict[str, list[str]]] = {
     "SaaS": {
         "B2B SaaS": [
             "b2b",
+            "crm",
             "enterprise software",
+            "erp",
             "saas platform",
             "subscription software",
         ],
