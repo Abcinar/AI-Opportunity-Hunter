@@ -1,15 +1,17 @@
-CATEGORIES = {
-    "DevTools": ["api", "developer", "deploy", "cli", "github", "react", "backend", "framework", "aws", "docker"],
-    "SaaS": ["subscription", "mrr", "dashboard", "b2b", "saas", "platform", "tenant"],
-    "AI/ML": ["openai", "llm", "chatgpt", "machine learning", "ai", "prompt", "generator", "huggingface"],
-    "Productivity": ["notion", "todo", "calendar", "notes", "workflow", "automate", "efficiency"],
-    "Creator Economy": ["newsletter", "youtube", "audience", "monetize", "patreon", "gumroad", "creator"],
-    "Marketing": ["seo", "ads", "conversion", "landing page", "leads", "email marketing", "analytics"]
-}
+"""
+category_rules.py
 
-SUB_CATEGORIES = {
-    "Infrastructure": ["aws", "docker", "kubernetes", "hosting"],
-    "Content Generation": ["generator", "prompt", "write", "copywriting"],
-    "Task Management": ["todo", "kanban", "calendar", "tracker"],
-    "Data Analytics": ["analytics", "metrics", "dashboard", "tracking"]
+Immutable keyword-to-taxonomy mappings for the
+Opportunity Intelligence Platform (OIP).
+
+This module contains only static classification rules.
+No classes, functions or business logic are permitted.
+All keywords are lowercase and unique within their scope.
+Categories, subcategories and keywords are alphabetically ordered.
+"""
+
+__all__ = ["CATEGORY_RULES"]
+
+CATEGORY_RULES: dict[str, dict[str, list[str]]] = {
+    ...
 }
