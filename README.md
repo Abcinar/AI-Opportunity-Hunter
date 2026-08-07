@@ -5,7 +5,19 @@
 <p align="center">
   <img src="docs/images/banner.png" alt="Opportunity Intelligence Platform" />
 </p>
+<p align="center">
 
+<img src="docs/images/banner.png" alt="Opportunity Intelligence Platform Banner"/>
+
+</p>
+
+<div align="center">
+
+> ### **AI-powered decision intelligence platform for discovering startup opportunities before they become obvious.**
+
+</div>
+
+<br>
 ### **Find Startup Opportunities Before Everyone Else.**
 
 AI-powered Opportunity Intelligence Platform for **Solo Founders**, **Indie Hackers** and **Startup Builders**.
