@@ -24,10 +24,12 @@ from .helpers import clamp, read_float, set_field
 from .weights import (
     ENGAGEMENT_WEIGHT,
     MOMENTUM_WEIGHT,
-    # TODO: SOURCE_WEIGHT,
-    # TODO: CATEGORY_WEIGHT,
-    # TODO: FOUNDER_FIT_WEIGHT,
 )
+
+# Future metrics will be introduced in later pipeline stages:
+# - SOURCE_WEIGHT
+# - CATEGORY_WEIGHT
+# - FOUNDER_FIT_WEIGHT
 
 
 class ScoreEngine(BaseEngine):
