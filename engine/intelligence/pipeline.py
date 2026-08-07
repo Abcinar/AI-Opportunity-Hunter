@@ -13,9 +13,9 @@ from __future__ import annotations
 
 from typing import Any
 
-from .category_engine import CategoryEngine
-from .score_engine import ScoreEngine
-from .confidence_engine import ConfidenceEngine
+from ._category_engine = CategoryEngine()
+from _score_engine = ScoreEngine()
+from _confidence_engine = ConfidenceEngine()
 
 __all__ = [
     "analyze_signal",
