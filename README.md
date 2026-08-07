@@ -17,29 +17,18 @@ Designed for **Solo Founders**, **Indie Hackers** and **Startup Builders**.
 </div>
 
 <br>
-### **Find Startup Opportunities Before Everyone Else.**
-
-AI-powered Opportunity Intelligence Platform for **Solo Founders**, **Indie Hackers** and **Startup Builders**.
-
-<p>
-
-![Python](https://img.shields.io/badge/Python-3.12-blue?style=for-the-badge)
-![Architecture](https://img.shields.io/badge/Clean_Architecture-Modular-orange?style=for-the-badge)
-![Pipeline](https://img.shields.io/badge/Pipeline-Operational-success?style=for-the-badge)
-![Dashboard](https://img.shields.io/badge/Dashboard-Live-8A2BE2?style=for-the-badge)
-![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 
 </p>
 
 ---
 
-### 🧠 Discover opportunities before they become obvious.
+## 🧠 Discover Opportunities Before They Become Obvious
 
 </div>
 
 ---
 
-# 📌 What is OIP?
+## 📌 What is OIP?
 
 Opportunity Intelligence Platform (OIP) is an AI-powered intelligence system that continuously collects startup signals from multiple online sources, analyzes them through modular intelligence engines, and ranks the highest potential opportunities for solo founders.
 
