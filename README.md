@@ -3,17 +3,12 @@
 # 🚀 Opportunity Intelligence Platform
 
 <p align="center">
-  <img src="docs/images/banner.png" alt="Opportunity Intelligence Platform" />
-</p>
-<p align="center">
 
 <img src="docs/images/banner.png" alt="Opportunity Intelligence Platform Banner"/>
 
 </p>
 
 <div align="center">
-
-> ### **AI-powered decision intelligence platform for discovering startup opportunities before they become obvious.**
 
 </div>
 
