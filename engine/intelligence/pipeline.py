@@ -13,9 +13,9 @@ from __future__ import annotations
 
 from typing import Any
 
-from ._category_engine = CategoryEngine()
-from _score_engine = ScoreEngine()
-from _confidence_engine = ConfidenceEngine()
+from .category_engine import CategoryEngine
+from .score_engine import ScoreEngine
+from .confidence_engine import ConfidenceEngine
 
 __all__ = [
     "analyze_signal",
@@ -30,7 +30,6 @@ _category_engine = CategoryEngine()
 _score_engine = ScoreEngine()
 _confidence_engine = ConfidenceEngine()
 
-# TODO: _confidence_engine = ConfidenceEngine()
 # TODO: _founder_fit_engine = FounderFitEngine()
 # TODO: _recommendation_engine = RecommendationEngine()
 
@@ -41,9 +40,9 @@ _ENGINES = (
 )
 
 # Future engines:
-# - ConfidenceEngine
 # - FounderFitEngine
 # - RecommendationEngine
+
 
 def analyze_signal(opportunity: Any) -> Any:
     """
@@ -53,9 +52,9 @@ def analyze_signal(opportunity: Any) -> Any:
     -----
     1. CategoryEngine
     2. ScoreEngine
-    3. ConfidenceEngine      (TODO)
-    4. FounderFitEngine      (TODO)
-    5. RecommendationEngine  (TODO)
+    3. ConfidenceEngine
+    4. FounderFitEngine (TODO)
+    5. RecommendationEngine (TODO)
 
     Parameters
     ----------
@@ -67,8 +66,10 @@ def analyze_signal(opportunity: Any) -> Any:
     Any
         The enriched opportunity.
     """
+
     for engine in _ENGINES:
         opportunity = engine.process(opportunity)
+
     return opportunity
 
 
@@ -79,11 +80,12 @@ def analyze_signals(opportunities: list[Any]) -> list[Any]:
     Parameters
     ----------
     opportunities : list[Any]
-        List of opportunity instances (dict or object).
+        List of opportunity instances.
 
     Returns
     -------
     list[Any]
-        List of enriched opportunities (same order).
+        List of enriched opportunities.
     """
+
     return [analyze_signal(opportunity) for opportunity in opportunities]
