@@ -21,6 +21,7 @@ from typing import Any
 
 from .base_engine import BaseEngine
 from .constants import UNKNOWN_CATEGORY, UNKNOWN_SUBCATEGORY
+from .helpers import normalize_text, set_field
 from ..rules.category_rules import CATEGORY_RULES
 
 
@@ -36,30 +37,18 @@ class CategoryEngine(BaseEngine):
 
         Supports both attribute-style objects and plain dictionaries.
         """
-        text = self._extract_text(opportunity)
+        text = normalize_text(opportunity)
         category, subcategory, tags = self._match(text)
 
-        self._set_field(opportunity, "category", category)
-        self._set_field(opportunity, "subcategory", subcategory)
-        self._set_field(opportunity, "tags", tags)
+        set_field(opportunity, "category", category)
+        set_field(opportunity, "subcategory", subcategory)
+        set_field(opportunity, "tags", tags)
 
         return opportunity
 
     # ------------------------------------------------------------------
     # Internal helpers
     # ------------------------------------------------------------------
-
-    def _extract_text(self, opportunity: Any) -> str:
-        """Safely collect and normalize textual fields."""
-        fields = ("title", "description", "summary", "content")
-        parts: list[str] = []
-
-        for field in fields:
-            value = self._get_field(opportunity, field)
-            if value is not None and isinstance(value, str) and value.strip():
-                parts.append(value)
-
-        return " ".join(parts).lower()
 
     def _match(self, text: str) -> tuple[str, str, list[str]]:
         """
@@ -109,16 +98,3 @@ class CategoryEngine(BaseEngine):
 
         tags = sorted(matched_keywords)
         return best_category, best_subcategory, tags
-
-    def _get_field(self, opportunity: Any, name: str) -> Any:
-        """Retrieve a field from either an object or a dict."""
-        if isinstance(opportunity, dict):
-            return opportunity.get(name)
-        return getattr(opportunity, name, None)
-
-    def _set_field(self, opportunity: Any, name: str, value: Any) -> None:
-        """Set a field on either an object or a dict."""
-        if isinstance(opportunity, dict):
-            opportunity[name] = value
-        else:
-            setattr(opportunity, name, value)
