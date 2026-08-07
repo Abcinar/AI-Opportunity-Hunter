@@ -1,14 +1,18 @@
 <div align="center">
 
-# 🚀 Opportunity Intelligence Platform
-
-<p align="center">
+# 🚀 Opportunity Intelligence Platform (OIP)
 
 <img src="docs/images/banner.png" alt="Opportunity Intelligence Platform Banner"/>
 
-</p>
+### AI-powered decision intelligence platform for discovering startup opportunities before they become obvious.
 
-<div align="center">
+Designed for **Solo Founders**, **Indie Hackers** and **Startup Builders**.
+
+![Python](https://img.shields.io/badge/Python-3.12-blue?style=for-the-badge)
+![Architecture](https://img.shields.io/badge/Clean_Architecture-Modular-orange?style=for-the-badge)
+![Pipeline](https://img.shields.io/badge/Pipeline-Operational-success?style=for-the-badge)
+![Dashboard](https://img.shields.io/badge/Dashboard-Live-8A2BE2?style=for-the-badge)
+![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 
 </div>
 
